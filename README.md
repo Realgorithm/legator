@@ -34,7 +34,7 @@ Follow these steps to get the website up and running on your local machine.
 
 3. Create a new database. You can name it `legator` or choose a name of your preference.
 
-4. Import the provided SQL file (`database.sql`) into the newly created database. This file contains the necessary tables and initial data.
+4. Import the provided SQL file (`database.sql`) into the newly created database. This file contains the necessary tables and initial data.(contact admin for my sql file if you dont have)
 
 ### Run the Website
 
@@ -44,8 +44,8 @@ Follow these steps to get the website up and running on your local machine.
 
 ### Accessing the Website
 
-- Username: admin
-- Password: admin123
+- Username: tabish
+- Password: 2508
 
 ## Usage
 
