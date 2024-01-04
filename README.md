@@ -1,0 +1,2 @@
+# legator
+a crypto website
