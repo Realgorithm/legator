@@ -15,7 +15,7 @@ Follow these steps to get the website up and running on your local machine.
 1. Clone or download the Git repository.
 
     ```bash
-    git clone https://github.com/your-username/legator.git
+    git clone https://github.com/Realgorithm/legator.git
     ```
 
 2. Extract the downloaded ZIP file.
