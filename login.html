@@ -1,0 +1,152 @@
+<script>
+  showGetMessage('error','1','Invalid username and password','danger')
+</script>
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+  <title>Legatordigitalpro.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <!-- External CSS libraries -->
+  <link type="text/css" rel="stylesheet" href="auth/assets/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="auth/assets/fonts/font-awesome/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="auth/assets/fonts/flaticon/font/flaticon.css">
+
+  <!-- Favicon icon -->
+  <link rel="shortcut icon" href="auth/assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- Google fonts -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+
+  <!-- Custom Stylesheet -->
+  <link type="text/css" rel="stylesheet" href="auth/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" id="style_sheet" href="auth/assets/css/skins/default.css">
+
+</head>
+
+<body id="top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="page_loader"></div>
+
+  <!-- Login 2 start -->
+  <div class="login-2 tab-box">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 col-pad-0 bg-img none-992">
+          <div class="informeson">
+            <div class="btn-section">
+              <a href="home.html?a=home" class="active link-btn  bg-primary"
+                style="background-color: #1a7d7e !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Home</a>
+              <a href="register.html?a=signup" class="active link-btn  bg-primary"
+                style="background-color: #c40d3b !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Register</a>
+            </div>
+            <h5>Your Gateway to Financial Excellence! 🚀</h5>
+            <h2>Learn <br class="custom-line-break">Earn <br class="custom-line-break">Grow  <br class="custom-line-break">Analyse <br class="custom-line-break">Trade <br class="custom-line-break">Overcome  <br class="custom-line-break">Re-invest</h2>
+            <h4>Unleash the power of financial mastery and secure your seat in the future of trading and investment.</h4>
+
+          </div>
+
+        </div>
+        <div class="col-lg-7 col-md-12 col-pad-0 bg-color"
+          style="background-image: url(wp-content/uploads/sites/8/2022/11/My-password-amico.png) !important;background-size:contain;">
+          <div class="login-inner-form">
+            <div class="details">
+              <a href="home.html?a=home">
+                <img
+                  src="wp-content/uploads/sites/8/2022/11/logo1.png"
+                  alt="logo">
+              </a>
+              <h3>Log In </h3>
+
+                <script language=javascript>
+                  function checkform() {
+                    if (document.mainform.username.value == '') {
+                      alert("Please type your username!");
+                      document.mainform.username.focus();
+                      return false;
+                    }
+                    if (document.mainform.password.value == '') {
+                      alert("Please type your password!");
+                      document.mainform.password.focus();
+                      return false;
+                    }
+                    return true;
+                  }
+                </script>
+
+
+
+                <form method=post name=mainform action="auth/login_process.php" onsubmit="return checkform()">
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                          <input type=text name=username value='' class="form-control"
+                            placeholder="Enter your username">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                          <input type=password name=password value='' class="form-control"
+                            placeholder="Enter your password">
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                    <div class="col-md-12">
+
+                      <label>
+                        <a href="index.php?page=forgot_password" class="text-white">Forgot Password</a>
+                      </label>
+
+                    </div>
+
+
+                    <div class="col-md-12">
+                      <button name="submit" type="submit" class="btn-md btn-theme btn-block  bg-primary"
+                        style="background-color: #a7cd78 !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Log
+                        In </button>
+
+                    </div>
+                    <br><br><br>
+                    <div class="table-row d-flex align-items-center flex-column">
+                      <p class="mb-0" style="color:#ffffff;">-Need an Legator Account account?
+                        <a style="color:#a7cd78; " href="register.html?a=signup">Create an account</a>
+                      </p>
+                    </div>
+
+                  </div>
+
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login 2 end -->
+
+  <!-- External JS libraries -->
+  <script src="auth/assets/js/jquery-2.2.0.min.js"></script>
+  <script src="auth/assets/js/popper.min.js"></script>
+  <script src="auth/assets/js/bootstrap.min.js"></script>
+  <!-- Custom JS Script -->
+
+</body>
+
+
+</html>

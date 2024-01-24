@@ -1,0 +1,22 @@
+/* Write your custom CSS here */
+.error-message {
+    display: none;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #error-mwssage{
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  .error-message span.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+  }

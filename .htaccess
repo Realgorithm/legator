@@ -1,0 +1,2 @@
+AddType application/x-httpd-php .HTML 
+DirectoryIndex index.php index2.php
