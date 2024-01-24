@@ -1,2 +1,7 @@
 AddType application/x-httpd-php .HTML 
 DirectoryIndex index.php index2.php
+ErrorDocument 404 /error_page.html
+ErrorDocument 500 /error_page.html
+ErrorDocument 502 /error_page.html
+ErrorDocument 503 /error_page.html
+ErrorDocument 504 /error_page.html
