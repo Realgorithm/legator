@@ -29,6 +29,8 @@
     <!-- Theme Styles -->
     <link href="1/assets/css/lime.min.css" rel="stylesheet">
     <link href="1/assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png"
+		sizes="32x32" />
 
     <script language="javascript">
         showGetMessage = function (getData, getValue, message, alert) {

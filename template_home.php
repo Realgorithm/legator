@@ -56,7 +56,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 		})(document, window, 'Chatra');
 	</script>
 	<!-- /Chatra {/literal} -->
-	<link rel="icon" href="../uploads-ssl.webflow.com/61094a65869caa4f3c35df0e/63f39c4b662d128f9982adb7_fav.png"
+	<link rel="icon" href="images/logo.png"
 		sizes="32x32" />
 
 	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.1.1'

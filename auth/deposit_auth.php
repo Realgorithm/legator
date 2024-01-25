@@ -3,6 +3,7 @@ include 'user_details.php';
 include 'conn.php';
 // Example usage:
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['hiddenInput'])==='save') {
     // Retrieve user credentials from the form
     $depositId = $_POST['depositid'];
     $depositamount =$_POST['amount'];
@@ -18,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // echo "you already use this transaction id or wrong transaction id";
         header("Location: ../index2.php?page=deposit_final&use=1");
     } else {
-        // echo "Username does not exist. Proceed with registration or other logic.";
-        // echo "deposit id:". $depositId. "username:". $username. "Amount". $depositamount;
+        echo "Username does not exist. Proceed with registration or other logic.";
+        echo "deposit id:". $depositId. "username:". $username. "Amount". $depositamount;
         $insertQuery = "INSERT INTO `deposits` (`deposit_id`, `username`, `plan`, `amount`, `isdeposit`, `processed`) VALUES (?, ?, ?, ?, 0, 0)";
         $stmt = $connect_db->prepare($insertQuery);
         $stmt->bind_param("ssss", $depositId, $username,$planNo, $depositamount);
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // $error = $stmt->error;
-            // echo "sorry for incovinience please re enter the transaction id and send" . $error . "";
+            echo "sorry for incovinience please re enter the transaction id and send" . $error . "";
             header("Location: ../index2.php?page=deposit&error=1");
         }
         $stmt->close();
@@ -37,5 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Close the statement and connection
     $stmtcheck->close();
     $connect_db->close();
+}
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 include 'auth/user_details.php';
 // Check if the user is authenticated
-if (!isset( $_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
     header("Location: index.php");
     exit();
@@ -17,15 +17,27 @@ if (!isset( $_SESSION['username'])) {
                             <h5 class="card-title">Welcome back
                                 <?php echo $username ?>
                             </h5>
-                            <p>It’s super simple - Your trading rigs are already set up and
-                                running.Don’t make mistakes and loose your money while tring to make
-                                trading calls. We have the most profitbale team running for you
-                                already!</p>
+                            <p>"It's easy – our trading rigs are up and running. No need to worry about making mistakes
+                                and losing money while trying to make trading calls. We've got a highly profitable team
+                                working for you!
+
+                                Pick the package you want on the deposit page.
+                                Choose the e-currency that works for you.
+                                Start earning based on the package intervals."</p>
                             <ul>
-                                <li>Choose the package you want to invest from deposit page</li>
-                                <li>Select the e-currency you are suitable with.</li>
-                                <li>Your earnings will be started according to the intervals of
-                                    packages.</li>
+                                <li><b>Sit Back and Relax:</b>
+                                    Once you've chosen your package and selected your preferred e-currency, there's
+                                    nothing more for you to do. Our trading rigs are already in action, working to
+                                    maximize your earnings.</li>
+                                <li><b>Keep an Eye on Your Profits:</b>
+                                    You can monitor your profits as they roll in. No need for complicated trading
+                                    decisions – we've got it covered.</li>
+                                <li><b>Withdraw Your Earnings:</b>
+                                    When you're ready to enjoy your earnings, simply follow the easy withdrawal process.
+                                    It's hassle-free and designed with your convenience in mind.</li>
+                                <li><b>24/7 Support:</b>
+                                    If you ever have questions or need assistance, our support team is available around
+                                    the clock. We're here to make your experience smooth and stress-free.</li>
                             </ul>
 
                             <!-- TradingView Widget END -->
@@ -114,7 +126,8 @@ if (!isset( $_SESSION['username'])) {
                                 <tbody>
                                     <tr>
                                         <td>Referral Link</td>
-                                        <td>https://Legatordigitalpro.com?ref=<?php echo$username ?>
+                                        <td>https://Legatordigitalpro.com?ref=
+                                            <?php echo $username ?>
                                         </td>
                                     </tr>
                                     <tr>

@@ -33,6 +33,9 @@ switch ($page) {
     case 'rules':
         $pageContent = 'rules.html';
         break;
+    case 'privacy':
+        $pageContent = 'privacy.html';
+        break;
     case 'forgot_password':
         $pageContent = 'forget.html';
         break;

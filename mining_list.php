@@ -99,17 +99,17 @@
                                                                         switch ($plan) {
                                                                             case '1':
                                                                                 $recievedAmount = $amount * 1.4;
-                                                                                $getAmount = $recievedAmount / 14;
+                                                                                $getAmount = $recievedAmount / 30;
                                                                                 $claimed = $claimed + $getAmount;
                                                                                 break;
                                                                             case '2':
                                                                                 $recievedAmount = $amount * 1.8;
-                                                                                $getAmount = $recievedAmount / 18;
+                                                                                $getAmount = $recievedAmount / 30;
                                                                                 $claimed = $claimed + $getAmount;
                                                                                 break;
                                                                             case '3':
                                                                                 $recievedAmount = $amount * 2;
-                                                                                $getAmount = $recievedAmount / 20;
+                                                                                $getAmount = $recievedAmount / 30;
                                                                                 $claimed = $claimed + $getAmount;
                                                                                 break;
                                                                         }

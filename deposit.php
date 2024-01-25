@@ -1,9 +1,18 @@
-<?php include 'auth/user_details.php' ?>
+<?php include 'auth/user_details.php';
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    // Store form data and error in session
+    $_SESSION['deposit_data'] = $_POST;
+    header("Location: index2.php?page=deposit_final");
+    exit();
+}
+
+?>
 
 <script language="javascript">
     showGetMessage('success', '1', 'The deposit has been saved. It will become active when the administrator checks statistics.', 'success');
     showGetMessage('error', '1', ' Your deposit is not complete for some reason. Please contact the support.', 'warning');
-    showGetMessage('use', '1', ' you already use this transaction id or wrong transaction id', 'danger');
     function updateCompound() {
         var id = 0;
         var tt = document.spendform.h_id.type;
@@ -55,7 +64,7 @@
                 case '1':
                     if (enteredAmount > 7999 || enteredAmount < 100) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
-                        showErrorMessage('Invalid amount or choose a different plan.', 'danger')
+                        showErrorMessage('Invalid amount or choose a different plan1.', 'danger')
                     } else {
                         submitForm();
                     }
@@ -64,14 +73,14 @@
                 case '2':
                     if (enteredAmount > 15000 || enteredAmount < 8000) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
-                        showErrorMessage('Invalid amount or choose a different plan.', 'danger')
+                        showErrorMessage('Invalid amount or choose a different plan2.', 'danger')
                     } else {
                         submitForm();
                     }
                     break;
 
                 case '3':
-                    if (enteredAmount < 20000) {
+                    if (enteredAmount < 15000) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
                         showErrorMessage('Invalid amount or choose a different plan.', 'danger')
                     } else {
@@ -98,7 +107,7 @@
 <div class="card">
     <h5 class="card-header bg-primary text-white">Deposit</h5>
     <div class="card-body">
-        <form id="depositForm" method=post action="index2.php?page=deposit_final" name="spendform">
+        <form id="depositForm" method=post action="deposit.php" name="spendform">
 
             <div class="table-responsive">
                 <table class="table">
@@ -197,7 +206,9 @@
                     </tr>
                     <tr>
                         <td>Amount to Spend ($):</td>
-                        <td><input type=text id=amount name=amount value='' class="form-control" size=15></td>
+                        <td><input type=text id=amount name=amount
+                                value="<?php echo isset($depositData['amount']) ? $depositData['amount'] : ''; ?>"
+                                class="form-control" size=15></td>
                     </tr>
                     <tr id="coumpond_block" style="display:none">
                         <td>Compounding(%):</td>
@@ -220,18 +231,18 @@
                 <!-- Display an error message -->
                 <div id="errorMessage" style="color: red;"></div>
             </div>
-</form>
+        </form>
 
-<script language=javascript>
-    for (i = 0; i < document.spendform.type.length; i++) {
-        if ((document.spendform.type[i].value.match(/^deposit/))) {
-            document.spendform.type[i].checked = true;
-            break;
-        }
-    }
-    updateCompound();
-</script>
+        <script language=javascript>
+            for (i = 0; i < document.spendform.type.length; i++) {
+                if ((document.spendform.type[i].value.match(/^deposit/))) {
+                    document.spendform.type[i].checked = true;
+                    break;
+                }
+            }
+            updateCompound();
+        </script>
 
 
-</div>
+    </div>
 </div>
