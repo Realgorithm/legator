@@ -42,6 +42,10 @@
     }
     ?>
 
+    <script>
+        showErrorMessage('<?php echo $updateMessage ?>', 'success')
+    </script>
+
                                 <div class="card">
                                     <h5 class="card-header bg-primary text-white">Deposit List</h5>
                                     <div class="card-body">
@@ -83,7 +87,7 @@
                                                                     <th>Get Money</th>
                                                                 </tr>
                                                                 <?php
-                                                                $getDepositQuery = "SELECT * FROM deposits WHERE username = ?";
+                                                                $getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1";
                                                                 $stmtGetDeposit = $connect_db->prepare($getDepositQuery);
                                                                 $stmtGetDeposit->bind_param("s", $_SESSION['username']);
                                                                 $stmtGetDeposit->execute();

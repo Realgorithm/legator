@@ -30,6 +30,7 @@ function updateReferralBonus($username, $bonusAmount)
     $stmt->execute();
     $stmt->close();
 }
+
 // Check for changes in isdeposited column
 $query = "SELECT deposit_id, username, amount FROM deposits WHERE isdeposit = 1 AND processed = 0";
 $result = $connect_db->query($query);
@@ -44,14 +45,17 @@ if ($result->num_rows > 0) {
         updatedeposit($username, $depositAmount);
 
         // Mark the deposit as processed
-        $updateQuery = "UPDATE deposits SET processed = 1 WHERE deposit_id = $depositId";
+        $updateQuery = "UPDATE deposits SET processed = 1 WHERE deposit_id = '$depositId'";
         $connect_db->query($updateQuery);
 
-        echo "Deposit ID $depositId processed successfully. User balance updated.<br>";
+        if($username === $_SESSION['username']){
+        $updateMessage = "<p>Your deposit has been processed successfully.</p>";
+        }
     }
 } else {
-    // echo "No deposits to process.<br>";
+    // $updateMessage = "No deposits to process.<br>";
 }
+
 $query1 = "SELECT withdraw_id, username, amount FROM withdrawals WHERE withdrawalinitiated = 1 AND processed = 0";
 $result1 = $connect_db->query($query1);
 
@@ -65,14 +69,17 @@ if ($result1->num_rows > 0) {
         updateWithdrawal($username, $withdrawalAmount);
 
         // Mark the deposit as processed
-        $updateQuery = "UPDATE withdrawals SET processed = 1 WHERE withdraw_id = $withdrawId";
+        $updateQuery = "UPDATE withdrawals SET processed = 1 WHERE withdraw_id = '$withdrawId'";
         $connect_db->query($updateQuery);
 
-        echo "withdraw of withdraw id:" . $withdrawId . " amount:" . $withdrawalAmount . "processed successfully. User balance updated.<br>";
+        if($username === $_SESSION['username']){
+        $updateMessage = "<p>withdraw of withdraw id:" . $withdrawId . " amount:" . $withdrawalAmount . "processed successfully<p>";
+        }
     }
 } else {
-    // echo "No deposits to process.<br>";
+    // $updateMessage = "No deposits to process.<br>";
 }
+
 $query2 = "SELECT * FROM referrals WHERE debited = 0";
 $result2 = $connect_db->query($query2);
 
@@ -89,9 +96,11 @@ if ($result2->num_rows > 0) {
         $updateQuery1 = "UPDATE `referrals` SET `debited` = 1 WHERE `referrername` = '$referrerName'";
         $connect_db->query($updateQuery1);
 
-        echo "Referee Name $refereeName referral amount processed successfully. User balance updated.<br>";
+        if($referrerName === $_SESSION["username"]){
+        $updateMessage = "<p>Referee Name $refereeName referral amount processed successfully.</p>";
+        }
     }
 } else {
-    // echo "No deposits to process.<br>";
+    // $updateMessage = "No deposits to process.<br>";
 }
 ?>
