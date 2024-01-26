@@ -6,7 +6,6 @@ if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
 }
-echo "Today is " . date("d/m/Y") . "<br>";
 ?>
 <div class="container">
     <div class="row">
