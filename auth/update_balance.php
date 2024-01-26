@@ -56,11 +56,11 @@ if ($result->num_rows > 0) {
 
             Thank you for choosing LEGATOR for your trading endeavors. We are pleased to confirm the successful processing of your deposit payment.
         
-            *Deposit Details:*
+            <b>*Deposit Details:*</b>
             - Amount: $depositAmount
             - Date: $depositDate
 
-            *Transaction ID: $depositId*
+            <b>*Transaction ID: $depositId*</b>
 
             Your funds are now available in your LEGATOR account, and you can begin exploring the exciting world of trading.
         
@@ -101,11 +101,11 @@ if ($result1->num_rows > 0) {
 
         Thank you for choosing LEGATOR for your trading needs. We have received your withdrawal request, and we want to confirm that it is being processed.
         
-        *Withdrawal Details:*
+        <b>*Withdrawal Details:*</b>
         - Amount: $withdrawalAmount
         - Date: $withdrawDate
         
-        *Transaction ID: $withdrawId*
+        <b>*Transaction ID: $withdrawId*</b>
         
         Please note that withdrawals may take 1-2 business days to reflect in your account. You can track the status of your withdrawal by logging into your LEGATOR account.
         

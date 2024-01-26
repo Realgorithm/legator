@@ -15,13 +15,18 @@
     function validateId(action) {
         var enteredTransId = document.getElementById('depositid').value;
         var validTransactionId = isValidTransactionId(enteredTransId);
+        var fileInput = document.getElementById('image');
+        var selectedFile = fileInput.files[0];
         // Check if the entered amount is a valid number
-        if (validTransactionId) {
+        if (!validTransactionId) {
             // errorMessage.innerHTML = "Please enter a valid amount."
+            showErrorMessage('Please enter a Correct transaction id.', 'danger')
+        } else if (!selectedFile) {
+            // Display an error message
+            showErrorMessage('Please select an image before uploading.', 'warning')
+        } else {
             showErrorMessage('your transaction is under processing....', 'success')
             submitForm(action)
-        } else {
-            showErrorMessage('Please enter a Correct transaction id.', 'danger')
 
         }
     }
@@ -37,9 +42,11 @@
         if (selectedFile) {
             // Perform the file upload or submission logic here
             document.getElementById('spendform').submit();
+            return true;
         } else {
             // Display an error message
             showErrorMessage('Please select an image before uploading.', 'warning')
+            return false;
         }
     }
 
@@ -106,7 +113,6 @@
     <h5 class="card-header bg-primary text-white">Please confirm your deposit</h5>
     <div class="card-body">
         <br><br>
-
         Hello Kindly click and copy the TRC20 address below and make deposit then save deposit to start
         earning<br><br>
         <div>
@@ -124,7 +130,8 @@
         // Get the selected plan from the form data
         $selectedPlan = $depositData['h_id'];
         $depositAmount = $depositData['amount'];
-        $errorMessage='';
+        $errorMessage = '';
+        $successMessage = '';
 
         // Render data based on the selected plan
         switch ($selectedPlan) {
@@ -237,7 +244,7 @@
                     $stmt = $connect_db->prepare($sql);
                     $stmt->bind_param("s", $imagePath);
                     if ($stmt->execute()) {
-                        $errorMessage .= "Image uploaded and stored in the database.";
+                        $successMessage .= "Image uploaded and stored in the database.";
                     } else {
                         echo "Error: " . $sql . "<br>" . $stmt->error;
                     }
@@ -266,7 +273,7 @@
                 </tr>
             </table>
             <table class="table">
-            <tr>
+                <tr>
                     <label for="image">
                         <th>Select Image:</th>
                     </label>
@@ -285,7 +292,11 @@
                 onclick="document.location='index2.php?page=deposit'">
 
         </form>
-        <script> showErrorMessage('<?php echo $errorMessage ?>', 'warning')</script>
+        <?php if ($successMessage != "") { ?>
+            <script> showErrorMessage('<?php echo $successMessage ?>', 'success')</script>
+        <?php } elseif ($errorMessage != "") { ?>
+            <script> showErrorMessage('<?php echo $errorMessage ?>', 'warning')</script>
+        <?php } ?>
         <!-- Hidden input field to store the button value -->
     </div>
 </div>
