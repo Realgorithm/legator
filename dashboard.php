@@ -56,9 +56,9 @@ if (!isset($_SESSION['username'])) {
         <div class="col-md-4">
             <div class="card stat-card">
                 <div class="card-body">
-                    <h5 class="card-title">Mining Balance</h5>
+                    <h5 class="card-title">Total Balance</h5>
                     <h2 class="float-right">$
-                        <?php echo $totalMining ?>
+                        <?php echo $totalAmount ?>
                     </h2>
 
                     <div class="progress" style="height: 10px;">
@@ -77,7 +77,22 @@ if (!isset($_SESSION['username'])) {
                     </h2>
 
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="45"
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Mining</h5>
+                    <h2 class="float-right">$
+                        <?php echo $totalMining ?>
+                    </h2>
+
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="60"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -92,7 +107,7 @@ if (!isset($_SESSION['username'])) {
                     </h2>
 
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="60"
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="45"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
@@ -113,6 +128,21 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Earning</h5>
+                    <h2 class="float-right">$
+                        <?php echo $earning ?>
+                    </h2>
+
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="45"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row content">
         <div class="col-sm-12 text-left">
@@ -126,8 +156,7 @@ if (!isset($_SESSION['username'])) {
                                 <tbody>
                                     <tr>
                                         <td>Referral Link</td>
-                                        <td>https://Legatordigitalpro.com?ref=
-                                            <?php echo $username ?>
+                                        <td>https://Legatordigitalpro.com?ref=<?php echo$username ?>
                                         </td>
                                     </tr>
                                     <tr>

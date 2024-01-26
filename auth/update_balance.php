@@ -2,6 +2,7 @@
 // Assume you have a database connection ($conn)
 include 'conn.php';
 include 'referral.php';
+require 'mail.php';
 // Function to update user balance
 function updateDeposit($username, $depositAmount)
 {
@@ -52,24 +53,22 @@ if ($result->num_rows > 0) {
             $depositDate = date("d/m/Y");
             $updateMessage = "<p>Your deposit has been processed successfully.</p>";
             $subject = "LEGATOR - Deposit Payment Confirmation";
-            $body = "<pre>Dear [User's Name],
+            $body = "<pre>Dear $username,
 
-            Thank you for choosing LEGATOR for your trading endeavors. We are pleased to confirm the successful processing of your deposit payment.
+    Thank you for choosing LEGATOR for your trading endeavors. We are pleased to confirm the successful processing of your deposit payment.
         
-            <b>*Deposit Details:*</b>
-            - Amount: $depositAmount
-            - Date: $depositDate
+    <b>*Deposit Details:*</b>
+    - Amount: $$depositAmount
+    - Date: $depositDate
 
-            <b>*Transaction ID: $depositId*</b>
+    <b>*Transaction ID: $depositId*</b>
 
-            Your funds are now available in your LEGATOR account, and you can begin exploring the exciting world of trading.
+    Your funds are now available in your LEGATOR account, and you can begin exploring the exciting world of trading.
+    If you have any questions or require further assistance, please don't hesitate to contact our support team at [support@legator.com].
+    Happy trading!
         
-            If you have any questions or require further assistance, please don't hesitate to contact our support team at [support@legator.com].
-        
-            Happy trading!
-        
-            Best regards,
-            The LEGATOR Team</pre>";
+    Best regards,
+    The LEGATOR Team</pre>";
             sendCustomEmail($subject, $body);
         }
     }
@@ -99,22 +98,20 @@ if ($result1->num_rows > 0) {
             $subject = " LEGATOR - Withdrawal Request Confirmation";
             $body = "<pre>Dear $username,
 
-        Thank you for choosing LEGATOR for your trading needs. We have received your withdrawal request, and we want to confirm that it is being processed.
+    Thank you for choosing LEGATOR for your trading needs. We have received your withdrawal request, and we want to confirm that it is being processed.
         
-        <b>*Withdrawal Details:*</b>
-        - Amount: $withdrawalAmount
-        - Date: $withdrawDate
+    <b>*Withdrawal Details:*</b>
+    - Amount: $$withdrawalAmount
+    - Date: $withdrawDate
         
-        <b>*Transaction ID: $withdrawId*</b>
+    <b>*Transaction ID: $withdrawId*</b>
         
-        Please note that withdrawals may take 1-2 business days to reflect in your account. You can track the status of your withdrawal by logging into your LEGATOR account.
+    Please note that withdrawals may take 1-2 business days to reflect in your account. You can track the status of your withdrawal by logging into your LEGATOR account.
+    If you did not initiate this withdrawal or have any concerns, please contact our support team immediately.
+    Thank you for trusting LEGATOR with your trading activities.
         
-        If you did not initiate this withdrawal or have any concerns, please contact our support team immediately.
-        
-        Thank you for trusting LEGATOR with your trading activities.
-        
-        Best regards,
-        The LEGATOR Team</pre>";
+    Best regards,
+    The LEGATOR Team</pre>";
             sendCustomEmail($subject, $body);
         }
     }

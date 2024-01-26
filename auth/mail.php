@@ -3,10 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require '../PHPMailer-6.9.1/src/Exception.php';
-require '../PHPMailer-6.9.1/src/PHPMailer.php';
-require '../PHPMailer-6.9.1/src/SMTP.php';
-
+require 'PHPMailer-6.9.1/src/Exception.php';
+require 'PHPMailer-6.9.1/src/PHPMailer.php';
+require 'PHPMailer-6.9.1/src/SMTP.php';
 // Function to send customized emails
 function sendCustomEmail( $subject, $message) {
     

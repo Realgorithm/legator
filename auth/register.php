@@ -88,20 +88,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $subject = 'Welcome to LEGATOR - Successful Signup!';
                 $body = "<pre>Dear $fullname,
 
-                Welcome to LEGATOR! We're thrilled to have you on board. Your signup was successful, and we're excited to provide you with a seamless trading experience.
+    Welcome to LEGATOR! We're thrilled to have you on board. Your signup was successful, and we're excited to provide you with a seamless trading experience.
                 
-                *<b>Account Information:</b>*
-                - Username: $username
-                - Password: $password
+    <b>*Account Information:*</b>
+    - Username: $username
+    - Password: $password
                 
-                Whether you're a seasoned trader or just getting started, LEGATOR is designed to meet your trading needs. Explore our platform, discover market opportunities, and stay updated on the latest trends.
+    Whether you're a seasoned trader or just getting started, LEGATOR is designed to meet your trading needs. Explore our platform, discover market opportunities, and stay updated on the latest trends.          
+    If you have any questions or need assistance, our support team is here to help. Feel free to reach out at [support@legator.com].          
+    Happy trading!
                 
-                If you have any questions or need assistance, our support team is here to help. Feel free to reach out at [support@legator.com].
-                
-                Happy trading!
-                
-                Best regards,
-                The LEGATOR Team</pre>";
+    Best regards,
+    The LEGATOR Team</pre>";
 
                 sendCustomEmail($subject,$body);
             // Redirect to the dashboard.html page with an error parameter
