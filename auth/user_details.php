@@ -20,6 +20,7 @@ if ($result->num_rows === 1) {
     // Check if $userDetails is not null before accessing its properties
     if ($userDetails !== null) {
         // $userDetails now contains the details of the user
+        $totalMining = $userDetails['totalmining'];
         $totalAmount = $userDetails['total_balance'];
         $username = $userDetails['username'];
         $earning = $userDetails['earning'];

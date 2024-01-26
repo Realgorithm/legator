@@ -6,6 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
 }
+echo "Today is " . date("d/m/Y") . "<br>";
 ?>
 <div class="container">
     <div class="row">
@@ -58,7 +59,7 @@ if (!isset($_SESSION['username'])) {
                 <div class="card-body">
                     <h5 class="card-title">Mining Balance</h5>
                     <h2 class="float-right">$
-                        <?php echo $totalAmount ?>
+                        <?php echo $totalMining ?>
                     </h2>
 
                     <div class="progress" style="height: 10px;">

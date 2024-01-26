@@ -1,8 +1,9 @@
     <?php include("auth/conn.php");
     include 'auth/user_details.php';
     // Function to check if the user is eligible for the option
-    function isEligibleForOption($lastOptionReceived)
+    function isEligibleForOption($lastOptionReceived, $deposit_id)
     {
+        include 'auth/conn.php';
         $timezone = new DateTimeZone('Asia/Kolkata'); // Replace 'Asia/Kolkata' with your actual time zone
         $currentDateTime = new DateTime('now', $timezone);
         $lastOptionDateTime = new DateTime($lastOptionReceived, $timezone);
@@ -18,8 +19,23 @@
         // echo 'elapsed time: ' . $interval->format('%R%a days %H hours %I minutes') . '<br>';
         // echo 'hours since last option: ' . $hoursSinceLastOption . '<br>';
     
-        // Allow option every 24 hours, and the user can use it within the next 12 hours
-        return ($hoursSinceLastOption >= 24 && $hoursSinceLastOption < 36);
+        // Calculate the total hours since the last option
+    $hoursSinceLastOption = $interval->days * 24 + $interval->h + $interval->i / 60;
+
+    // Check if the user is eligible for the option
+    $isEligible = ($hoursSinceLastOption >= 24 && $hoursSinceLastOption < 36);
+
+    // If the user is not eligible, update the lastOptionReceived to the current time
+    if ($hoursSinceLastOption > 36) {
+        $updateTimeQuery = "UPDATE deposits SET last_option_received = CURRENT_TIMESTAMP WHERE deposit_id = ?";
+        $stmtUpdateTime = $connect_db->prepare($updateTimeQuery);
+        $stmtUpdateTime->bind_param("i", $deposit_id);
+        $stmtUpdateTime->execute();
+        $stmtUpdateTime->close();
+        echo "<p>missed chance<br></p>";
+    }
+
+    return $isEligible;
     }
 
     // Function to process the "Get Option" click
@@ -28,9 +44,9 @@
         global $connect_db;
 
         // Update the user's earnings and total amount
-        $updateEarningsQuery = "UPDATE userinformation SET earning = earning + ?, total_balance = total_balance + ?, withdrawal_amount = withdrawal_amount + ? WHERE username = ?";
+        $updateEarningsQuery = "UPDATE userinformation SET earning = earning + ?,totalmining = totalmining + ?, total_balance = total_balance + ?, withdrawal_amount = withdrawal_amount + ? WHERE username = ?";
         $stmtUpdateEarnings = $connect_db->prepare($updateEarningsQuery);
-        $stmtUpdateEarnings->bind_param("dddi", $getAmount, $getAmount, $getAmount, $username);
+        $stmtUpdateEarnings->bind_param("ddddi", $getAmount, $getAmount, $getAmount, $getAmount, $username);
 
         if ($stmtUpdateEarnings->execute()) {
             echo "Earnings updated successfully!";
@@ -132,7 +148,7 @@
                                                                                     <?php // Check if the user is eligible for the option
                                                                                     
                                                                                                     if ($recievedAmount !== ($claimed - $getAmount)) {
-                                                                                                        if (isEligibleForOption($option)) {
+                                                                                                        if (isEligibleForOption($option, $deposit_id)) {
                                                                                                             $ifclicked = 0;
                                                                                                             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                 if ((isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token'])) {
@@ -161,17 +177,17 @@
                                                                                                             // Generate a unique token for the form
                                                                                                             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                                                                                         } else {
-                                                                                                            echo "You are not eligible for the option at this time.";
+                                                                                                            echo "<p>not eligible now</p>";
                                                                                                             $ifclicked = 1;
                                                                                                         }
                                                                                                     } else {
                                                                                                         $ifclicked = 1;
-                                                                                                        echo "Already claimed all rewards";
+                                                                                                        echo "claimed all";
                                                                                                     }
                                                                                                     ?>
 
 <!-- <?php if ($ifclicked === 0): ?> -->
-                                                                                    <form action="indexcc36.php" method="post">
+                                                                                    <form action="index2.php?page=mining_list" method="post">
                                                                                         <!-- Add the CSRF token as a hidden input field -->
                                                                                         <input type="hidden" name="csrf_token"
                                                                                             value="<?php echo $_SESSION['csrf_token']; ?>">

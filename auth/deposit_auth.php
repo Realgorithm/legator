@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // $error = $stmt->error;
-            echo "sorry for incovinience please re enter the transaction id and send" . $error . "";
+            // echo "sorry for incovinience please re enter the transaction id and send" . $error . "";
             header("Location: ../index2.php?page=deposit&error=1");
         }
         $stmt->close();

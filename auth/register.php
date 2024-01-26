@@ -1,12 +1,6 @@
 <?php
 include 'conn.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
-require '../PHPMailer-6.9.1/src/Exception.php';
-require '../PHPMailer-6.9.1/src/PHPMailer.php';
-require '../PHPMailer-6.9.1/src/SMTP.php';
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
@@ -16,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password2 = $_POST['password2'];
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $email1 = $_POST['email1'];
-
 
     // Capture current date and time
     $registrationTimestamp = date('Y-m-d H:i:s');
@@ -81,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         $sql = "INSERT INTO userdetails (fullname, email, pass, username,registration_timestamp) VALUES (?, ?, ?, ?, ?)";
-        $sql_user = "INSERT INTO userinformation (total_balance, username, earning, withdraw, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0, ?, 0, 0, 0, 0, 0, 0, current_timestamp())";
+        $sql_user = "INSERT INTO userinformation (totalmining, total_balance, username, earning, withdraw, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0,5, ?, 0, 0, 0, 0, 0, 0, current_timestamp())";
 
         // Use prepared statements to prevent SQL injection
         $stmt_user = $connect_db->prepare($sql_user);
@@ -91,34 +84,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Execute the statement
         if ($stmt->execute() and $stmt_user->execute()) {
-            echo"final output";
-            try {
-                $mail = new PHPMailer(true);
+            
+                $subject = 'Welcome to LEGATOR - Successful Signup!';
+                $body = "<pre>Dear $fullname,
 
-                // Server settings
-                $mail->isSMTP();
-                $mail->Host = 'localhost'; // Set your SMTP server
-                $mail->SMTPAuth = true;
-                $mail->Username = 'your_username@example.com'; // SMTP username
-                $mail->Password = 'your_password'; // SMTP password
-                // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
-                $mail->Port = 25; // TCP port to connect to
+                Welcome to LEGATOR! We're thrilled to have you on board. Your signup was successful, and we're excited to provide you with a seamless trading experience.
+                
+                *<b>Account Information:</b>*
+                - Username: $username
+                - Password: $password
+                
+                Whether you're a seasoned trader or just getting started, LEGATOR is designed to meet your trading needs. Explore our platform, discover market opportunities, and stay updated on the latest trends.
+                
+                If you have any questions or need assistance, our support team is here to help. Feel free to reach out at [support@legator.com].
+                
+                Happy trading!
+                
+                Best regards,
+                The LEGATOR Team</pre>";
 
-                // Recipients
-                $mail->setFrom('Legatordigital@gmail.com', 'Legator');
-                $mail->addAddress($email, $username);
-
-                // Content
-                $mail->isHTML(true);
-                $mail->Subject = 'Welcome to Legator';
-                $mail->Body = 'Dear User,<br><br>Thank you for registering on Legator. We appreciate your membership.<br><br>Best regards,<br>Legator Team';
-
-                $mail->send();
-                echo 'Registration successful. Welcome email sent!';
-
-            } catch (Exception $e) {
-                echo "Registration successful, but there was an error sending the welcome email. Error: {$mail->ErrorInfo}";
-            }
+                sendCustomEmail($subject,$body);
             // Redirect to the dashboard.html page with an error parameter
             header("Location: ../index2.php");
             // exit;
