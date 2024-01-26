@@ -32,10 +32,8 @@ function sendCustomEmail( $subject, $message) {
         $mail->Body = $message;
 
         $mail->send();
-        echo 'Email sent successfully!';
 
     } catch (Exception $e) {
-        echo "Error sending email. Error: {$mail->ErrorInfo}";
     }
 }
 ?>
