@@ -1,5 +1,6 @@
 <?php
 include 'conn.php';
+include 'mail.php';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtEmail->close();
 
         // Store relevant user information in the session
-        $_SESSION['username'] = $userDetails['username'];
+        $_SESSION['username'] = $username;
 
         // Insert data into the database (replace 'your_table' with your actual table name)
         // Assume you have columns: fullname, username, password, email
