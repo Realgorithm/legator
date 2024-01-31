@@ -3,7 +3,7 @@ ini_set('display_errors', true);
 error_reporting(E_ALL ^ E_NOTICE);
 
 include 'conn.php';
-include 'auth/mail.php';
+include 'mail_auth.php';
 
 
 // Check if the form is submitted

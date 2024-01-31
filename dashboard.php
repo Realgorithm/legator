@@ -17,8 +17,8 @@ if (!isset($_SESSION['username'])) {
         <div class="card-body">
             <div class="dashboard-info row">
                 <div class="info-text">
-                    <h5 class="card-title">Welcome back
-                        <?php echo $username ?>
+                    <h5 class="card-title">Welcome back, <span style="text-transform: capitalize;"><?php echo $username ?></span>
+
                     </h5>
                     <p>"It's easy – our trading rigs are up and running. No need to worry about making mistakes
                         and losing money while trying to make trading calls. We've got a highly profitable team

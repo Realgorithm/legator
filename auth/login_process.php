@@ -24,15 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtGetUser->bind_param("s", $username);
         $stmtGetUser->execute();
         $result = $stmtGetUser->get_result();
-        echo "executed";
 
         // Check if the user exists
         if ($result->num_rows === 1) {
             $userDetails = $result->fetch_assoc();
-            echo "get data ";
-
-            echo $password;
-            echo $userDetails['pass'];
+            
             // Verify the password
             if (password_verify($password, $userDetails['pass'])) {
                 echo "pass varified";
@@ -75,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         // Credentials are not valid, show an error message or redirect to the login page with an error parameter
-        // header("Location: ../index.php?page=login&error=1");
+        header("Location: ../index.php?page=login&error=1");
         exit();
     }
 }
