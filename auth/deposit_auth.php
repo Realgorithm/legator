@@ -1,9 +1,16 @@
 <?php
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ E_NOTICE);
 include 'user_details.php';
 include 'conn.php';
 // Example usage:
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['hiddenInput'])==='save') {
+    echo "start";
+    include 'upload.php';
+    // Check if the flag is set
+    if (isset($executeCardAuth) && $executeCardAuth) {
+    if (($_POST['save'])==='save') {
+        echo"start deposit";
     // Retrieve user credentials from the form
     $depositId = $_POST['depositid'];
     $depositamount =$_POST['amount'];
@@ -21,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "Username does not exist. Proceed with registration or other logic.";
         echo "deposit id:". $depositId. "username:". $username. "Amount". $depositamount;
-        $insertQuery = "INSERT INTO `deposits` (`deposit_id`, `username`, `plan`, `amount`, `isdeposit`, `processed`) VALUES (?, ?, ?, ?, 0, 0)";
+        $insertQuery = "INSERT INTO `deposits` (`deposit_id`, `username`, `plan`, `amount`, `isdeposit`, `processed`, `claimed`) VALUES (?, ?, ?, ?, 0, 0, 0)";
         $stmt = $connect_db->prepare($insertQuery);
         $stmt->bind_param("ssss", $depositId, $username,$planNo, $depositamount);
         if ($stmt->execute()) {
@@ -31,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // $error = $stmt->error;
             // echo "sorry for incovinience please re enter the transaction id and send" . $error . "";
             header("Location: ../index2.php?page=deposit&error=1");
+            exit();
         }
         $stmt->close();
     }
@@ -39,5 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmtcheck->close();
     $connect_db->close();
 }
+    }
+    else{
+        header("Location: ../index2.php?page=deposit_final&upload=1");
+        exit();
+    }
 }
 ?>

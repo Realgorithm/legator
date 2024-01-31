@@ -2,8 +2,8 @@
         <div class="lime-sidebar-inner slimscroll">
             <ul class="accordion-menu">
                 <li class="sidebar-title">
-                    Hello
-                    <?php echo $username ?>
+                    <span style="text-transform: lowercase;">Hello,</span> <span style="color: green;"><?php echo $username ?></span>
+                    
                 </li>
                 <li>
                     <a href="index2.php?page=dashboard"><i class="material-icons">airplay</i>Mining Dashboard</a>

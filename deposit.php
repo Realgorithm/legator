@@ -1,4 +1,8 @@
-<?php include 'auth/user_details.php';
+<?php 
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ E_NOTICE);
+include 'auth/user_details.php';
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 

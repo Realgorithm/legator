@@ -58,10 +58,6 @@
     }
     ?>
 
-    <script>
-        showErrorMessage('<?php echo $updateMessage ?>', 'success')
-    </script>
-
                                 <div class="card">
                                     <h5 class="card-header bg-primary text-white">Deposit List</h5>
                                     <div class="card-body">

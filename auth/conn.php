@@ -2,7 +2,7 @@
 //connecting to the Database
 $serverName ="localhost";
 $userName = "root";
-$password = "";
+$password = "2508";
 
 //create a connection
 $conn = mysqli_connect($serverName, $userName, $password);
@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
     exit(1);
 }
 // Create a new database
-$databaseName = "tabish";
+$databaseName = "legator";
 $sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS $databaseName";
 
 if (mysqli_query($conn, $sqlCreateDatabase)) {

@@ -1,8 +1,8 @@
 <?php
 // Assume you have a database connection ($conn)
 include 'conn.php';
-include 'referral.php';
-require 'mail.php';
+include 'referral_auth.php';
+require 'mail_auth.php';
 // Function to update user balance
 function updateDeposit($username, $depositAmount)
 {

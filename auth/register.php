@@ -1,6 +1,10 @@
 <?php
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ E_NOTICE);
+
 include 'conn.php';
-include 'mail.php';
+include 'auth/mail.php';
+
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -75,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         $sql = "INSERT INTO userdetails (fullname, email, pass, username,registration_timestamp) VALUES (?, ?, ?, ?, ?)";
-        $sql_user = "INSERT INTO userinformation (totalmining, total_balance, username, earning, withdraw, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0, 10, ?, 0, 0, 0, 0, 0, 0, current_timestamp())";
+        $sql_user = "INSERT INTO userinformation (totalmining, total_balance, username, earning, withdraw, withdrawal_amount, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0, 10, ?, 0, 0, 0, 0, 0, 0, 0, current_timestamp())";
 
         // Use prepared statements to prevent SQL injection
         $stmt_user = $connect_db->prepare($sql_user);
