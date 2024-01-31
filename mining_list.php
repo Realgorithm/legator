@@ -1,4 +1,7 @@
-    <?php include("auth/conn.php");
+    <?php 
+    ini_set('display_errors', true);
+    error_reporting(E_ALL ^ E_NOTICE);
+    include("auth/conn.php");
     include 'auth/user_details.php';
     // Function to check if the user is eligible for the option
     function isEligibleForOption($lastOptionReceived, $deposit_id)
@@ -18,24 +21,24 @@
         // echo 'current time: ' . $currentDateTime->format('Y-m-d H:i:s') . '<br>';
         // echo 'elapsed time: ' . $interval->format('%R%a days %H hours %I minutes') . '<br>';
         // echo 'hours since last option: ' . $hoursSinceLastOption . '<br>';
-    
+
         // Calculate the total hours since the last option
-    $hoursSinceLastOption = $interval->days * 24 + $interval->h + $interval->i / 60;
+        $hoursSinceLastOption = $interval->days * 24 + $interval->h + $interval->i / 60;
 
-    // Check if the user is eligible for the option
-    $isEligible = ($hoursSinceLastOption >= 24 && $hoursSinceLastOption < 36);
+        // Check if the user is eligible for the option
+        $isEligible = ($hoursSinceLastOption >= 24 && $hoursSinceLastOption < 36);
 
-    // If the user is not eligible, update the lastOptionReceived to the current time
-    if ($hoursSinceLastOption > 36) {
-        $updateTimeQuery = "UPDATE deposits SET last_option_received = CURRENT_TIMESTAMP WHERE deposit_id = ?";
-        $stmtUpdateTime = $connect_db->prepare($updateTimeQuery);
-        $stmtUpdateTime->bind_param("i", $deposit_id);
-        $stmtUpdateTime->execute();
-        $stmtUpdateTime->close();
-        echo "<p>missed chance<br></p>";
-    }
+        // If the user is not eligible, update the lastOptionReceived to the current time
+        if ($hoursSinceLastOption > 36) {
+            $updateTimeQuery = "UPDATE deposits SET last_option_received = CURRENT_TIMESTAMP WHERE deposit_id = ?";
+            $stmtUpdateTime = $connect_db->prepare($updateTimeQuery);
+            $stmtUpdateTime->bind_param("i", $deposit_id);
+            $stmtUpdateTime->execute();
+            $stmtUpdateTime->close();
+            echo "<p>missed chance<br></p>";
+        }
 
-    return $isEligible;
+        return $isEligible;
     }
 
     // Function to process the "Get Option" click
@@ -58,167 +61,180 @@
     }
     ?>
 
-                                <div class="card">
-                                    <h5 class="card-header bg-primary text-white">Deposit List</h5>
-                                    <div class="card-body">
-                                        <br />
-                                        <b>Total: $
-                                            <?php echo $totalAmount ?>
-                                        </b><br><br>
-                                        <?php $no = 1; ?>
-                                        <?php while ($no <= 3): ?>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <tr>
-                                                        <td colspan=3 align=center>
-                                                            <div class="alert alert-success" role="alert">
-                                                                <?php switch ($no) {
-                                                                    case 1:
-                                                                        echo 'FIRST';
-                                                                        break;
-                                                                    case 2:
-                                                                        echo 'SECOND';
-                                                                        break;
-                                                                    case 3:
-                                                                        echo 'THIRD';
-                                                                        break;
-                                                                } ?> <b>PLAN
-                                                                </b>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class=item>
-                                                            <table class="table">
-                                                                <tr>
-                                                                    <th class=inheader>Sno</th>
-                                                                    <th class=inheader>Amount Spent ($)</th>
-                                                                    <th class=inheader>
-                                                                        <nobr>Total Profit</nobr>
-                                                                    </th>
-                                                                    <th>Get Money</th>
-                                                                </tr>
-                                                                <?php
-                                                                $getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1";
-                                                                $stmtGetDeposit = $connect_db->prepare($getDepositQuery);
-                                                                $stmtGetDeposit->bind_param("s", $_SESSION['username']);
-                                                                $stmtGetDeposit->execute();
-                                                                $result = $stmtGetDeposit->get_result();
-                                                                if ($result->num_rows > 0) {
-                                                                    $sno = 1;
-                                                                    while ($row = $result->fetch_assoc()) {
-                                                                        $deposit_id = $row['deposit_id'];
-                                                                        $plan = $row['plan'];
-                                                                        $amount = $row['amount'];
-                                                                        $claimed = $row['claimed'];
-                                                                        $option = $row['last_option_received'];
-                                                                        switch ($plan) {
-                                                                            case '1':
-                                                                                $recievedAmount = $amount * 1.4;
-                                                                                $getAmount = $recievedAmount / 30;
-                                                                                $claimed = $claimed + $getAmount;
-                                                                                break;
-                                                                            case '2':
-                                                                                $recievedAmount = $amount * 1.8;
-                                                                                $getAmount = $recievedAmount / 30;
-                                                                                $claimed = $claimed + $getAmount;
-                                                                                break;
-                                                                            case '3':
-                                                                                $recievedAmount = $amount * 2;
-                                                                                $getAmount = $recievedAmount / 30;
-                                                                                $claimed = $claimed + $getAmount;
-                                                                                break;
-                                                                        }
-                                                                        if ($plan === $no): ?>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <?php echo $sno ?>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <?php echo $amount ?>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <?php echo $recievedAmount ?>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <?php // Check if the user is eligible for the option
-                                                                                    
-                                                                                                    if ($recievedAmount !== ($claimed - $getAmount)) {
-                                                                                                        if (isEligibleForOption($option, $deposit_id)) {
-                                                                                                            $ifclicked = 0;
-                                                                                                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                                                                                                if ((isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token'])) {
-
-                                                                                                                    // User is eligible, update the last option received timestamp
-                                                                                                                    $updateOptionQuery = "UPDATE deposits SET last_option_received = CURRENT_TIMESTAMP, claimed = $claimed WHERE deposit_id = ?";
-                                                                                                                    $stmtUpdateOption = $connect_db->prepare($updateOptionQuery);
-                                                                                                                    $stmtUpdateOption->bind_param("i", $deposit_id);
-                                                                                                                    if ($stmtUpdateOption->execute()) {
-                                                                                                                        // Process the "Get Option" click
-                                                                                                                        processGetOption($username, $getAmount);
-                                                                                                                        $ifclicked = 1;
-                                                                                    
-                                                                                                                    } else {
-                                                                                    
-                                                                                                                        echo "Error updating option timestamp: " . $stmtUpdateOption->error;
-                                                                                                                    }
-                                                                                                                    $stmtUpdateOption->close();
-                                                                                                                    // Clear the form token after processing to prevent resubmission
-                                                                                                                    unset($_SESSION['csrf_token']);
-                                                                                                                } else {
-                                                                                                                    // Token is not valid, handle accordingly (e.g., display an error)
-                                                                                                                    echo ''. $stmtUpdateOption->error;
-                                                                                                                }
-                                                                                                            }
-                                                                                                            // Generate a unique token for the form
-                                                                                                            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-                                                                                                        } else {
-                                                                                                            echo "<p>not eligible now</p>";
-                                                                                                            $ifclicked = 1;
-                                                                                                        }
-                                                                                                    } else {
-                                                                                                        $ifclicked = 1;
-                                                                                                        echo "claimed all";
-                                                                                                    }
-                                                                                                    ?>
-
-<!-- <?php if ($ifclicked === 0): ?> -->
-                                                                                    <form action="index2.php?page=mining_list" method="post">
-                                                                                        <!-- Add the CSRF token as a hidden input field -->
-                                                                                        <input type="hidden" name="csrf_token"
-                                                                                            value="<?php echo $_SESSION['csrf_token']; ?>">
-                                                                                        <button type="submit" name="getreward"
-                                                                                            value="getreward"
-                                                                                            class="btn btn-warning m-t-xs">Get
-                                                                                            Reward</button>
-                                                                                    </form>
-
-<!-- <?php endif; ?> -->
-                                                                                </td>
-                                                                            </tr>
-
-                                                                            <?php $sno++ ?>
-                                                                        <?php else:
-                                                                            $sno = 1 ?>
-                                                                        <?php endif; ?>
-                                                                    <?php }
-                                                                } else { ?>
-                                                                    <tr>
-                                                                        <td colspan=4>
-                                                                            <div class="alert alert-warning m-b-lg"
-                                                                                role="alert">
-                                                                                <b>No deposits for this plan</b>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                <?php } ?>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <?php $no++ ?>
-                                        <?php endwhile; ?>
-                                        <br>
-                                    </div>
+    <div class="card">
+        <h5 class="card-header bg-primary text-white">Deposit List</h5>
+        <div class="card-body">
+            <br />
+            <b>Total: $
+                <?php echo $totalAmount ?>
+            </b><br><br>
+            <?php $no = 1; ?>
+            <?php while ($no <= 3) : ?>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td colspan=3 align=center>
+                                <div class="alert alert-success" role="alert">
+                                    <?php switch ($no) {
+                                        case 1:
+                                            echo 'FIRST';
+                                            break;
+                                        case 2:
+                                            echo 'SECOND';
+                                            break;
+                                        case 3:
+                                            echo 'THIRD';
+                                            break;
+                                    } ?> <b>PLAN
+                                    </b>
                                 </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=item>
+                                <table class="table">
+                                    <tr>
+                                        <th class=inheader>Sno</th>
+                                        <th class=inheader>Amount Spent ($)</th>
+                                        <th class=inheader>
+                                            <nobr>Total Profit</nobr>
+                                        </th>
+                                        <th>Get Money</th>
+                                    </tr>
+                                    <?php
+                                    $getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1";
+                                    $stmtGetDeposit = $connect_db->prepare($getDepositQuery);
+                                    $stmtGetDeposit->bind_param("s", $_SESSION['username']);
+                                    $stmtGetDeposit->execute();
+                                    $result = $stmtGetDeposit->get_result();
+                                    if ($result->num_rows > 0) {
+                                        $sno = 1;
+                                        while ($row = $result->fetch_assoc()) {
+                                            $deposit_id = $row['deposit_id'];
+                                            $plan = $row['plan'];
+                                            $amount = $row['amount'];
+                                            $claimed = $row['claimed'];
+                                            $option = $row['last_option_received'];
+                                            $depositDate = strtotime($row['deposit_date']);
+                                            switch ($plan) {
+                                                case '1':
+                                                    $recievedAmount = $amount * 1.4;
+                                                    $getAmount = $recievedAmount / 30;
+                                                    $claimed = $claimed + $getAmount;
+                                                    break;
+                                                case '2':
+                                                    $recievedAmount = $amount * 1.8;
+                                                    $getAmount = $recievedAmount / 30;
+                                                    $claimed = $claimed + $getAmount;
+                                                    break;
+                                                case '3':
+                                                    $recievedAmount = $amount * 2;
+                                                    $getAmount = $recievedAmount / 30;
+                                                    $claimed = $claimed + $getAmount;
+                                                    break;
+                                            }
+                                            if ($plan === $no) : ?>
+                                                <tr>
+                                                    <td>
+                                                        <?php echo $sno ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $amount; ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $recievedAmount ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php
+                                                        $currentDate = strtotime(date('Y-m-d'));
+                                                        // Calculate the difference in seconds
+                                                        $diffInSeconds = $currentDate - $depositDate;
+
+                                                        // Convert seconds to days
+                                                        $daysDifference = floor($diffInSeconds / (60 * 60 * 24));
+
+                                                        // echo "Difference in days: $daysDifference";
+                                                        
+                                                        if ($daysDifference == 30) {
+                                                            // rigs is complete, update the rigs value
+                                                            $updateRigsQuery = "UPDATE userinformation SET rigs = rigs - $amount WHERE username = ?";
+                                                            $stmtRigsOption = $connect_db->prepare($updateRigsQuery);
+                                                            $stmtRigsOption->bind_param("s", $username);
+                                                            $stmtRigsOption->execute();
+                                                        }
+                                                        // Check if the user is eligible for the option
+
+                                                        if ($recievedAmount !== ($claimed - $getAmount)) {
+                                                            if (isEligibleForOption($option, $deposit_id)) {
+                                                                $ifclicked = 0;
+                                                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                                                    if ((isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token'])) {
+
+                                                                        // User is eligible, update the last option received timestamp
+                                                                        $updateOptionQuery = "UPDATE deposits SET last_option_received = CURRENT_TIMESTAMP, claimed = $claimed WHERE deposit_id = ?";
+                                                                        $stmtUpdateOption = $connect_db->prepare($updateOptionQuery);
+                                                                        $stmtUpdateOption->bind_param("i", $deposit_id);
+                                                                        if ($stmtUpdateOption->execute()) {
+                                                                            // Process the "Get Option" click
+                                                                            processGetOption($username, $getAmount);
+                                                                            $ifclicked = 1;
+                                                                        } else {
+
+                                                                            echo "Error updating option timestamp: " . $stmtUpdateOption->error;
+                                                                        }
+                                                                        $stmtUpdateOption->close();
+                                                                        // Clear the form token after processing to prevent resubmission
+                                                                        unset($_SESSION['csrf_token']);
+                                                                    } else {
+                                                                        // Token is not valid, handle accordingly (e.g., display an error)
+                                                                        echo '' . $stmtUpdateOption->error;
+                                                                    }
+                                                                }
+                                                                // Generate a unique token for the form
+                                                                $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                                                            } else {
+                                                                echo "<p>not eligible now</p>";
+                                                                $ifclicked = 1;
+                                                            }
+                                                        } else {
+                                                            $ifclicked = 1;
+                                                            echo "claimed all";
+                                                        }
+                                                        ?>
+
+                                                        <!-- <?php if ($ifclicked === 0) : ?> -->
+                                                        <form action="index2.php?page=mining_list" method="post">
+                                                            <!-- Add the CSRF token as a hidden input field -->
+                                                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                                                            <button type="submit" name="getreward" value="getreward" class="btn btn-warning m-t-xs">Get
+                                                                Reward</button>
+                                                        </form>
+
+                                                        <!-- <?php endif; ?> -->
+                                                    </td>
+                                                </tr>
+
+                                                <?php $sno++ ?>
+                                            <?php else :
+                                                $sno = 1 ?>
+                                            <?php endif; ?>
+                                        <?php }
+                                    } else { ?>
+                                        <tr>
+                                            <td colspan=4>
+                                                <div class="alert alert-warning m-b-lg" role="alert">
+                                                    <b>No deposits for this plan</b>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <?php $no++ ?>
+            <?php endwhile; ?>
+            <br>
+        </div>
+    </div>
