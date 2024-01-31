@@ -120,7 +120,7 @@
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6">
 										<a href="index.php?page=home" aria-current="page"
-											class="elementor-item elementor-item-active" tabindex="-1">Home</a>
+											class="elementor-item" tabindex="-1">Home</a>
 									</li>
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8">
