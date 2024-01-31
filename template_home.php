@@ -1,19 +1,32 @@
 <!doctype html>
 <html lang="en-US">
+<?php
+// Original string
+$originalString = $pageContent;
 
-<!-- Mirrored from www.Legatordigitalpro.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 12:07:50 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+// Text to be removed from the end
+$textToRemove = ".html";
+
+// Check if the original string ends with the text to be removed
+if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
+    // Remove the text from the end
+    // $trimmedString = rtrim($originalString, $textToRemove);
+	$trimmedString = strtoupper(substr($originalString, 0, -strlen($textToRemove)));
+}
+?>
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Home &#8211; LEGATOR</title>
+	<title><?php echo $trimmedString?> &#8211; LEGATOR</title>
 	<meta name='robots' content='max-image-preview:large'>
-	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Feed" href="feed/index.html">
+	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Feed" href="error_page.html">
 	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Comments Feed"
-		href="comments/feed/index.html">
+		href="error_page.html">
 
 
 	<meta property="og:title" content="Legator | Online Mining And Digital Services" />
@@ -1115,6 +1128,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 
 	<link rel='stylesheet' id='e-animations-css'
 		href='wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.17.3' media='all' />
+		
 	<script src="wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0"
 		id="hello-theme-frontend-js"></script>
 	<script src="wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script5b75.js?ver=3.0.2"

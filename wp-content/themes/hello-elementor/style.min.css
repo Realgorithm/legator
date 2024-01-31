@@ -59,7 +59,12 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 0.9rem;
-  color: rgb(165, 165, 165);
+  color: #b0f4a7;
+}
+
+p.bg-white{
+  color:#400b96
+
 }
 hr {
   -webkit-box-sizing: content-box;

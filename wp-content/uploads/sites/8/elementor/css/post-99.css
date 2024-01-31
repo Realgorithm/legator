@@ -41,7 +41,7 @@
   letter-spacing: var(--e-global-typography-25fd629-letter-spacing);
   word-spacing: var(--e-global-typography-25fd629-word-spacing);
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  font-size: 200%;
+  font-size: 60px;
   color:silver;
 }
 
