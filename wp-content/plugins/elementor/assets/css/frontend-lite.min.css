@@ -448,7 +448,7 @@
 .elementor *,
 .elementor :after,
 .elementor :before {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .elementor a {
@@ -2391,7 +2391,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 
 .e-con>.e-con-inner>.elementor-widget>.elementor-widget-container,
 .e-con>.elementor-widget>.elementor-widget-container {
-    height: 100%
+    height: 75%
 }
 
 .e-con.e-con>.e-con-inner>.elementor-widget,
@@ -2790,7 +2790,8 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 }
 
 .elementor-element .elementor-widget-container {
-    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s)
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+    color: #b01b1b;
 }
 
 .elementor-button {
@@ -2834,7 +2835,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 .elementor-button-text {
     flex-grow: 1;
     order: 10;
-    display: inline-block
+    display: inline-block;
 }
 
 .elementor-button.elementor-size-xs {
@@ -3276,7 +3277,8 @@ button.swiper-pagination-bullet {
 
 .swiper-container-coverflow .swiper-wrapper,
 .swiper-container-flip .swiper-wrapper {
-    -ms-perspective: 1200px
+    /* -ms-perspective: 1200px */
+    perspective: 1200px;   /* Fixed by Terminator*/
 }
 
 .swiper-container-cube,
@@ -3384,7 +3386,8 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
-    -ms-touch-action: none;
+    /* -ms-touch-action: none; */
+    touch-action: none;     /* Fixed by Terminator*/
     background: rgba(0, 0, 0, .1)
 }
 
@@ -4259,7 +4262,7 @@ button.swiper-pagination-bullet {
 }
 
 .elementor-widget-text-path svg path {
-    vector-effect: non-scaling-stroke;
+    -webkit-vector-effect: non-scaling-stroke;
     fill: var(--path-fill, transparent);
     stroke: var(--stroke-color, transparent);
     stroke-width: var(--stroke-width, 1px);

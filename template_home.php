@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Homepage &#8211; Legator Digital</title>
+	<title>Home &#8211; LEGATOR</title>
 	<meta name='robots' content='max-image-preview:large'>
 	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Feed" href="feed/index.html">
 	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Comments Feed"
@@ -403,8 +403,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 						<div class="elementor-element elementor-element-4e774ab elementor-widget elementor-widget-heading"
 							data-id="4e774ab" data-element_type="widget" data-widget_type="heading.default">
 							<div class="elementor-widget-container">
-								<h2 class="elementor-heading-title elementor-size-default">Created by professionals. For
-									professionals.</h2>
+								<h2 class="elementor-heading-title elementor-size-default">Pro Platform, By Professionals for Professionals</h2>
 							</div>
 						</div>
 					</div>
@@ -559,7 +558,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 											data-widget_type="image.default">
 											<div class="elementor-widget-container">
 												<img width="300" height="79"
-													src="wp-content/uploads/sites/8/2022/11/Logo1.png"
+													src="wp-content/uploads/sites/8/2022/11/logo1.png"
 													class="attachment-full size-full wp-image-41" alt=""
 													loading="lazy" />
 											</div>
@@ -573,14 +572,13 @@ making payments faster, more secure, and less expensive on a global scale." />
 														<span class="elementor-icon-list-icon">
 															<i aria-hidden="true" class="fas fa-map-marker-alt"></i>
 														</span>
-														<span class="elementor-icon-list-text">Inwalidzka 11, 41-506
-															Chorzów, Poland</span>
+														<span class="elementor-icon-list-text">LEGATOR DIGITAL, NEWZEALAND INCORPORATED 2564509</span>
 													</li>
 													<li class="elementor-icon-list-item">
 														<span class="elementor-icon-list-icon">
 															<i aria-hidden="true" class="mdi mdi-email"></i> </span>
 														<span
-															class="elementor-icon-list-text">support@Legatordigital.com</span>
+															class="elementor-icon-list-text">support@legatordigital.com</span>
 													</li>
 
 												</ul>
@@ -601,7 +599,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 											data-id="d06889f" data-element_type="widget"
 											data-widget_type="heading.default">
 											<div class="elementor-widget-container">
-												<div class="elementor-heading-title elementor-size-default">Copyright © 2023 Legator Digital, All rights reserved.</div>
+												<div class="elementor-heading-title elementor-size-default">Copyright © 2024 Legator Digital, All rights reserved.</div>
 											</div>
 										</div>
 									</div>
@@ -1097,13 +1095,13 @@ making payments faster, more secure, and less expensive on a global scale." />
 										<div class="elementor-element elementor-element-1dbb54c elementor-widget elementor-widget-text-editor"
 											data-id="1dbb54c" data-element_type="widget"
 											data-widget_type="text-editor.default">
-											<div class="elementor-widget-container">
+											<!-- <div class="elementor-widget-container">
 												<p>1) or fractional share<br />Investing in the stock markets carries
 													risk: the value of investments can go up as well as down and you may
 													receive back less than your original investment. Individual
 													investors should make their own decisions or seek independent
 													advice.</p>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>

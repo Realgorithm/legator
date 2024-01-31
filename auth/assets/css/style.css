@@ -42,7 +42,6 @@ body {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Open Sans', sans-serif;
 }
-
 /** Login 2 start **/
 .login-2 .login-inner-form .col-pad-0{
     padding: 0;
@@ -109,7 +108,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-size: 18px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
-    color: #25106c;
+    color: silver !important;
 }
 
 .login-2 .login-inner-form .form-group {
@@ -339,8 +338,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /** MEDIA **/
 @media (max-width: 992px) {
-    .login-2 .none-2{
-        display: inline-flex;
+    .login-2 .none-992{
+        display: none;
     }
 
     .login-2 .bg-color{

@@ -28,7 +28,7 @@
 									display: inline-block
 								}
 							</style> <img width="300" height="79"
-								src="wp-content/uploads/sites/8/2022/11/Logo1.png"
+								src="wp-content/uploads/sites/8/2022/11/logo1.png"
 								class="attachment-full size-full wp-image-40" alt="" loading="lazy">
 						</div>
 					</div>

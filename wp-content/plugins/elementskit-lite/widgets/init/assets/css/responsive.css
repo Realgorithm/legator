@@ -12,7 +12,7 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-}
+} 
 @media screen and (min-width: 1025px) {
   .ekit-image-accordion-vertical .ekit-image-accordion {
     -webkit-box-orient: vertical;
