@@ -41,6 +41,32 @@
         cursor: pointer;
     }
 </style>
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Get form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Admin email
+    $adminEmail = 'admin@example.com';
+
+    // Email body
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Message:\n$message";
+
+    // Send email
+    $headers = "From: $email\r\n";
+    mail($adminEmail, $subject, $body, $headers);
+
+    $msg = "<h2>Thank you for your submission!</h2><p> We'll get back to you soon.</p>";
+}
+?>
+<script>
+    showErrorMessage("<?php echo $msg ?>", 'success')
+</script>
 <div class="container">
     <h2>Contact Us</h2>
     <form action="#" method="post">

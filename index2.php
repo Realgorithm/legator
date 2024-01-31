@@ -41,7 +41,7 @@ switch ($page) {
         $pageContent = 'security.php';
         break;
     case 'support':
-        $pageContent = 'contact.html';
+        $pageContent = 'contact.php';
         break;
         case 'deposit_final':
             $pageContent = 'deposit_final.php';

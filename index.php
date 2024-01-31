@@ -19,7 +19,7 @@ switch ($page) {
         $pageContent = 'pricing.html';
         break;
     case 'support':
-        $pageContent = 'contact.html';
+        $pageContent = 'contact.php';
         break;
     case 'signup':
         $pageContent = 'register.html';
