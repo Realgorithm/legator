@@ -11,7 +11,7 @@ $textToRemove = ".html";
 if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
     // Remove the text from the end
     // $trimmedString = rtrim($originalString, $textToRemove);
-	$trimmedString = strtoupper(substr($originalString, 0, -strlen($textToRemove)));
+	$trimmedString = substr($originalString, 0, -strlen($textToRemove));
 }
 ?>
 
@@ -22,18 +22,21 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title><?php echo $trimmedString?> &#8211; LEGATOR</title>
+	<title><?php echo $trimmedString?> &#8211; Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</title>
+    <title>Bitcoin Mining Investment: The Future of Digital Currency</title>
 	<meta name='robots' content='max-image-preview:large'>
 	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Feed" href="error_page.html">
 	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Comments Feed"
 		href="error_page.html">
 
+<meta name="geo.placename" content="Cityville, NEWZEALAND">
 
 	<meta property="og:title" content="Legator | Online Mining And Digital Services" />
 	<meta property="og:description"
 		content="Legator Digital services is the easiest and most effective way to make money digital world without buying and maintaining your mining equipment." />
-	<meta name="description" content="At Legator Digital we see the potential for crypto currency to revolutionize the financial industry,
-making payments faster, more secure, and less expensive on a global scale." />
+	<meta name="description" content="Legator is best crpyto mining website, bitcoin mining investment and cryptocurrency mining investment we see the potential for crypto currency to revolutionize the financial industry,making payments faster, more secure, and less expensive on a global scale." />
+    <meta name="description" content="Discover the lucrative world of cryptocurrency mining investment and maximize your profits with Legator Pro. Join us today!" />
+    <meta name="description" content="At Legator. legator is the best crypto earning, make positive earning, earning from home, making money from home, high profit/earning platform, big profit crypto website and the best website for crypto currency, bitcoin, ethereum trc20 erc20. easy crypto earning money online nz" />
 	<meta name="robots" content="index, follow" />
 
 	<script>
@@ -71,6 +74,27 @@ making payments faster, more secure, and less expensive on a global scale." />
 	<!-- /Chatra {/literal} -->
 	<link rel="icon" href="images/logo.png"
 		sizes="32x32" />
+
+        <!-- External CSS libraries -->
+    <link type='text/css' rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link type='text/css' rel='stylesheet' href='assets/fonts/font-awesome/css/font-awesome.min.css'>
+    <link type='text/css' rel='stylesheet' href='assets/fonts/flaticon/font/flaticon.css'>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/owl.carousel.min.css'>
+    <link rel='stylesheet' href='css/all.min.css'>
+    <link rel='stylesheet' href='css/animate.css'>
+    <link rel='stylesheet' href='css/main.css'>
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="auth/assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="auth/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="auth/assets/css/skins/default.css">
 
 	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.1.1'
 		media='all'>
@@ -393,6 +417,7 @@ making payments faster, more secure, and less expensive on a global scale." />
 	<a class="skip-link screen-reader-text" href="#content">
 		Skip to content</a>
 	<?php require 'nav_home.php'; ?>
+    <h1 class="hide">Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</h1>
 
 	<!-- Display an error message -->
 	<div id="error-message" class="error-message alert alert-danger">
@@ -1181,10 +1206,14 @@ making payments faster, more secure, and less expensive on a global scale." />
 	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor5b75.js?ver=3.0.2"
 		id="elementskit-elementor-js"></script>
 
+
+    <!-- External JS libraries -->
+    <script src="assets/js/jquery-2.2.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS Script -->
+
 </body>
 <script src="//code.tidio.co_443/9quipgijvkwhsexreqqfpjeri9h4jp0o.js" async></script>
-
-
-<!-- Mirrored from www.Legatordigitalpro.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 12:08:15 GMT -->
 
 </html>

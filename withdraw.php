@@ -80,7 +80,7 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($isAccountSet and $withdrawal_amount >= 200): ?>
+                                <?php if ($isAccountSet and $withdrawal_amount >= 100): ?>
                                     <input type=number name=amount id="withdrawAmount" class="form-control" value=''
                                         placeholder="Enter the Amount">
                                 </td>
@@ -101,7 +101,7 @@
             </div>
         </div>
         <br><br>
-        <?php if ($withdrawal_amount < 200): ?>
+        <?php if ($withdrawal_amount < 100): ?>
             <div class="alert alert-warning m-b-lg" role="alert">
                 You have no funds to withdraw.
             </div>

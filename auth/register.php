@@ -62,8 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmtEmail->close();
 
-        // Store relevant user information in the session
-        $_SESSION['username'] = $username;
 
         // Insert data into the database (replace 'your_table' with your actual table name)
         // Assume you have columns: fullname, username, password, email
@@ -89,6 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Execute the statement
         if ($stmt->execute() and $stmt_user->execute()) {
+
+             // Store relevant user information in the session
+            $_SESSION['username'] = $username;
             
                 $subject = 'Welcome to LEGATOR - Successful Signup!';
                 $body = "<pre>Dear $fullname,
@@ -107,19 +108,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     The LEGATOR Team</pre>";
 
                 sendCustomEmail($subject,$body);
-            // Redirect to the dashboard.html page with an error parameter
-            header("Location: ../index2.php");
-            // exit;
-            echo"exit successfully";
+                $isSignup=true;
 
         } else {
-            echo "Error: " . $stmt->error;
+            $isSignup=false;
         }
 
         // Close the statement and database connection
         $stmt->close();
         $stmt_user->close();
         $connect_db->close();
+    }
+    if($isSignup){
+        // Redirect to the dashboard.html page with an error parameter
+            header("Location: ../index2.php");
+            exit();
+    }else{
+        header("Location: ../index.php?page=signup&error=1")
+        exit();
     }
 }
 ?>

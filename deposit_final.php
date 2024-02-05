@@ -95,10 +95,10 @@
     <h5 class="card-header bg-primary text-white">Please confirm your deposit</h5>
     <div class="card-body">
         <br><br>
-        Hello Kindly click and copy the TRC20 address below and make deposit then save deposit to start
+        Hello Kindly click and copy the ERC20(Ethereum) address below and make deposit then save deposit to start
         earning<br><br>
         <div>
-            <span id="copyText" onclick="copyTextToClipboard()">TRCaFDAoRMmKvQPSDsJ1JdqhoQgioRhSXF</span>
+            <span id="copyText" onclick="copyTextToClipboard()">0x6281bfbce9afbab7ef2518b73412997ee392cd92</span>
             <!-- Pop-up notification div -->
             <span id="copyNotification">Copied!</span>
         </div><br>

@@ -46,9 +46,9 @@
 									vertical-align: middle;
 									display: inline-block
 								}
-							</style> <img width="300" height="79"
+							</style><a href="home"> <img width="300" height="79"
 								src="wp-content/uploads/sites/8/2022/11/logo1.png"
-								class="attachment-full size-full wp-image-40" alt="" loading="lazy">
+								class="attachment-full size-full wp-image-40" alt="" loading="lazy"></a>
 						</div>
 					</div>
 				</div>
@@ -68,37 +68,37 @@
 								<ul id="menu-1-b33ecb6" class="elementor-nav-menu">
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6">
-										<a href="index.php?page=home" aria-current="page"
+										<a href="home" aria-current="page"
 											class="elementor-item">Home</a>
 									</li>
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8">
-										<a href="index.php?page=about" class="elementor-item">About Us</a>
+										<a href="about" class="elementor-item">About Us</a>
 										<ul class="sub-menu elementor-nav-menu--dropdown">
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
-												<a href="index.php?page=about" class="elementor-sub-item">About
+												<a href="about" class="elementor-sub-item">About
 													Us</a>
 											</li>
 
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18">
-												<a href="index.php?page=faq" class="elementor-sub-item">FAQ</a>
+												<a href="faq" class="elementor-sub-item">FAQ</a>
 											</li>
 										</ul>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
-										<a href="index.php?page=pricing" class="elementor-item"> Pricing</a>
+										<a href="pricing" class="elementor-item"> Pricing</a>
 									</li>
 
 
 
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
-										<a href="index.php?page=support" class="elementor-item">Contact</a>
+										<a href="support" class="elementor-item">Contact</a>
 									</li>
 
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
-										<a href="index.php?page=login" class="elementor-item"> Login</a>
+										<a href="login" class="elementor-item"> Login</a>
 									</li>
 
 
@@ -119,43 +119,43 @@
 								<ul id="menu-2-b33ecb6" class="elementor-nav-menu">
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6">
-										<a href="index.php?page=home" aria-current="page"
+										<a href="home" aria-current="page"
 											class="elementor-item" tabindex="-1">Home</a>
 									</li>
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8">
-										<a href="index.php?page=about" class="elementor-item" tabindex="-1">About
+										<a href="about" class="elementor-item" tabindex="-1">About
 											Us</a>
 										<ul class="sub-menu elementor-nav-menu--dropdown">
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
-												<a href="index.php?page=about" class="elementor-sub-item"
+												<a href="about" class="elementor-sub-item"
 													tabindex="-1">About Us</a>
 											</li>
 
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18">
-												<a href="index.php?page=faq" class="elementor-sub-item"
+												<a href="faq" class="elementor-sub-item"
 													tabindex="-1">FAQ</a>
 											</li>
 										</ul>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
-										<a href="index.php?page=pricing" class="elementor-item" tabindex="-1">
+										<a href="pricing" class="elementor-item" tabindex="-1">
 											Pricing</a>
 									</li>
 
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
-										<a href="index.php?page=support" class="elementor-item"
+										<a href="support" class="elementor-item"
 											tabindex="-1">Contact</a>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
-										<a href="index.php?page=signup" class="elementor-item" tabindex="-1">
+										<a href="signup" class="elementor-item" tabindex="-1">
 											Register</a>
 									</li>
 
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
-										<a href="index.php?page=login" class="elementor-item" tabindex="-1">Login</a>
+										<a href="login" class="elementor-item" tabindex="-1">Login</a>
 									</li>
 								</ul>
 							</nav>
@@ -170,7 +170,7 @@
 						data-id="237b8c9" data-element_type="widget" data-widget_type="button.default">
 						<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-								<a href="index.php?page=signup"
+								<a href="signup"
 									class="elementor-button-link elementor-button elementor-size-sm" role="button">
 									<span class="elementor-button-content-wrapper">
 										<span class="elementor-button-text">Open Account</span>

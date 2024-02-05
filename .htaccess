@@ -1,7 +1,29 @@
 AddType application/x-httpd-php .HTML 
 DirectoryIndex index.php index2.php
-ErrorDocument 404 /error_page.html
-ErrorDocument 500 /error_page.html
-ErrorDocument 502 /error_page.html
-ErrorDocument 503 /error_page.html
-ErrorDocument 504 /error_page.html
+ErrorDocument 404 error_page.html
+ErrorDocument 403 error_page.html
+ErrorDocument 500 error_page.html
+ErrorDocument 502 error_page.html
+ErrorDocument 503 error_page.html
+ErrorDocument 504 error_page.html
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect requests from /index.php?page=name to /name
+RewriteCond %{THE_REQUEST} /index\.php\?page=([^&\ ]+) [NC]
+RewriteRule ^ /%1? [L,R=301]
+
+# Rewrite requests from /name to /index.php?page=name
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ /index.php?page=$1 [L]
+php_value display_errors On
+
+# Allow access to the auth directory only for specific pages
+<FilesMatch "^(conn\.php|register\.php|deposit_auth\.php|get_user_details\.php|login_process\.php|logout\.php|mail_auth\.php|referral_auth\.php|register\.php|update_balance\.php|update_user_details\.php|upload\.php|user_details\.php|withdraw\.php)$">
+    Allow from all
+</FilesMatch>

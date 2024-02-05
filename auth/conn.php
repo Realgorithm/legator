@@ -1,8 +1,8 @@
 <?php
 //connecting to the Database
-$serverName ="localhost";
-$userName = "root";
-$password = "";
+$serverName ="sql200.infinityfree.com";
+$userName = "if0_35909869";
+$password = "5kiCAHOe2UAo";
 
 //create a connection
 $conn = mysqli_connect($serverName, $userName, $password);
@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
     exit(1);
 }
 // Create a new database
-$databaseName = "legator";
+$databaseName = "if0_35909869_legator";
 $sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS $databaseName";
 
 if (mysqli_query($conn, $sqlCreateDatabase)) {

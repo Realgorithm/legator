@@ -3972,22 +3972,22 @@
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: normal;
-  src: url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.eot);
-  src: url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.eot?#iefix)
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot);
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400d41d.eot)
       format("embedded-opentype"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.woff2)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2)
       format("woff2"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.woff)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff)
       format("woff"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.ttf)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf)
       format("truetype"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-brands-400.svg#fontawesome)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg#fontawesome)
       format("svg");
 }
 .fab {
   font-family: "Font Awesome 5 Brands";
 }
-@font-face {
+/* @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 400;
@@ -4002,7 +4002,7 @@
       format("truetype"),
     url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-regular-400.svg#fontawesome)
       format("svg");
-}
+} */
 .far {
   font-weight: 400;
 }
@@ -4010,16 +4010,16 @@
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
-  src: url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.eot);
-  src: url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.eot?#iefix)
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot);
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900d41d.eot)
       format("embedded-opentype"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.woff2)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2)
       format("woff2"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.woff)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff)
       format("woff"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.ttf)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf)
       format("truetype"),
-    url(http://phantom-themes.com/lime/assets/plugins/font-awesome/webfonts/fa-solid-900.svg#fontawesome)
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg#fontawesome)
       format("svg");
 }
 .fa,
