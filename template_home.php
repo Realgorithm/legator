@@ -57,6 +57,33 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 			background: none !important;
 			padding: 0 !important;
 		}
+        #loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
 	</style>
 	<!-- Chatra {literal} -->
 	<script>
@@ -71,14 +98,21 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 			if (d.head) d.head.appendChild(s);
 		})(document, window, 'Chatra');
 	</script>
+    <script>
+        window.addEventListener('load', function () {
+            var loadingContainer = document.getElementById('loading-container');
+            loadingContainer.style.display = 'none';
+        });
+    </script>
+
 	<!-- /Chatra {/literal} -->
 	<link rel="icon" href="images/logo.png"
 		sizes="32x32" />
 
         <!-- External CSS libraries -->
-    <link type='text/css' rel='stylesheet' href='assets/css/bootstrap.min.css'>
-    <link type='text/css' rel='stylesheet' href='assets/fonts/font-awesome/css/font-awesome.min.css'>
-    <link type='text/css' rel='stylesheet' href='assets/fonts/flaticon/font/flaticon.css'>
+    <link type='text/css' rel='stylesheet' href='loginasset/assets/css/bootstrap.min.css'>
+    <link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/font-awesome/css/font-awesome.min.css'>
+    <link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/flaticon/font/flaticon.css'>
     <link rel='stylesheet' href='css/bootstrap.min.css'>
     <link rel='stylesheet' href='css/owl.carousel.min.css'>
     <link rel='stylesheet' href='css/all.min.css'>
@@ -86,15 +120,15 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
     <link rel='stylesheet' href='css/main.css'>
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="auth/assets/img/favicon.ico" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="loginasset/assets/img/favicon.ico" type="image/x-icon"> -->
 
     <!-- Google fonts -->
     <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
 
     <!-- Custom Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="auth/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="auth/assets/css/skins/default.css">
+    <link type="text/css" rel="stylesheet" href="loginasset/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="loginasset/assets/css/skins/default.css">
 
 	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.1.1'
 		media='all'>
@@ -284,6 +318,11 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 
 <body
 	class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-99 elementor-default elementor-template-full-width elementor-kit-20 elementor-page elementor-page-99">
+
+    <div id="loading-container">
+    <div id="loading-spinner"></div>
+</div>
+
 
 	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
 		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
