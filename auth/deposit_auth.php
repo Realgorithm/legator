@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->bind_param("ssss", $depositId, $username, $planNo, $depositamount);
                 if ($stmt->execute()) {
                     header("Location: ../index2.php?page=deposit&success=1");
+                    $stmt->close();
                     exit();
                 } else {
                     // $error = $stmt->error;
@@ -40,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("Location: ../index2.php?page=deposit&error=1");
                     exit();
                 }
-                $stmt->close();
             }
 
             // Close the statement and connection
