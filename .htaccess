@@ -1,11 +1,11 @@
 AddType application/x-httpd-php .HTML 
 DirectoryIndex index.php index2.php
-ErrorDocument 404 error_page.html
-ErrorDocument 403 error_page.html
-ErrorDocument 500 error_page.html
-ErrorDocument 502 error_page.html
-ErrorDocument 503 error_page.html
-ErrorDocument 504 error_page.html
+ErrorDocument 404 https://www.legator.pro/error_page.html
+ErrorDocument 403 https://www.legator.pro/error_page.html
+ErrorDocument 500 https://www.legator.pro/error_page.html
+ErrorDocument 502 https://www.legator.pro/error_page.html
+ErrorDocument 503 https://www.legator.pro/error_page.html
+ErrorDocument 504 https://www.legator.pro/error_page.html
 
 Options +FollowSymLinks
 RewriteEngine On

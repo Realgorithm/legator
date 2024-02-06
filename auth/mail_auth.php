@@ -18,7 +18,7 @@ function sendCustomEmail( $subject, $message) {
         $mail->Host = 'smtpout.secureserver.net'; // Set your SMTP server
         $mail->SMTPAuth = true;
         $mail->Username = 'support@legator.pro'; // SMTP username
-        $mail->Password = 'MF3EGaWTU'; // SMTP password
+        $mail->Password = 'MF3egAWTU'; // SMTP password
         $mail->SMTPSecure = 'ssl'; // Enable TLS encryption
         $mail->Port = 465; // TCP port to connect to
 
@@ -29,10 +29,10 @@ function sendCustomEmail( $subject, $message) {
         // Content
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body ="<p>". $message."</p>";
+        $mail->Body ="<p style='font-size: 16px;'>". $message."</p>";
 
         $mail->send();
-        echo "mail sent successfully";
+        // echo "mail sent successfully";
 
     } catch (Exception $e) {
     }

@@ -10,7 +10,7 @@
 </style>
 <script>
     showGetMessage('use', '1', ' you already use this transaction id or wrong transaction id', 'danger');
-    showGetMessage('use', '1', ' you already use this image or change the name and upload', 'warninhg');
+    showGetMessage('upload', '1', ' you already use this image or change the name and upload', 'warning');
 
     function validateId(action) {
         var enteredTransId = document.getElementById('depositid').value;

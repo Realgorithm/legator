@@ -4,12 +4,12 @@ error_reporting(E_ALL ^ E_NOTICE);
 // login_process.php
 include 'conn.php';
 session_start();
+echo "Started";
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve user credentials from the form
     $username = $_POST['username'];
     $password = $_POST['password']; // Note: You should hash and verify passwords in a real scenario
-
     $isValidCredentials = false;
 
     // For the sake of illustration, let's assume the credentials are valid
@@ -24,14 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtGetUser->bind_param("s", $username);
         $stmtGetUser->execute();
         $result = $stmtGetUser->get_result();
-
         // Check if the user exists
         if ($result->num_rows === 1) {
             $userDetails = $result->fetch_assoc();
             
             // Verify the password
             if (password_verify($password, $userDetails['pass'])) {
-                echo "pass varified";
+                echo "pass verified";
                 // Password is correct, user is authenticated
 
                 // Store relevant user information in the session
@@ -52,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // echo "Login successful! Welcome, " . $userDetails['fullName'];
             } else {
                 // Password is incorrect
-                // echo "Incorrect password. Please try again.";
+                echo "Incorrect password. Please try again.";
                 $isValidCredentials = false;
             }
         } else {
@@ -71,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         // Credentials are not valid, show an error message or redirect to the login page with an error parameter
-        header("Location: ../index.php?page=login&error=1");
+        header("Location: ../login?error=1");
         exit();
     }
 }

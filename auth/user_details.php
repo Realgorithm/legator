@@ -30,7 +30,7 @@ if ($result->num_rows === 1) {
         $deposit = $userDetails['deposit'];
         $referal = $userDetails['referal'];
         $rigs = $userDetails['rigs'];
-        $lastAccessTime = $_SESSION['last_access_time'];
+        $lastAccessTime = $userDetails['lastaccess'];
     } else {
         // Handle the case where $userDetails is null
         echo "User details not found.";

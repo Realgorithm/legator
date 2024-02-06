@@ -2,11 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- Your common head content goes here -->
-
-<!-- Mirrored from www.Legatordigitalpro.com/?a=account by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 12:14:04 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -31,6 +27,43 @@
     <link href="1/assets/css/custom.css" rel="stylesheet">
     <link rel="icon" href="images/logo.png"
 		sizes="32x32" />
+
+    <style>
+        #loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+	</style>
+    <script>
+        window.addEventListener('load', function () {
+            var loadingContainer = document.getElementById('loading-container');
+            loadingContainer.style.display = 'none';
+        });
+    </script>
+
 
     <script language="javascript">
         showGetMessage = function (getData, getValue, message, alert) {
@@ -82,6 +115,9 @@
 </head>
 
 <body>
+<div id="loading-container">
+    <div id="loading-spinner"></div>
+</div>
     <?php require 'nav.php';?>
     <div class="lime-container">
         <div class="lime-body">
@@ -128,8 +164,6 @@
     <script src="1/assets/js/pages/dashboard.js"></script>
 </body>
 <script src="../code.tidio.co_443/9quipgijvkwhsexreqqfpjeri9h4jp0o.js" async></script>
-
-<!-- Mirrored from www.Legatordigitalpro.com/?a=withdraw by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 12:14:14 GMT -->
 
 
 </html>

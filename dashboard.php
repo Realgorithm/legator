@@ -3,7 +3,7 @@ include 'auth/user_details.php';
 // Check if the user is authenticated
 if (!isset($_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
-    header("Location: index.php");
+    header("Location: home?error=login");
     exit();
 }
 ?>
@@ -188,7 +188,7 @@ if (!isset($_SESSION['username'])) {
                                 <tr>
                                     <td class="title">Last Access</td>
                                     <td>
-                                        <?php echo Date("Y-m-d H:i:s", $lastAccessTime); ?>&nbsp;
+                                        <?php echo $lastAccessTime ?>&nbsp;
                                     </td>
                                 </tr>
                             </tbody>

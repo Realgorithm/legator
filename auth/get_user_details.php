@@ -40,7 +40,7 @@ if ($result->num_rows === 1) {
     }
 } else {
     // Handle the case where the user doesn't exist
-    header("Location: ../index.php?page=home");
+    header("Location: ../home");
 }
 
 // Close the statement and database connection

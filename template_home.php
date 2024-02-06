@@ -537,19 +537,19 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=home">
+														<a href="home">
 
 															<span class="elementor-icon-list-text">Home</span>
 														</a>
 													</li>
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=about">
+														<a href="about">
 
 															<span class="elementor-icon-list-text">About Us</span>
 														</a>
 													</li>
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=faq">
+														<a href="faq">
 
 															<span class="elementor-icon-list-text">FAQ</span>
 														</a>
@@ -576,7 +576,7 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=pricing">
+														<a href="pricing">
 
 															<span class="elementor-icon-list-text"> Pricing</span>
 														</a>
@@ -605,19 +605,19 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=support">
+														<a href="support">
 
 															<span class="elementor-icon-list-text">Support</span>
 														</a>
 													</li>
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=signup">
+														<a href="signup">
 
 															<span class="elementor-icon-list-text"> Register</span>
 														</a>
 													</li>
 													<li class="elementor-icon-list-item">
-														<a href="index.php?page=login">
+														<a href="login">
 
 															<span class="elementor-icon-list-text"> Login</span>
 														</a>
@@ -654,8 +654,9 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 													<li class="elementor-icon-list-item">
 														<span class="elementor-icon-list-icon">
 															<i aria-hidden="true" class="mdi mdi-email"></i> </span>
+                                                            <a href="mailto:support@legator.pro" target="_blank">
 														<span
-															class="elementor-icon-list-text">support@legatordigital.com</span>
+															class="elementor-icon-list-text">support@legator.pro</span></a>
 													</li>
 
 												</ul>

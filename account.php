@@ -114,7 +114,7 @@ include('auth/get_user_details.php');
                         <td><input type=password name=password2 value="" class="form-control"></td>
                     </tr>
                     <tr>
-                        <td class="title">Your USDT TRC20 Account ID:</td>
+                        <td class="title">Your USDT ERC20 Account ID:</td>
                         <td><input type=text class="form-control" name="account" value='<?php echo $accountNo ?>'></td>
                     </tr>
                     <tr>

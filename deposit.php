@@ -212,7 +212,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <td>Amount to Spend ($):</td>
                         <td><input type=text id=amount name=amount
                                 value="<?php echo isset($depositData['amount']) ? $depositData['amount'] : ''; ?>"
-                                class="form-control" size=15></td>
+                                class="form-control" placeholder="Enter the amount here"size=15></td>
                     </tr>
                     <tr id="coumpond_block" style="display:none">
                         <td>Compounding(%):</td>
@@ -223,7 +223,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                     <tr>
                         <td colspan=2><input type=radio name=type value="deposit" checked="checked">Spend funds
-                            from USDT TRC20</td>
+                            from USDT ERC20</td>
 
                     </tr>
                     <tr>

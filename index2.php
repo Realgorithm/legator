@@ -5,7 +5,7 @@ session_start();
 // Check if the user is authenticated
 if (!isset( $_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
-    header("Location: index.php");
+    header("Location: home?error=login");
     exit();
 }
 // Get the requested page from the query parameter
