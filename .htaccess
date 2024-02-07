@@ -21,7 +21,7 @@ RewriteRule ^ /%1? [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)$ /index.php?page=$1 [L]
-php_value display_errors On
+php_value display_errors Off
 
 # Allow access to the auth directory only for specific pages
 <FilesMatch "^(conn\.php|register\.php|deposit_auth\.php|get_user_details\.php|login_process\.php|logout\.php|mail_auth\.php|referral_auth\.php|register\.php|update_balance\.php|update_user_details\.php|upload\.php|user_details\.php|withdraw\.php)$">

@@ -29,7 +29,7 @@ function sendCustomEmail( $subject, $message) {
         // Content
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body ="<p style='font-size: 22px;'>". $message."</p>";
+        $mail->Body ="<p style='font-size: 22px; color: green;'>". $message."</p>";
 
         $mail->send();
         // echo "mail sent successfully";
