@@ -19,7 +19,7 @@ function sendCustomEmail( $subject, $message) {
         $mail->SMTPAuth = true;
         $mail->Username = $smtpUser; // SMTP username
         $mail->Password = $smtpPass; // SMTP password
-        $mail->SMTPSecure = $smtpEncryption; // Enable TLS encryption
+        // $mail->SMTPSecure = $smtpEncryption; // Enable TLS encryption
         $mail->Port = $smtpPort; // TCP port to connect to
 
         // Recipients

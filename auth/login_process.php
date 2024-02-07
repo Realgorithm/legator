@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         // Credentials are not valid, show an error message or redirect to the login page with an error parameter
-        header("Location: ../login?error=1");
+        header("Location: ../index.php?page=login&error=1");
         exit();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 // Define the path to the configuration file
-$configFile = 'config/config.ini';
+$configFile = 'E:\Xampp\htdocs\legator-final\auth\config\config.ini';
 
 // Check if the configuration file exists
 if (file_exists($configFile)) {

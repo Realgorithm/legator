@@ -53,6 +53,12 @@
 
         if ($stmtUpdateEarnings->execute()) {
             echo "Earnings updated successfully!";
+            $date=date('Y-m-d');
+            $query = "INSERT INTO transactions (amount, dates, username, selectedtype) VALUES (?, ?, ?, 'earning')";
+            $stmt = $connect_db->prepare($query);
+            $stmt->bind_param("sss", $getAmount, $date, $username);
+            $stmt->execute();
+            $stmt->close();
         } else {
             echo "Error updating earnings: " . $stmtUpdateEarnings->error;
         }

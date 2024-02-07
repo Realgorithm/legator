@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require "config.php";
 //connecting to the Database
 $serverName =$dbHost;
 $userName = $dbUser;
