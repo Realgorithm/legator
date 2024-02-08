@@ -12,6 +12,7 @@ html {
 body {
     /* background-color: #9ae153; */
     background-image: url(../../../wp-content/uploads/sites/8/2022/11/pexels-rdne-stock-project-8369677.jpg);
+    background-size: cover;
     font-weight: 400;
     color: linear-gradient(#9ae17b,#eb463f);
     line-height: 1.4
@@ -532,7 +533,8 @@ strong {
 }
 
 .bg-info {
-    background-image:url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important
+    background-image:url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important;
+    background-size: cover;
 }
 
 .bg-light {
