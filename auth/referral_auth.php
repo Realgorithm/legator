@@ -13,59 +13,81 @@ $result = $stmtgetrefer->get_result();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $refereeName = $row["refereename"];
+        $referrerName=$row['referrername'];
+        $firstRefereeName = $row["refereename"];
         $level = $row["level"];
+        // echo "level: " . $level . ",  referrer: ".$referrerName. ",  referee: " . $firstRefereeName . "<br>";
+        updateReferralAmount($firstRefereeName,$referrerName, $level);
+        if ($level != 2) {
+            if ($level === 0) {
+                $updatesql = "UPDATE `referrals` SET `level` = 1 WHERE `referrername` = ?";
+                $stmtupdaterefer = $connect_db->prepare($updatesql);
+                $stmtupdaterefer->bind_param("s", $username);
+                $stmtupdaterefer->execute();
+                $stmtupdaterefer->close();
+            }
+            $sqlupdate = "SELECT * FROM referrals WHERE referrername = ? AND debited = 1";
+            $stmtupdatelevel = $connect_db->prepare($sqlupdate);
+            $stmtupdatelevel->bind_param("s", $firstRefereeName);
+            $stmtupdatelevel->execute();
+            $results = $stmtupdatelevel->get_result();
 
-        $updatesql = "UPDATE `referrals` SET `level` = 1 WHERE `referrername` = ? AND  `level` != 2";
-        $stmtupdaterefer = $connect_db->prepare($updatesql);
-        $stmtupdaterefer->bind_param("s", $username);
-        $stmtupdaterefer->execute();
-        $stmtupdaterefer->close();
+            if ($results->num_rows > 0) {
+                while ($row = $results->fetch_assoc()) {
+                    $referrerName = $row['referrername'];
+                    $refereeName = $row['refereename'];
+                    // $level = $row['level'];
+                    // echo "2nd referral: " . $referrerName . "<br>";
+                    // echo "2nd referee: " . $refereeName . "<br>";
+                    // echo "2nd level: " . $level . "<br>";
 
-        $sqlupdate = "SELECT * FROM referrals WHERE referrername = ? AND debited = 1";
-        $stmtupdatelevel = $connect_db->prepare($sqlupdate);
-        $stmtupdatelevel->bind_param("s", $refereeName);
-        $stmtupdatelevel->execute();
-        $results = $stmtupdatelevel->get_result();
+                    // updateReferralAmount($referrerName,$level);
 
-        if ($results->num_rows > 0) {
-            while ($row = $results->fetch_assoc()) {
-                $refereeName = $row['refereename'];
+                    // Check if the referral already exists before inserting
+                    $checkSql = "SELECT * FROM referrals WHERE referrername = ? AND refereename = ?";
+                    $checkStmt = $connect_db->prepare($checkSql);
+                    $checkStmt->bind_param("ss", $username, $refereeName);
+                    $checkStmt->execute();
+                    $checkResult = $checkStmt->get_result();
 
-                // Check if the referral already exists before inserting
-                $checkSql = "SELECT * FROM referrals WHERE referrername = ? AND refereename = ?";
-                $checkStmt = $connect_db->prepare($checkSql);
-                $checkStmt->bind_param("ss", $username, $refereeName);
-                $checkStmt->execute();
-                $checkResult = $checkStmt->get_result();
-
-                if ($checkResult->num_rows == 0) {
-                    $insertSql = "INSERT INTO referrals (`level`, `referrername`, `refereename`) VALUES (2, ?, ?)";
-                    $insertStmt = $connect_db->prepare($insertSql);
-                    $insertStmt->bind_param("ss", $username, $refereeName);
-                    $insertStmt->execute();
+                    if ($checkResult->num_rows == 0) {
+                        $insertSql = "INSERT INTO referrals (`level`, `referrername`, `refereename`) VALUES (2, ?, ?)";
+                        $insertStmt = $connect_db->prepare($insertSql);
+                        $insertStmt->bind_param("ss", $username, $refereeName);
+                        $insertStmt->execute();
+                    }
                 }
             }
         }
+    }
+}
+function updateReferralAmount($user,$username, $level)
+{
+    global $connect_db;
+    $sqlgetrefer = "SELECT * FROM deposits WHERE username = ? AND isdeposit = 1 AND processed = 1";
+    $stmtgetrefer = $connect_db->prepare($sqlgetrefer);
+    $stmtgetrefer->bind_param("s", $user);
+    $stmtgetrefer->execute();
+    $referee = $stmtgetrefer->get_result();
 
-        $sqlgetrefer = "SELECT * FROM deposits WHERE username = ? AND isdeposit = 1 AND processed = 1";
-        $stmtgetrefer = $connect_db->prepare($sqlgetrefer);
-        $stmtgetrefer->bind_param("s", $refereeName);
-        $stmtgetrefer->execute();
-        $referee = $stmtgetrefer->get_result();
-
-        if ($referee->num_rows > 0) {
-            while ($result2 = $referee->fetch_assoc()) {
-                $amount = $result2["amount"];
-                $plan = $result2["plan"];
-                $referralbonus = ($level === 1) ? calculateFirstLevelBonus($amount, $plan) : calculateSecondLevelBonus($amount);
-
-                $sqlbonus = "UPDATE `referrals` SET `amount` = ? WHERE `referrername` = ?";
-                $stmtupdatebonus = $connect_db->prepare($sqlbonus);
-                $stmtupdatebonus->bind_param("ds", $referralbonus, $_SESSION["username"]);
-                $stmtupdatebonus->execute();
-                $stmtupdatebonus->close();
+    if ($referee->num_rows > 0) {
+        while ($result2 = $referee->fetch_assoc()) {
+            $amount = $result2["amount"];
+            $plan = $result2["plan"];
+            
+            
+            if ($level === 1) {
+                $referralbonus = calculateFirstLevelBonus($amount, $plan);
+            } elseif ($level === 2) {
+                $referralbonus = calculateSecondLevelBonus($amount);
             }
+            // $referralbonus = ($level === 1) ? calculateFirstLevelBonus($amount, $plan) : calculateSecondLevelBonus($amount);
+            // echo "plan: " . $plan .", amount: " . $amount .", bonus: " . $referralbonus . "<br>";
+            $sqlbonus = "UPDATE `referrals` SET `amount` = ? WHERE `referrername` = ? AND `refereename` = ?";
+            $stmtupdatebonus = $connect_db->prepare($sqlbonus);
+            $stmtupdatebonus->bind_param("dss", $referralbonus, $username, $user);
+            $stmtupdatebonus->execute();
+            $stmtupdatebonus->close();
         }
     }
 }

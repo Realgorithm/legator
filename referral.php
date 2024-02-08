@@ -45,7 +45,9 @@ include 'auth/conn.php';
                                                                     ' . $refereeName . '
                                                                 </td>
                                                             </tr>';
+                                                            $sno++;
                             }
+                            
                         } else {
                             // echo "No deposits to process.<br>";
                         }

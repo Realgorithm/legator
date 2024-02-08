@@ -139,17 +139,17 @@ if ($result2->num_rows > 0) {
         $referrerName = $row['referrername'];
         $referralAmount = $row['amount'];
         $refereeName = $row['refereename'];
-
-        // Update user's balance
-        updateReferralBonus($referrerName, $referralAmount);
-
-        // Mark the deposit as processed
-        $updateQuery1 = "UPDATE `referrals` SET `debited` = 1 WHERE `referrername` = '$referrerName'";
-        $connect_db->query($updateQuery1);
-        $date=date('Y-m-d');
-        if ($referrerName === $_SESSION["username"]) {
-            insertTransaction($referralAmount,$date,$referrerName,'referral');
-            $updateMessage = "<p>Referee Name $refereeName referral amount processed successfully.</p>";
+        if($referralAmount!=0){
+            // Update user's balance
+            updateReferralBonus($referrerName, $referralAmount);
+            // Mark the deposit as processed
+            $updateQuery1 = "UPDATE `referrals` SET `debited` = 1 WHERE `referrername` = '$referrerName'";
+            $connect_db->query($updateQuery1);
+            $date=date('Y-m-d');
+            if ($referrerName === $_SESSION["username"]) {
+                insertTransaction($referralAmount,$date,$referrerName,'referral');
+                $updateMessage = "<p>Referee Name $refereeName referral amount processed successfully.</p>";
+            }
         }
     }
 } else {
