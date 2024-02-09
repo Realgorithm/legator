@@ -7,8 +7,8 @@ ErrorDocument 502 /error_page.html
 ErrorDocument 503 /error_page.html
 ErrorDocument 504 /error_page.html
 
-
+SetEnv ENCRYPTION_KEY 0cec6c66e0311924520741fba428f178
 # Allow access to the auth directory only for specific pages
-<FilesMatch "^(conn\.php|register\.php|deposit_auth\.php|get_user_details\.php|login_process\.php|logout\.php|mail_auth\.php|referral_auth\.php|register\.php|update_balance\.php|update_user_details\.php|upload\.php|user_details\.php|withdraw\.php)$">
+<FilesMatch "^(conn\.php|register\.php|deposit_auth\.php|get_user_details\.php|login_process\.php|logout\.php|mail_auth\.php|referral_auth\.php|register\.php|update_balance\.php|update_user_details\.php|upload\.php|user_details\.php|withdraw\.php|tfa\.php)$">
     Allow from all
 </FilesMatch>
