@@ -3,6 +3,7 @@ ini_set('display_errors', true);
 error_reporting(E_ALL ^ E_NOTICE);
 // login_process.php
 include 'conn.php';
+require_once 'GoogleAuthenticator.php';
 session_start();
 echo "Started";
 // Check if the form is submitted
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Check if the user exists
         if ($result->num_rows === 1) {
             $userDetails = $result->fetch_assoc();
-            
+
             // Verify the password
             if (password_verify($password, $userDetails['pass'])) {
                 echo "pass verified";
@@ -43,6 +44,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Set the current time as the last access time
                 $_SESSION['last_access_time'] = time();
+                if (!isset($_SESSION['authenticated'])) {
+
+                    $query = "SELECT * FROM usertfa WHERE username = ?";
+                    $stmtGetUser = $connect_db->prepare($query);
+                    $stmtGetUser->bind_param("s", $username);
+                    $stmtGetUser->execute();
+                    $result = $stmtGetUser->get_result();
+                    $isTFAEnabled = false; // Flag to track if TFA is enabled for the user
+
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        $encryptedSecretKey = $row['secretkey'];
+                        $hexKey1 = getenv('ENCRYPTION_KEY');
+                        $encryptionKey1 = hex2bin($hexKey1);
+
+                        // Decrypt the secret key if it exists
+                        if ($encryptedSecretKey !== null) {
+                            $decryptedSecretKey = openssl_decrypt($encryptedSecretKey, 'aes-128-cbc', $encryptionKey1, 0, $encryptionKey1);
+                            $secret = $decryptedSecretKey;
+                            $isTFAEnabled = true; // TFA is enabled for the user
+                            $_SESSION['data']=$secret;
+                            header("Location: ../tfa_home.php");
+                            exit();
+                        }
+                    }
+                }
 
                 // You can redirect to a dashboard or perform any other actions here
                 $isValidCredentials = true;
@@ -64,6 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $connect_db->close();
     }
 
+
     if ($isValidCredentials) {
         // Redirect to the dashboard upon successful login
         header("Location: ../index2.php");
@@ -74,4 +102,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
-?>

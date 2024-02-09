@@ -176,7 +176,6 @@ if (empty($secret)) {
 </div>
 
 <script language=javascript>
-    showErrorMessage('<?php echo $error ?>', 'danger')
     document.mainform.time.value = (new Date()).getTime();
 
     function checkform() {
