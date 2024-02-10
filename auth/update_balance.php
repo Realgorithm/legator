@@ -137,13 +137,13 @@ $result2 = $connect_db->query($query2);
 if ($result2->num_rows > 0) {
     while ($row = $result2->fetch_assoc()) {
         $referrerName = $row['referrername'];
-        $referralAmount = $row['amount'];
+        $referralAmount = $row['newamount'];
         $refereeName = $row['refereename'];
         if($referralAmount!=0){
             // Update user's balance
             updateReferralBonus($referrerName, $referralAmount);
             // Mark the deposit as processed
-            $updateQuery1 = "UPDATE `referrals` SET `debited` = 1 WHERE `referrername` = '$referrerName'";
+            $updateQuery1 = "UPDATE `referrals` SET `debited` = 1, `newamount` = 0 WHERE `referrername` = '$referrerName'";
             $connect_db->query($updateQuery1);
             $date=date('Y-m-d');
             if ($referrerName === $_SESSION["username"]) {

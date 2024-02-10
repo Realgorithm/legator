@@ -13,11 +13,13 @@ $result = $stmtgetrefer->get_result();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $referrerName=$row['referrername'];
+        $referrerName = $row['referrername'];
         $firstRefereeName = $row["refereename"];
         $level = $row["level"];
+        $referAmount = $row['amount'];
+
         // echo "level: " . $level . ",  referrer: ".$referrerName. ",  referee: " . $firstRefereeName . "<br>";
-        updateReferralAmount($firstRefereeName,$referrerName, $level);
+        updateReferralAmount($firstRefereeName, $referrerName, $level, $referAmount);
         if ($level != 2) {
             if ($level === 0) {
                 $updatesql = "UPDATE `referrals` SET `level` = 1 WHERE `referrername` = ?";
@@ -61,36 +63,47 @@ if ($result->num_rows > 0) {
         }
     }
 }
-function updateReferralAmount($user,$username, $level)
+function updateReferralAmount($user, $username, $level, $referAmount)
 {
     global $connect_db;
+
+    // Check if the user has made deposits
     $sqlgetrefer = "SELECT * FROM deposits WHERE username = ? AND isdeposit = 1 AND processed = 1";
     $stmtgetrefer = $connect_db->prepare($sqlgetrefer);
     $stmtgetrefer->bind_param("s", $user);
     $stmtgetrefer->execute();
     $referee = $stmtgetrefer->get_result();
-
+    $totalBonus = 0;
     if ($referee->num_rows > 0) {
         while ($result2 = $referee->fetch_assoc()) {
             $amount = $result2["amount"];
             $plan = $result2["plan"];
-            
-            
+
+            // Calculate the referral bonus based on the level
             if ($level === 1) {
                 $referralbonus = calculateFirstLevelBonus($amount, $plan);
             } elseif ($level === 2) {
                 $referralbonus = calculateSecondLevelBonus($amount);
             }
-            // $referralbonus = ($level === 1) ? calculateFirstLevelBonus($amount, $plan) : calculateSecondLevelBonus($amount);
-            // echo "plan: " . $plan .", amount: " . $amount .", bonus: " . $referralbonus . "<br>";
-            $sqlbonus = "UPDATE `referrals` SET `amount` = ? WHERE `referrername` = ? AND `refereename` = ?";
+            // Calculate the total bonus for the referee's deposits
+            // $totalBonus = $referralbonus * $referee->num_rows;
+            $totalBonus = $totalBonus + $referralbonus;
+        }
+        if ($referAmount < $totalBonus) {
+            // Calculate the update amount based on the referral bonus and the referred amount
+            $updateAmount = $totalBonus - $referAmount;
+
+            // Update the referral bonus amount in the database
+            $sqlbonus = "UPDATE `referrals` SET `amount` = `amount` + ?, `newamount` = ?, debited = 0 WHERE `referrername` = ? AND `refereename` = ?";
             $stmtupdatebonus = $connect_db->prepare($sqlbonus);
-            $stmtupdatebonus->bind_param("dss", $referralbonus, $username, $user);
+            $stmtupdatebonus->bind_param("ddss", $updateAmount, $updateAmount, $username, $user);
             $stmtupdatebonus->execute();
             $stmtupdatebonus->close();
+            // $referAmount = $referAmount + $updateAmount;
         }
     }
 }
+
 
 function calculateFirstLevelBonus($purchaseAmount, $plan)
 {
@@ -110,4 +123,3 @@ function calculateSecondLevelBonus($amount)
 {
     return $amount * 0.02; // 2% bonus on each plan for second level
 }
-?>

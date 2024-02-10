@@ -65,11 +65,9 @@
         require_once 'auth/GoogleAuthenticator.php';
         $secretKey=$_SESSION['data'];
         // Check if the form is submitted
-        echo strlen($secretKey);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Handle login form submission
             $tfaCode = $_POST['code'];
-            echo $tfaCode;
              // TFA code entered by the use
 
             $ga = new PHPGangsta_GoogleAuthenticator();
