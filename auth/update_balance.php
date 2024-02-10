@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
         updatedeposit($username, $depositAmount);
 
         // Mark the deposit as processed
-        $updateQuery = "UPDATE deposits SET processed = 1 WHERE deposit_id = '$depositId'";
+        $updateQuery = "UPDATE deposits SET processed = 1, last_option_received = '$dateTime' WHERE deposit_id = '$depositId'";
         $connect_db->query($updateQuery);
 
         $depositDate = date('Y-m-d');

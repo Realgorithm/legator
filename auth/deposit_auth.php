@@ -48,6 +48,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Close the statement and connection
         $stmtcheck->close();
         $connect_db->close();
-
     }
 }

@@ -199,153 +199,150 @@ if (!isset($_SESSION['username'])) {
                                         <?php echo $lastAccessTime ?>&nbsp;
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="title"><b>Refer to your friends:&nbsp;&nbsp;&nbsp;&nbsp; </b>
-                                        <!-- Icons for platforms -->
-                                        <img class="icon" src="images/facebook.png" alt="Facebook" id="facebookIcon">
-                                        <img class="icon" src="images/twitter.png" alt="Twitter" id="twitterIcon">
-                                        <img class="icon" src="images/linkedin.png" alt="LinkedIn" id="linkedinIcon">
-                                        <img class="icon" src="images/pinterest.png" alt="Pinterest" id="pinterestIcon">
-                                        <img class="icon" src="images/whatsapp.png" alt="WhatsApp" id="whatsappIcon">
-                                        <img class="icon" src="images/gmail.png" alt="Email" id="emailIcon">
-                                        <img class="icon" src="images/social.png" alt="copy" id="copyLinkButton">
-                                        <script>
-                                            // URL of the referral link
-                                            const referralLink = 'https://legator.pro/signup?ref=<?php echo $username ?>';
-
-                                            // Description to be shared
-                                            const description = "Join the mining revolution today! Sign up and earn a $10 bonus instantly. Plus, boost your earnings further by inviting friends and get an extra 8% bonus on their mining rewards. Don't miss out on this lucrative opportunity to multiply your crypto earnings effortlessly!";
-
-                                            // Image URL to be shared
-                                            const imageUrl = 'https://i.ibb.co/g6S6W32/Screenshot-10-Copy.png';
-
-                                            // Function to handle sharing on each platform
-                                            function shareOnPlatform(platform) {
-                                                // Shareable link for the selected platform
-                                                const shareLink = {
-                                                    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}&quote=${encodeURIComponent(description)}`,
-                                                    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(description)}`,
-                                                    linkedin: `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(referralLink)}&title=${encodeURIComponent(document.title)}&summary=${encodeURIComponent(description)}`,
-                                                    pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(referralLink)}&description=${encodeURIComponent(description)}&media=${encodeURIComponent(imageUrl)}`,
-                                                    whatsapp: `whatsapp://send?text=${encodeURIComponent(description + '\n' + referralLink)}`,
-                                                    email: `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`,
-                                                };
-
-                                                // Open the share link for the selected platform
-                                                window.open(shareLink[platform], '_blank');
-                                            }
-
-                                            // Function to copy the referral link to clipboard
-                                            function copyReferralLink() {
-                                                const textField = document.createElement('textarea');
-                                                textField.innerText = referralLink;
-                                                document.body.appendChild(textField);
-                                                textField.select();
-                                                document.execCommand('copy');
-                                                textField.remove();
-
-                                                // Show a popup message indicating that the link has been copied
-                                                const popup = document.createElement('div');
-                                                popup.innerText = 'Link copied!';
-                                                popup.style.position = 'fixed';
-                                                popup.style.bottom = '30%';
-                                                popup.style.left = '45%';
-                                                popup.style.transform = 'translateX(-50%)';
-                                                popup.style.padding = '10px 20px';
-                                                popup.style.backgroundColor = '#389020';
-                                                popup.style.color = '#fff';
-                                                popup.style.borderRadius = '5px';
-                                                popup.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-                                                popup.style.zIndex = '9999';
-                                                document.body.appendChild(popup);
-                                                console.log("text");
-
-                                                // Remove the popup after 2 seconds
-                                                setTimeout(function() {
-                                                    popup.remove();
-                                                }, 2000);
-
-                                            }
-                                            // Add click event listeners to each platform icon
-                                            document.getElementById('facebookIcon').addEventListener('click', function() {
-                                                shareOnPlatform('facebook');
-                                            });
-
-                                            document.getElementById('twitterIcon').addEventListener('click', function() {
-                                                shareOnPlatform('twitter');
-                                            });
-
-                                            document.getElementById('linkedinIcon').addEventListener('click', function() {
-                                                shareOnPlatform('linkedin');
-                                            });
-
-                                            document.getElementById('pinterestIcon').addEventListener('click', function() {
-                                                shareOnPlatform('pinterest');
-                                            });
-
-                                            document.getElementById('whatsappIcon').addEventListener('click', function() {
-                                                shareOnPlatform('whatsapp');
-                                            });
-
-                                            document.getElementById('emailIcon').addEventListener('click', function() {
-                                                shareOnPlatform('email');
-                                            });
-                                            // Add click event listener to the "Copy Link" button
-                                            document.getElementById('copyLinkButton').addEventListener('click', function() {
-                                                copyReferralLink();
-                                            });
-                                        </script>
-                                    </td>
-                                    <td>
-                                        <!-- Button to trigger the share functionality -->
-                                        <button id="shareButton" class="btn btn-warning m-t-xs">Share Referral Link</button>
-                                        <script>
-                                            document.getElementById('shareButton').addEventListener('click', function() {
-                                                // URL of the referral link
-                                                const referralLink = 'https://legator.pro/signup?ref=<?php echo $username ?>';
-
-                                                // Description to be shared
-                                                const description = 'Check out this amazing referral program!';
-
-                                                // Image URL to be shared
-                                                const imageUrl = 'https://example.com/image.jpg';
-
-                                                // // Share on different platforms
-                                                if (navigator.share) { // Check if the navigator.share API is supported
-                                                    navigator.share({
-                                                            title: document.title,
-                                                            text: description,
-                                                            url: referralLink,
-                                                        })
-                                                        .then(() => console.log('Successful share'))
-                                                        .catch((error) => console.log('Error sharing:', error));
-                                                } else { // Fallback for platforms that do not support navigator.share
-                                                    const shareUrl = `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`;
-                                                    window.location.href = shareUrl;
-                                                }
-                                                // Social media platforms
-                                                const platforms = {
-                                                    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}&quote=${encodeURIComponent(description)}`,
-                                                    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(description)}`,
-                                                    linkedin: `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(referralLink)}&title=${encodeURIComponent(document.title)}&summary=${encodeURIComponent(description)}`,
-                                                    pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(referralLink)}&description=${encodeURIComponent(description)}&media=${encodeURIComponent(imageUrl)}`,
-                                                    whatsapp: `whatsapp://send?text=${encodeURIComponent(description + '\n' + referralLink)}`,
-                                                    email: `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`,
-                                                };
-
-                                                // Open share links for each platform
-                                                for (const platform in platforms) {
-                                                    window.open(platforms[platform], '_blank');
-                                                }
-                                            });
-                                        </script>
-                                    </td>
-
-                                </tr>
                             </tbody>
                         </table>
                     </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><b>Refer to your friends: </b></div>
+                            <div class="col-md-8">
+                                <!-- Icons for platforms -->
+                                <img class="icon" src="images/facebook.png" alt="Facebook" id="facebookIcon">
+                                <img class="icon" src="images/twitter.png" alt="Twitter" id="twitterIcon">
+                                <img class="icon" src="images/linkedin.png" alt="LinkedIn" id="linkedinIcon">
+                                <img class="icon" src="images/pinterest.png" alt="Pinterest" id="pinterestIcon">
+                                <img class="icon" src="images/whatsapp.png" alt="WhatsApp" id="whatsappIcon">
+                                <img class="icon" src="images/gmail.png" alt="Email" id="emailIcon">
+                                <img class="icon" src="images/social.png" alt="copy" id="copyLinkButton">
+                            </div>
 
+                            <script>
+                                // URL of the referral link
+                                const referralLink = "https://legator.pro/signup?ref=<?php echo $username ?>";
+
+                                // Description to be shared
+                                const description = "Join the mining revolution today! Sign up and earn a $10 bonus instantly. Plus, boost your earnings further by inviting friends and get an extra 8% bonus on their mining rewards. Don't miss out on this lucrative opportunity to multiply your crypto earnings effortlessly!";
+
+                                // Image URL to be shared
+                                const imageUrl = "https://i.ibb.co/g6S6W32/Screenshot-10-Copy.png";
+
+
+                                // Function to handle sharing on each platform
+                                function shareOnPlatform(platform) {
+                                    // Shareable link for the selected platform
+                                    const shareLink = {
+                                        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}&quote=${encodeURIComponent(description)}`,
+                                        twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(description)}`,
+                                        linkedin: `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(referralLink)}&title=${encodeURIComponent(document.title)}&summary=${encodeURIComponent(description)}`,
+                                        pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(referralLink)}&description=${encodeURIComponent(description)}&media=${encodeURIComponent(imageUrl)}`,
+                                        whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(description + '\n' + referralLink)}&image=${encodeURIComponent(imageUrl)}`,
+                                        email: `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`,
+                                    };
+
+                                    // Open the share link for the selected platform
+                                    window.open(shareLink[platform], '_blank');
+                                }
+
+                                // Function to copy the referral link to clipboard
+                                function copyReferralLink() {
+                                    const textField = document.createElement('textarea');
+                                    textField.innerText = referralLink;
+                                    document.body.appendChild(textField);
+                                    textField.select();
+                                    document.execCommand('copy');
+                                    textField.remove();
+
+                                    // Show a popup message indicating that the link has been copied
+                                    const popup = document.createElement('div');
+                                    popup.innerText = 'Link copied!';
+                                    popup.style.position = 'fixed';
+                                    popup.style.bottom = '30%';
+                                    popup.style.left = '45%';
+                                    popup.style.transform = 'translateX(-50%)';
+                                    popup.style.padding = '10px 20px';
+                                    popup.style.backgroundColor = '#389020';
+                                    popup.style.color = '#fff';
+                                    popup.style.borderRadius = '5px';
+                                    popup.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+                                    popup.style.zIndex = '9999';
+                                    document.body.appendChild(popup);
+                                    console.log("text");
+
+                                    // Remove the popup after 2 seconds
+                                    setTimeout(function() {
+                                        popup.remove();
+                                    }, 2000);
+                                }
+
+                                // Add click event listeners to each platform icon
+                                document.getElementById('facebookIcon').addEventListener('click', function() {
+                                    shareOnPlatform('facebook');
+                                });
+
+                                document.getElementById('twitterIcon').addEventListener('click', function() {
+                                    shareOnPlatform('twitter');
+                                });
+
+                                document.getElementById('linkedinIcon').addEventListener('click', function() {
+                                    shareOnPlatform('linkedin');
+                                });
+
+                                document.getElementById('pinterestIcon').addEventListener('click', function() {
+                                    shareOnPlatform('pinterest');
+                                });
+
+                                document.getElementById('whatsappIcon').addEventListener('click', function() {
+                                    shareOnPlatform('whatsapp');
+                                });
+
+                                document.getElementById('emailIcon').addEventListener('click', function() {
+                                    shareOnPlatform('email');
+                                });
+                                // Add click event listener to the "Copy Link" button
+                                document.getElementById('copyLinkButton').addEventListener('click', function() {
+                                    copyReferralLink();
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Button to trigger the share functionality -->
+                        <button id="shareButton" class="btn btn-warning m-t-xs">Share Referral Link</button>
+                        <script>
+                            document.getElementById('shareButton').addEventListener('click', function() {
+
+                                // // Share on different platforms
+                                if (navigator.share) { // Check if the navigator.share API is supported
+                                    navigator.share({
+                                            title: document.title,
+                                            text: description,
+                                            url: referralLink,
+                                        })
+                                        .then(() => console.log('Successful share'))
+                                        .catch((error) => console.log('Error sharing:', error));
+                                } else { // Fallback for platforms that do not support navigator.share
+                                    const shareUrl = `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`;
+                                    window.location.href = shareUrl;
+
+                                    // Social media platforms
+                                    const platforms = {
+                                        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}&quote=${encodeURIComponent(description)}`,
+                                        twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(description)}`,
+                                        linkedin: `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(referralLink)}&title=${encodeURIComponent(document.title)}&summary=${encodeURIComponent(description)}`,
+                                        pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(referralLink)}&description=${encodeURIComponent(description)}&media=${encodeURIComponent(imageUrl)}`,
+                                        whatsapp: `whatsapp://send?text=${encodeURIComponent(description + '\n' + referralLink)}`,
+                                        email: `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`,
+                                    };
+
+                                    // Open share links for each platform
+                                    for (const platform in platforms) {
+                                        window.open(platforms[platform], '_blank');
+                                    }
+                                }
+
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
