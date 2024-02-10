@@ -44,16 +44,23 @@
     }
 
     function isValidTransactionId(transactionId) {
-        // Step 1: Check length
-        if (transactionId.length !== 64) {
-            return false;
-        }
-
-        // Step 2: Check if it is a valid hexadecimal string
-        const isValidHex = /^[0-9a-fA-F]+$/.test(transactionId);
-
-        return isValidHex;
+    // Step 1: Check length
+    if (transactionId.length !== 66) {
+        return false;
     }
+
+    // Step 2: Check if it starts with '0x'
+    if (!transactionId.startsWith('0x')) {
+        return false;
+    }
+
+    // Step 3: Check if the remaining characters are valid hexadecimal
+    const hexPart = transactionId.substring(2);
+    const isValidHex = /^[0-9a-fA-F]+$/.test(hexPart);
+
+    return isValidHex;
+}
+
 </script>
 <script>
     function copyTextToClipboard() {

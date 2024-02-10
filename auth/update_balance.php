@@ -25,9 +25,9 @@ function updateWithdrawal($username, $withdrawAmount)
 function updateReferralBonus($username, $bonusAmount)
 {
     global $connect_db;
-    $query = "UPDATE `userinformation` SET `total_balance` = `total_balance`  + ?, `earning` = `earning` + ?  WHERE `username` = ?";
+    $query = "UPDATE `userinformation` SET `total_balance` = `total_balance`  + ?, `earning` = `earning` + ?, `referal` = `referal` + ?  WHERE `username` = ?";
     $stmt = $connect_db->prepare($query);
-    $stmt->bind_param("sss", $bonusAmount, $bonusAmount, $username);
+    $stmt->bind_param("ssss", $bonusAmount, $bonusAmount,$bonusAmount, $username);
     $stmt->execute();
     $stmt->close();
 }
