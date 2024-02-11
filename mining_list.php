@@ -112,7 +112,7 @@ function processGetOption($username, $getAmount)
                                     <th>Get Money</th>
                                 </tr>
                                 <?php
-                                $getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1";
+                                $getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1 and plan = '$no'";
                                 $stmtGetDeposit = $connect_db->prepare($getDepositQuery);
                                 $stmtGetDeposit->bind_param("s", $_SESSION['username']);
                                 $stmtGetDeposit->execute();

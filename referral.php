@@ -49,7 +49,7 @@ include 'auth/conn.php';
                             }
                             
                         } else {
-                            // echo "No deposits to process.<br>";
+                            echo "Sorry 🤔, we couldn't find any referrals associated with your account<br>";
                         }
                         ?>
 

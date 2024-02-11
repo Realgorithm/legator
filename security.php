@@ -47,9 +47,9 @@ if (empty($secret)) {
 
 
 <script>
-    showGetMessage('error', '1', 'Error occur please try again', 'warning');
-    showGetMessage('success', '1', 'Your Two Factor Authentication Activated', 'success');
-    showGetMessage('error', '2', 'Invalid TFA code. Please try again.', 'danger');
+    showGetMessage('error', '1', 'An error occurred. 😕 Please try again.', 'warning');
+    showGetMessage('success', '1', 'Your two-factor authentication has been activated! 🛡️', 'success');
+    showGetMessage('error', '2', 'Invalid TFA code. Please try again. 🚫🔒', 'danger');
 
     function sensitivityChanged() {
         var sensitivity = document.querySelector('input[name="ip"]:checked');

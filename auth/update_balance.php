@@ -62,7 +62,7 @@ if ($result->num_rows > 0) {
         insertTransaction($depositAmount,$depositDate,$username,'deposit');
         if ($username === $_SESSION['username']) {
             
-            $updateMessage = "<p>Your deposit has been processed successfully.</p>";
+            $updateMessage = "<p>Your deposit has been processed successfully. 🚀</p>";
             $subject = "LEGATOR - Deposit Payment Confirmation";
             $body = "<pre>Dear $username,
 
@@ -106,7 +106,7 @@ if ($result1->num_rows > 0) {
         $withdrawDate = date('Y-m-d');
         insertTransaction($withdrawalAmount,$withdrawDate,$username,'withdrawal');
         if ($username === $_SESSION['username']) {
-            $updateMessage = "<p>withdraw of withdraw id:" . $withdrawId . " amount:" . $withdrawalAmount . "processed successfully<p>";
+            $updateMessage = "<p>withdraw of withdraw id:" . $withdrawId . " amount:" . $withdrawalAmount . "processed successfully🎉<p>";
             $subject = " LEGATOR - Withdrawal Request Confirmation";
             $body = "<pre>Dear $username,
 
@@ -148,7 +148,7 @@ if ($result2->num_rows > 0) {
             $date=date('Y-m-d');
             if ($referrerName === $_SESSION["username"]) {
                 insertTransaction($referralAmount,$date,$referrerName,'referral');
-                $updateMessage = "<p>Referee Name $refereeName referral amount processed successfully.</p>";
+                $updateMessage = "<p>Referral amount for referee $refereeName processed successfully! 🎉</p>";
             }
         }
     }

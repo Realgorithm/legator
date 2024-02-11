@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // echo "Login successful! Welcome, " . $userDetails['fullName'];
             } else {
                 // Password is incorrect
-                echo "Incorrect password. Please try again.";
+                echo "Incorrect password. 🔒 Please try again.";
                 $isValidCredentials = false;
             }
         } else {

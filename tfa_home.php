@@ -79,7 +79,7 @@
                 header("Location: index2.php?page=dashboard");
                 exit();
             } else {
-                echo "<h2 style='color: red;'>Invalid TFA code. Please try again</h2>";
+                echo "<h2 style='color: red;'>Invalid TFA code. Please try again. 🚫🔒</h2>";
             }
         }
         ?>
