@@ -56,7 +56,7 @@ function processGetOption($username, $getAmount)
     $stmtUpdateEarnings->bind_param("ddddi", $getAmount, $getAmount, $getAmount, $getAmount, $username);
 
     if ($stmtUpdateEarnings->execute()) {
-        echo "Earnings updated successfully!";
+        echo "Earnings updated successfully! 💰";
         $date = date('Y-m-d');
         $query = "INSERT INTO transactions (amount, dates, username, selectedtype) VALUES (?, ?, ?, 'earning')";
         $stmt = $connect_db->prepare($query);
@@ -68,6 +68,16 @@ function processGetOption($username, $getAmount)
     }
 
     $stmtUpdateEarnings->close();
+}
+function updateAllclaimed($username, $amount)
+{
+    global $connect_db;
+    if($amount){
+    $updateclaimedQuery = "UPDATE deposits SET allclaimed = 1 WHERE username = ?";
+    $stmtclaimedOption = $connect_db->prepare($updateclaimedQuery);
+    $stmtclaimedOption->bind_param("s",  $username);
+    $stmtclaimedOption->execute();
+    }
 }
 ?>
 
@@ -164,6 +174,7 @@ function processGetOption($username, $getAmount)
                                                     $daysDifference = floor($diffInSeconds / (60 * 60 * 24));
 
                                                     // echo "Difference in days: $daysDifference";
+                                                    $isAllClaimed = $recievedAmount === ($claimed - $getAmount);
 
                                                     if ($daysDifference == 30) {
                                                         // rigs is complete, update the rigs value
@@ -171,6 +182,7 @@ function processGetOption($username, $getAmount)
                                                         $stmtRigsOption = $connect_db->prepare($updateRigsQuery);
                                                         $stmtRigsOption->bind_param("s", $username);
                                                         $stmtRigsOption->execute();
+                                                        updateAllclaimed($username,$isAllClaimed);
                                                     }
                                                     // Check if the user is eligible for the option
                                                     if ($recievedAmount !== ($claimed - $getAmount)) {
@@ -208,6 +220,7 @@ function processGetOption($username, $getAmount)
                                                     } else {
                                                         $ifclicked = 1;
                                                         echo "All rewards claimed! 🎉";
+                                                        updateAllclaimed($username,$isAllClaimed);
                                                     }
                                                     ?>
 

@@ -48,9 +48,11 @@ include 'auth/conn.php';
                                                             $sno++;
                             }
                             
-                        } else {
-                            echo "Sorry 🤔, we couldn't find any referrals associated with your account<br>";
-                        }
+                        } else {?>
+                        <script>
+                            showErrorMessage("Sorry 🤔, we couldn't find any referrals associated with your account<br>",'warning');
+                        </script>
+                       <?php }
                         ?>
 
                     </tbody>

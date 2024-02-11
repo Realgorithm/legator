@@ -15,8 +15,7 @@
     <title>Legator Mining Room</title>
 
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="1/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="1/assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
@@ -25,8 +24,7 @@
     <!-- Theme Styles -->
     <link href="1/assets/css/lime.min.css" rel="stylesheet">
     <link href="1/assets/css/custom.css" rel="stylesheet">
-    <link rel="icon" href="images/logo.png"
-		sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
 
     <style>
         #loading-container {
@@ -52,13 +50,17 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+            0% {
+                transform: rotate(0deg);
+            }
 
-	</style>
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     <script>
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             var loadingContainer = document.getElementById('loading-container');
             loadingContainer.style.display = 'none';
         });
@@ -66,7 +68,7 @@
 
 
     <script language="javascript">
-        showGetMessage = function (getData, getValue, message, alert) {
+        showGetMessage = function(getData, getValue, message, alert) {
             // Get the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const errorParam = urlParams.get(getData);
@@ -81,7 +83,7 @@
     <script language="javascript">
         // errorHandling.js
 
-        window.showErrorMessage = function (message, alertClass) {
+        window.showErrorMessage = function(message, alertClass) {
             var errorMessage = document.getElementById("error-message");
             var errorText = document.getElementById("error-text");
 
@@ -102,11 +104,10 @@
             errorMessage.style.display = "block";
         };
 
-        window.closeErrorMessage = function () {
+        window.closeErrorMessage = function() {
             var errorMessage = document.getElementById("error-message");
             errorMessage.style.display = "none";
         };
-
     </script>
 
     <?php
@@ -115,10 +116,10 @@
 </head>
 
 <body>
-<div id="loading-container">
-    <div id="loading-spinner"></div>
-</div>
-    <?php require 'nav.php';?>
+    <div id="loading-container">
+        <div id="loading-spinner"></div>
+    </div>
+    <?php require 'nav.php'; ?>
     <div class="lime-container">
         <div class="lime-body">
             <div class="container">
@@ -131,7 +132,9 @@
                                     <span id="error-text"></span>
                                     <span class="close-btn" onclick="closeErrorMessage()">&times;</span>
                                 </div>
-                                <?php include $pageContent; ?>
+                                <?php include $pageContent;
+                                ?>
+
 
                             </div>
                         </div>
@@ -140,12 +143,31 @@
             </div>
         </div>
     </div>
+    <style>
+        .footer {
+            background-color: #f3f3f3;
+            margin: 0px auto;
+            border-radius: 5px;
+        }
+    </style>
 
     <div class="lime-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="footer-text">2024 © Legator Digital Dashboard</span>
+                    <span class="footer-text footer"><p style="margin-top:20px; margin-bottom:0px;">2024 © Legator <?php // Original string
+                                                                    $originalString = $pageContent;
+
+                                                                    // Text to be removed from the end
+                                                                    $textToRemove = ".php";
+
+                                                                    // Check if the original string ends with the text to be removed
+                                                                    if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
+                                                                        // Remove the text from the end
+                                                                        // $trimmedString = rtrim($originalString, $textToRemove);
+                                                                        $trimmedString = substr($originalString, 0, -strlen($textToRemove));
+                                                                        echo ucfirst($trimmedString);
+                                                                    } ?> 📅</p></span>
                 </div>
             </div>
         </div>

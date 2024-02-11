@@ -4,7 +4,7 @@ require_once 'auth/check_eligibility.php';
 // Check if the user is authenticated
 if (!isset($_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
-    header("Location: home?error=login");
+    header("Location: index.php?home&error=login");
     exit();
 }
 ?>

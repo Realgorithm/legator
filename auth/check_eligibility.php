@@ -1,7 +1,7 @@
 <?php
 
 include_once 'conn.php';
-$getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1";
+$getDepositQuery = "SELECT * FROM deposits WHERE username = ? and isdeposit = 1 and allclaimed = 0";
 $stmtGetDeposit = $connect_db->prepare($getDepositQuery);
 $stmtGetDeposit->bind_param("s", $_SESSION['username']);
 $stmtGetDeposit->execute();

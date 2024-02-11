@@ -3,9 +3,9 @@
 <?php
 session_start();
 // Check if the user is authenticated
-if (!isset( $_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
-    header("Location: home?error=login");
+    header("Location: index.phph?home&error=login");
     exit();
 }
 // Get the requested page from the query parameter
@@ -43,13 +43,13 @@ switch ($page) {
     case 'support':
         $pageContent = 'contact.php';
         break;
-        case 'deposit_final':
-            $pageContent = 'deposit_final.php';
-            break;
+    case 'deposit_final':
+        $pageContent = 'deposit_final.php';
+        break;
 
-    // default:
-    //     $pageContent = '404.php'; // or handle as needed
-    //     break;
+        // default:
+        //     $pageContent = '404.php'; // or handle as needed
+        //     break;
 }
 
 // Include the template with the selected page content
