@@ -103,7 +103,7 @@
         <br><br>
         <?php if ($withdrawal_amount < 100): ?>
             <div class="alert alert-warning m-b-lg" role="alert">
-                You have no funds to withdraw.
+            💸 You have no funds available for withdrawal.
             </div>
         <?php endif; ?>
 </form>

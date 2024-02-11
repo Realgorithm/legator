@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 <script language="javascript">
-    showGetMessage('success', '1', 'The deposit has been saved. It will become active when the administrator checks statistics.', 'success');
-    showGetMessage('error', '1', ' Your deposit is not complete for some reason. Please contact the support.', 'warning');
+    showGetMessage('success', '1', 'The deposit is saved and will activate upon administrator review of statistics. 📊', 'success');
+    showGetMessage('error', '1', ' Your deposit is incomplete. Please reach out to support for assistance. 🛠️', 'warning');
     function updateCompound() {
         var id = 0;
         var tt = document.spendform.h_id.type;
@@ -57,18 +57,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Check if the entered amount is a valid number
         if (isNaN(enteredAmount) || enteredAmount <= 0) {
             // errorMessage.innerHTML = "Please enter a valid amount.";
-            showErrorMessage('Please enter a valid amount.', 'danger')
+            showErrorMessage('⚠️ Please enter a valid amount.', 'danger')
 
         } else {
             var selectedPlan = document.spendform.h_id.value;
-            var successMsg = showErrorMessage('Your deposit is under process please wait....', 'success')
+            var successMsg = showErrorMessage('🔄 Your deposit is currently being processed. Please wait for confirmation.', 'success')
+            var errorMsg= showErrorMessage('⚠️ Invalid amount. Please choose a different plan or enter a valid amount', 'danger')
 
             // Validate amount based on the selected plan
             switch (selectedPlan) {
                 case '1':
                     if (enteredAmount > 7999 || enteredAmount < 100) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
-                        showErrorMessage('Invalid amount or choose a different plan1.', 'danger')
+                        errorMsg
                     } else {
                         submitForm();
                     }
@@ -77,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 case '2':
                     if (enteredAmount > 15000 || enteredAmount < 8000) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
-                        showErrorMessage('Invalid amount or choose a different plan2.', 'danger')
+                        errorMsg
                     } else {
                         submitForm();
                     }
@@ -86,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 case '3':
                     if (enteredAmount < 15000) {
                         // errorMessage.innerHTML = "Invalid amount or choose a different plan.";
-                        showErrorMessage('Invalid amount or choose a different plan.', 'danger')
+                        errorMsg
                     } else {
                         submitForm();
                     }

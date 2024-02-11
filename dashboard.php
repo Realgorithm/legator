@@ -1,5 +1,6 @@
 <?php
 include 'auth/user_details.php';
+require_once 'auth/check_eligibility.php';
 // Check if the user is authenticated
 if (!isset($_SESSION['username'])) {
     // Redirect to the login page or handle unauthenticated access
@@ -9,8 +10,8 @@ if (!isset($_SESSION['username'])) {
 ?>
 <style>
     .icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin-right: 10px;
         cursor: pointer;
     }
@@ -20,7 +21,14 @@ if (!isset($_SESSION['username'])) {
         <?php if (isset($updateMessage)) : ?>
             showErrorMessage('<?php echo $updateMessage ?>', 'success')
         <?php endif ?>
+        <?php if (isset($success)) : ?>
+            showErrorMessage('<?php echo $success ?>', 'success')
+        <?php endif ?>
+        <?php if (isset($error)) : ?>
+            showErrorMessage("<?php echo $error ?>", 'danger');
+        <?php endif ?>
     </script>
+
     <div class="card bg-info text-white">
         <div class="card-body">
             <div class="dashboard-info row">
@@ -199,12 +207,16 @@ if (!isset($_SESSION['username'])) {
                                         <?php echo $lastAccessTime ?>&nbsp;
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-md-4"><b>Refer to your friends: </b></div>
+                            <div class="col-md-4" style="margin-top: 8px; font-size:18px"><b>Refer to your friends: </b></div>
                             <div class="col-md-8">
                                 <!-- Icons for platforms -->
                                 <img class="icon" src="images/facebook.png" alt="Facebook" id="facebookIcon">
@@ -307,19 +319,33 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div class="col-md-6">
                         <!-- Button to trigger the share functionality -->
-                        <button id="shareButton" class="btn btn-warning m-t-xs">Share Referral Link</button>
+                        <button id="shareButton" class="btn btn-warning m-t-xs" style="margin-top: 0px;">Share Referral Link</button>
                         <script>
                             document.getElementById('shareButton').addEventListener('click', function() {
 
                                 // // Share on different platforms
-                                if (navigator.share) { // Check if the navigator.share API is supported
-                                    navigator.share({
-                                            title: document.title,
-                                            text: description,
-                                            url: referralLink,
+                                if (navigator.share) {
+                                    // Check if the navigator.share API is supported
+                                    const shareData = {
+                                        title: document.title,
+                                        text: description,
+                                        url: referralLink,
+                                    };
+
+                                    // Fetch the image URL asynchronously
+                                    fetch(imageUrl)
+                                        .then(response => response.blob())
+                                        .then(blob => {
+                                            shareData.files = [new File([blob], 'image.png', {
+                                                type: 'image/png'
+                                            })];
+
+                                            // Share the data including the image
+                                            navigator.share(shareData)
+                                                .then(() => console.log('Successful share'))
+                                                .catch((error) => console.log('Error sharing:', error));
                                         })
-                                        .then(() => console.log('Successful share'))
-                                        .catch((error) => console.log('Error sharing:', error));
+                                        .catch(error => console.error('Error fetching image:', error));
                                 } else { // Fallback for platforms that do not support navigator.share
                                     const shareUrl = `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(description + '\n' + referralLink)}`;
                                     window.location.href = shareUrl;
@@ -342,6 +368,7 @@ if (!isset($_SESSION['username'])) {
 
                             });
                         </script>
+
                     </div>
                 </div>
             </div>

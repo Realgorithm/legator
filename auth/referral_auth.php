@@ -78,7 +78,6 @@ function updateReferralAmount($user, $username, $level, $referAmount)
         while ($result2 = $referee->fetch_assoc()) {
             $amount = $result2["amount"];
             $plan = $result2["plan"];
-
             // Calculate the referral bonus based on the level
             if ($level === 1) {
                 $referralbonus = calculateFirstLevelBonus($amount, $plan);

@@ -145,7 +145,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="footer-text">2023 © Legator Digital Dashboard</span>
+                    <span class="footer-text">2024 © Legator Digital Dashboard</span>
                 </div>
             </div>
         </div>

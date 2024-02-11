@@ -9,8 +9,8 @@
     }
 </style>
 <script>
-    showGetMessage('use', '1', ' you already use this transaction id or wrong transaction id', 'danger');
-    showGetMessage('upload', '1', ' you already use this image or change the name and upload', 'warning');
+    showGetMessage('use', '1', 'You have already used this transaction ID or entered the wrong one. 🤔 Please try again.', 'danger');
+    showGetMessage('upload', '1', ' 🖼️ You already used this image or changed its name. Please upload a different image.', 'warning');
 
     function validateId(action) {
         var enteredTransId = document.getElementById('depositid').value;
@@ -21,12 +21,12 @@
         // Check if the entered amount is a valid number
         if (!validTransactionId) {
             // errorMessage.innerHTML = "Please enter a valid amount."
-            showErrorMessage('Please enter a Correct transaction id.', 'danger')
+            showErrorMessage('⚠️ Please enter a valid transaction ID.', 'danger')
         } else if (!selectedFile) {
             // Display an error message
-            showErrorMessage('Please select an image before uploading.', 'warning')
+            showErrorMessage('⚠️ Please select an image before uploading.', 'warning')
         } else {
-            showErrorMessage('your transaction is under processing....', 'success')
+            showErrorMessage('Hurray! ⏳ Your transaction is currently under processing...', 'success')
             submitForm(action)
 
         }
