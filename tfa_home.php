@@ -87,14 +87,13 @@
         <img src="images/logo.png" alt="logo">
         <h2>Legator</h2>
         <p>Enter the code from your authenticator app:</p>
-        <form id="tfa-form" method="post" action="tfa_home.php">
+        <form id="tfa-form" method="post" action="tfa_home.php" name="mainform">
             <input type="text" name="code" id="tfa-code" placeholder="Enter TFA Code" required>
             <button type="submit" onclick="checkform()" id="verify-btn">Verify Code</button>
         </form>
     </div>
 
     <script>
-        document.mainform.time.value = (new Date()).getTime();
 
         function checkform() {
             if (!document.mainform.code.value.match(/^[0-9]{6}$/)) {

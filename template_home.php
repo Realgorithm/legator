@@ -9,8 +9,8 @@ $textToRemove = ".html";
 
 // Check if the original string ends with the text to be removed
 if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
-    // Remove the text from the end
-    // $trimmedString = rtrim($originalString, $textToRemove);
+	// Remove the text from the end
+	// $trimmedString = rtrim($originalString, $textToRemove);
 	$trimmedString = substr($originalString, 0, -strlen($textToRemove));
 }
 ?>
@@ -22,27 +22,65 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title><?php echo $trimmedString?> &#8211; Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</title>
-    <title>Bitcoin Mining Investment: The Future of Digital Currency</title>
+	<title><?php echo $trimmedString ?> &#8211; Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</title>
+	<title>Bitcoin Mining Investment: The Future of Digital Currency</title>
 	<meta name='robots' content='max-image-preview:large'>
-	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Feed" href="error_page.html">
-	<link rel="alternate" type="application/rss+xml" title="Legator Digital &raquo; Comments Feed"
-		href="error_page.html">
 
-<meta name="geo.placename" content="Cityville, NEWZEALAND">
+
+	<meta name="geo.placename" content="Cityville, NEWZEALAND">
 
 	<meta property="og:title" content="Legator | Online Mining And Digital Services" />
-	<meta property="og:description"
-		content="Legator Digital services is the easiest and most effective way to make money digital world without buying and maintaining your mining equipment." />
+	<meta property="og:description" content="Legator Digital services is the easiest and most effective way to make money digital world without buying and maintaining your mining equipment." />
 	<meta name="description" content="Legator is best crpyto mining website, bitcoin mining investment and cryptocurrency mining investment we see the potential for crypto currency to revolutionize the financial industry,making payments faster, more secure, and less expensive on a global scale." />
-    <meta name="description" content="Discover the lucrative world of cryptocurrency mining investment and maximize your profits with Legator Pro. Join us today!" />
-    <meta name="description" content="At Legator. legator is the best crypto earning, make positive earning, earning from home, making money from home, high profit/earning platform, big profit crypto website and the best website for crypto currency, bitcoin, ethereum trc20 erc20. easy crypto earning money online nz" />
+	<meta name="description" content="Discover the lucrative world of cryptocurrency mining investment and maximize your profits with Legator Pro. Join us today!" />
+	<meta name="description" content="At Legator. legator is the best crypto earning, make positive earning, earning from home, making money from home, high profit/earning platform, big profit crypto website and the best website for crypto currency, bitcoin, ethereum trc20 erc20. easy crypto earning money online nz" />
 	<meta name="robots" content="index, follow" />
 
 	<script>
-		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1" } };
+		window._wpemojiSettings = {
+			"baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
+			"ext": ".png",
+			"svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
+			"svgExt": ".svg",
+			"source": {
+				"concatemoji": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"
+			}
+		};
 		/*! This file is auto-generated */
-		!function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode, e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL()); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+		! function(e, a, t) {
+			var n, r, o, i = a.createElement("canvas"),
+				p = i.getContext && i.getContext("2d");
+
+			function s(e, t) {
+				var a = String.fromCharCode,
+					e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL());
+				return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+			}
+
+			function c(e) {
+				var t = a.createElement("script");
+				t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+			}
+			for (o = Array("flag", "emoji"), t.supports = {
+					everything: !0,
+					everythingExceptFlag: !0
+				}, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+				if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+					case "flag":
+						return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+					case "emoji":
+						return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999])
+				}
+				return !1
+			}(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+			t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+				t.DOMReady = !0
+			}, t.supports.everything || (n = function() {
+				t.readyCallback()
+			}, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+				"complete" === a.readyState && t.readyCallback()
+			})), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)))
+		}(window, document, window._wpemojiSettings);
 	</script>
 	<style>
 		img.wp-smiley,
@@ -57,193 +95,114 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 			background: none !important;
 			padding: 0 !important;
 		}
-        #loading-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
 
-        #loading-spinner {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s linear infinite;
-        }
+		#loading-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.8);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+		}
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+		#loading-spinner {
+			border: 8px solid #f3f3f3;
+			border-top: 8px solid #3498db;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			animation: spin 2s linear infinite;
+		}
 
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
 	</style>
-	<!-- Chatra {literal} -->
 	<script>
-		(function (d, w, c) {
-			w.ChatraID = 'ZPAnhnD2mgpviLA9C';
-			var s = d.createElement('script');
-			w[c] = w[c] || function () {
-				(w[c].q = w[c].q || []).push(arguments);
-			};
-			s.async = true;
-			s.src = 'https://call.chatra.io/chatra.js';
-			if (d.head) d.head.appendChild(s);
-		})(document, window, 'Chatra');
+		window.addEventListener('load', function() {
+			var loadingContainer = document.getElementById('loading-container');
+			loadingContainer.style.display = 'none';
+		});
 	</script>
-    <script>
-        window.addEventListener('load', function () {
-            var loadingContainer = document.getElementById('loading-container');
-            loadingContainer.style.display = 'none';
-        });
-    </script>
 
-	<!-- /Chatra {/literal} -->
-	<link rel="icon" href="images/logo.png"
-		sizes="32x32" />
+	<link rel="icon" href="images/logo.png" sizes="32x32" />
 
-        <!-- External CSS libraries -->
-    <link type='text/css' rel='stylesheet' href='loginasset/assets/css/bootstrap.min.css'>
-    <link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/font-awesome/css/font-awesome.min.css'>
-    <link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/flaticon/font/flaticon.css'>
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
-    <link rel='stylesheet' href='css/owl.carousel.min.css'>
-    <link rel='stylesheet' href='css/all.min.css'>
-    <link rel='stylesheet' href='css/animate.css'>
-    <link rel='stylesheet' href='css/main.css'>
+	<!-- External CSS libraries -->
+	<link type='text/css' rel='stylesheet' href='loginasset/assets/css/bootstrap.min.css'>
+	<link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/font-awesome/css/font-awesome.min.css'>
+	<link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/flaticon/font/flaticon.css'>
+	<link rel='stylesheet' href='css/bootstrap.min.css'>
+	<link rel='stylesheet' href='css/owl.carousel.min.css'>
+	<link rel='stylesheet' href='css/all.min.css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Favicon icon -->
-    <!-- <link rel="shortcut icon" href="loginasset/assets/img/favicon.ico" type="image/x-icon"> -->
+	<!-- Favicon icon -->
+	<!-- <link rel="shortcut icon" href="loginasset/assets/img/favicon.ico" type="image/x-icon"> -->
 
-    <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+	<!-- Google fonts -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
 
-    <!-- Custom Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="loginasset/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="loginasset/assets/css/skins/default.css">
+	<!-- Custom Stylesheet -->
+	<link type="text/css" rel="stylesheet" href="loginasset/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" id="style_sheet" href="loginasset/assets/css/skins/default.css">
 
-	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.1.1'
-		media='all'>
-	<link rel='stylesheet' id='classic-theme-styles-css' href='wp-includes/css/classic-themes.min.css?ver=1'
-		media='all'>
+	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' media='all'>
+	<link rel='stylesheet' id='classic-theme-styles-css' href='wp-includes/css/classic-themes.min.css?ver=1' media='all'>
 	<link rel="stylesheet" id="global-styles-inline-css" href="css/inline.css" media="all">
-	<link rel='stylesheet' id='template-kit-export-css'
-		href='wp-content/plugins/template-kit-export/public/assets/css/template-kit-export-public.min365c.css?ver=1.0.21'
-		media='all'>
-	<link rel='stylesheet' id='hello-elementor-css' href='wp-content/themes/hello-elementor/style.min.css?ver=2.6.1'
-		media='all'>
-	<link rel='stylesheet' id='elementor-post-519-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-51.css?ver=1673317606' media='all'>
-	<link rel='stylesheet' id='elementor-post-461-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-46.css?ver=1673322687' media='all'>
-	<link rel='stylesheet' id='hello-elementor-theme-style-css'
-		href='wp-content/themes/hello-elementor/theme.min.css?ver=2.6.1' media='all'>
-	<link rel='stylesheet' id='elementor-frontend-css'
-		href='wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.10.0' media='all'>
-	<link rel='stylesheet' id='elementor-post-20-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-20.css?ver=1673311170' media='all'>
-	<link rel='stylesheet' id='elementor-post-23-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-23.css?ver=1673322754' media='all'>
-	<link rel='stylesheet' id='elementor-icons-css'
-		href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.mine.css?ver=5.17.0' media='all'>
-	<link rel='stylesheet' id='elementor-pro-css'
-		href='wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.7' media='all'>
-	<link rel='stylesheet' id='elementor-post-99-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-99.css?ver=1673331555' media='all'>
-	<link rel='stylesheet' id='elementor-post-39-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-39.css?ver=1673311170' media='all'>
-	<link rel='stylesheet' id='elementor-post-62-css'
-		href='wp-content/uploads/sites/8/elementor/css/post-62.css?ver=1673311170' media='all'>
-	<link rel='stylesheet' id='elementor-icons-ekiticons-css'
-		href='wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=2.8.1'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-brands_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icomoon_brands97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-devicons_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/devicons.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-elegant_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/elegant97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='skb-cife-elusive_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/elusive-icons.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-icofont_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icofont.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-icomoon_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icomoon97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='skb-cife-iconic_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/iconic97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='skb-cife-ion_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/ionicons.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-linearicons_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/linearicons97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-lineawesome_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/line-awesome.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-line_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/lineicons97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='skb-cife-materialdesign_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/materialdesignicons.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-open_iconic-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/open-iconic97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-simpleline_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/simple-line-icons97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='skb-cife-themify_icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/themify97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='ekit-widget-styles-css'
-		href='wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.8.1' media='all'>
-	<link rel='stylesheet' id='ekit-responsive-css'
-		href='wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.8.1' media='all'>
-	<link rel='stylesheet' id='elementor-icons-skb_cife-materialdesign-icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/materialdesignicons.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='elementor-icons-skb_cife-icofont-icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icofont.min97de.css?ver=1.0.5'
-		media='all'>
-	<link rel='stylesheet' id='elementor-icons-shared-0-css'
-		href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all'>
-	<link rel='stylesheet' id='elementor-icons-fa-solid-css'
-		href='wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all'>
-	<link rel='stylesheet' id='elementor-icons-fa-brands-css'
-		href='wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all'>
-	<link rel='stylesheet' id='elementor-icons-skb_cife-iconic-icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/iconic97de.css?ver=1.0.5' media='all'>
-	<link rel='stylesheet' id='elementor-icons-skb_cife-open_iconic-icon-css'
-		href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/open-iconic97de.css?ver=1.0.5'
-		media='all'>
+	<link rel='stylesheet' id='template-kit-export-css' href='wp-content/plugins/template-kit-export/public/assets/css/template-kit-export-public.min365c.css?ver=1.0.21' media='all'>
+	<link rel='stylesheet' id='hello-elementor-css' href='wp-content/themes/hello-elementor/style.min.css?ver=2.6.1' media='all'>
+	<link rel='stylesheet' id='elementor-post-519-css' href='wp-content/uploads/sites/8/elementor/css/post-51.css?ver=1673317606' media='all'>
+	<link rel='stylesheet' id='elementor-post-461-css' href='wp-content/uploads/sites/8/elementor/css/post-46.css?ver=1673322687' media='all'>
+	<link rel='stylesheet' id='hello-elementor-theme-style-css' href='wp-content/themes/hello-elementor/theme.min.css?ver=2.6.1' media='all'>
+	<link rel='stylesheet' id='elementor-frontend-css' href='wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.10.0' media='all'>
+	<link rel='stylesheet' id='elementor-post-20-css' href='wp-content/uploads/sites/8/elementor/css/post-20.css?ver=1673311170' media='all'>
+	<link rel='stylesheet' id='elementor-post-23-css' href='wp-content/uploads/sites/8/elementor/css/post-23.css?ver=1673322754' media='all'>
+	<link rel='stylesheet' id='elementor-icons-css' href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.mine.css?ver=5.17.0' media='all'>
+	<link rel='stylesheet' id='elementor-pro-css' href='wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.7' media='all'>
+	<link rel='stylesheet' id='elementor-post-99-css' href='wp-content/uploads/sites/8/elementor/css/post-99.css?ver=1673331555' media='all'>
+	<link rel='stylesheet' id='elementor-post-39-css' href='wp-content/uploads/sites/8/elementor/css/post-39.css?ver=1673311170' media='all'>
+	<link rel='stylesheet' id='elementor-post-62-css' href='wp-content/uploads/sites/8/elementor/css/post-62.css?ver=1673311170' media='all'>
+	<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=2.8.1' media='all'>
+	<link rel='stylesheet' id='skb-cife-brands_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icomoon_brands97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-devicons_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/devicons.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-elegant_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/elegant97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-elusive_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/elusive-icons.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-icofont_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icofont.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-icomoon_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icomoon97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-iconic_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/iconic97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-ion_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/ionicons.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-linearicons_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/linearicons97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-lineawesome_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/line-awesome.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-line_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/lineicons97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-materialdesign_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/materialdesignicons.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-open_iconic-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/open-iconic97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-simpleline_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/simple-line-icons97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='skb-cife-themify_icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/themify97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='ekit-widget-styles-css' href='wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.8.1' media='all'>
+	<link rel='stylesheet' id='ekit-responsive-css' href='wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.8.1' media='all'>
+	<link rel='stylesheet' id='elementor-icons-skb_cife-materialdesign-icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/materialdesignicons.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='elementor-icons-skb_cife-icofont-icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/icofont.min97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='elementor-icons-shared-0-css' href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all'>
+	<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all'>
+	<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all'>
+	<link rel='stylesheet' id='elementor-icons-skb_cife-iconic-icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/iconic97de.css?ver=1.0.5' media='all'>
+	<link rel='stylesheet' id='elementor-icons-skb_cife-open_iconic-icon-css' href='wp-content/plugins/skyboot-custom-icons-for-elementor/assets/css/open-iconic97de.css?ver=1.0.5' media='all'>
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 	<script src='wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
-	<script src='wp-includes/js/jquery/wp-polyfill.mjquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-	<script
-		src='wp-content/plugins/template-kit-export/public/assets/js/template-kit-export-public.min365c.js?ver=1.0.21'
-		id='template-kit-export-js'></script>
-	<link rel="https://api.w.org/" href="wp-json/index.html">
-	<link rel="EditURI" type="application/rsd+xml" title="RSD"
-		href="https://kitnew.moxcreative.com/gettrade/xmlrpc.php?rsd">
-	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
-		href="https://kitnew.moxcreative.com/gettrade/wp-includes/wlwmanifest.xml">
-
-	<link rel="canonical" href="index-2.html">
-	<link rel='shortlink' href='index5401.html?p=99'>
-	<link rel="alternate" type="application/json+oembed"
-		href="wp-json/oembed/1.0/embed610f.html?url=https%3A%2F%2Fkitnew.moxcreative.com%2Fgettrade%2Ftemplate-kit%2Fhomepage%2F">
-	<link rel="alternate" type="text/xml+oembed"
-		href="wp-json/oembed/1.0/embed-1657b.html?url=https%3A%2F%2Fkitnew.moxcreative.com%2Fgettrade%2Ftemplate-kit%2Fhomepage%2F&amp;format=xml">
+	<script src='wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+	<script src='wp-content/plugins/template-kit-export/public/assets/js/template-kit-export-public.min365c.js?ver=1.0.21' id='template-kit-export-js'></script>
+	<link rel="canonical" href="https:legator.pro/home">
+	<link rel='shortlink' href='legator.pro'>
 
 	<style>
 		/* Write your custom CSS here */
@@ -271,7 +230,7 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 		}
 	</style>
 	<script language="javascript">
-		showGetMessage = function (getData, getValue, message, alert) {
+		showGetMessage = function(getData, getValue, message, alert) {
 			// Get the URL parameters
 			const urlParams = new URLSearchParams(window.location.search);
 			const errorParam = urlParams.get(getData);
@@ -279,57 +238,53 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 			// Show alert if the 'error' parameter is present and has the value 'username_exists'
 			if (errorParam === getValue) {
 				// document.write("<div class='alert alert-danger' role='alert'> invalid username and password </div>");
-				showErrorMessage(message,alert);
+				showErrorMessage(message, alert);
 			}
 		};
 	</script>
 	<script language="javascript">
-    // errorHandling.js
+		// errorHandling.js
 
-    window.showErrorMessage = function (message, alertClass) {
-        var errorMessage = document.getElementById("error-message");
-        var errorText = document.getElementById("error-text");
+		window.showErrorMessage = function(message, alertClass) {
+			var errorMessage = document.getElementById("error-message");
+			var errorText = document.getElementById("error-text");
 
-        // Remove existing classes
-        errorMessage.classList.remove("alert-success", "alert-warning", "alert-danger");
+			// Remove existing classes
+			errorMessage.classList.remove("alert-success", "alert-warning", "alert-danger");
 
-        // Set the new class based on the provided alertClass
-        if (alertClass === "success") {
-            errorMessage.classList.add("alert-success");
-        } else if (alertClass === "warning") {
-            errorMessage.classList.add("alert-warning");
-        } else {
-            // Default to danger if the class is not recognized
-            errorMessage.classList.add("alert-danger");
-        }
+			// Set the new class based on the provided alertClass
+			if (alertClass === "success") {
+				errorMessage.classList.add("alert-success");
+			} else if (alertClass === "warning") {
+				errorMessage.classList.add("alert-warning");
+			} else {
+				// Default to danger if the class is not recognized
+				errorMessage.classList.add("alert-danger");
+			}
 
-        errorText.innerHTML = message;
-        errorMessage.style.display = "block";
-    };
+			errorText.innerHTML = message;
+			errorMessage.style.display = "block";
+		};
 
-    window.closeErrorMessage = function () {
-        var errorMessage = document.getElementById("error-message");
-        errorMessage.style.display = "none";
-    };
-
-</script>
+		window.closeErrorMessage = function() {
+			var errorMessage = document.getElementById("error-message");
+			errorMessage.style.display = "none";
+		};
+	</script>
 
 </head>
 
-<body
-	class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-99 elementor-default elementor-template-full-width elementor-kit-20 elementor-page elementor-page-99">
+<body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-99 elementor-default elementor-template-full-width elementor-kit-20 elementor-page elementor-page-99">
 
-    <div id="loading-container">
-    <div id="loading-spinner"></div>
-</div>
+	<div id="loading-container">
+		<div id="loading-spinner"></div>
+	</div>
 
 
-	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-dark-grayscale">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr>
@@ -340,12 +295,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-grayscale">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0 1"></fefuncr>
@@ -356,12 +309,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-purple-yellow">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr>
@@ -372,12 +323,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-blue-red">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0 1"></fefuncr>
@@ -388,12 +337,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-midnight">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0 0"></fefuncr>
@@ -404,12 +351,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-magenta-yellow">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr>
@@ -420,12 +365,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-purple-green">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr>
@@ -436,12 +379,10 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
 			</filter>
 		</defs>
-	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
 		<defs>
 			<filter id="wp-duotone-blue-orange">
-				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
-					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
 				</fecolormatrix>
 				<fecomponenttransfer color-interpolation-filters="sRGB">
 					<fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr>
@@ -456,7 +397,7 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 	<a class="skip-link screen-reader-text" href="#content">
 		Skip to content</a>
 	<?php require 'nav_home.php'; ?>
-    <h1 class="hide">Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</h1>
+	<h1 class="hide">Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</h1>
 
 	<!-- Display an error message -->
 	<div id="error-message" class="error-message alert alert-danger">
@@ -466,35 +407,24 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 
 	<?php include $pageContent; ?>
 
-	<div data-elementor-type="footer" data-elementor-id="62" class="elementor elementor-62 elementor-location-footer"
-		data-elementor-post-type="elementor_library">
-		<section
-			class="elementor-section elementor-top-section elementor-element elementor-element-c1ecc37 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-			data-id="c1ecc37" data-element_type="section"
-			data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+	<div data-elementor-type="footer" data-elementor-id="62" class="elementor elementor-62 elementor-location-footer" data-elementor-post-type="elementor_library">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-c1ecc37 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c1ecc37" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
 			<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-53d62cf elementor-invisible"
-					data-id="53d62cf" data-element_type="column"
-					data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-53d62cf elementor-invisible" data-id="53d62cf" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
 					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-4e774ab elementor-widget elementor-widget-heading"
-							data-id="4e774ab" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-element elementor-element-4e774ab elementor-widget elementor-widget-heading" data-id="4e774ab" data-element_type="widget" data-widget_type="heading.default">
 							<div class="elementor-widget-container">
 								<h2 class="elementor-heading-title elementor-size-default">Pro Platform, By Professionals for Professionals</h2>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8d25fb7 elementor-invisible"
-					data-id="8d25fb7" data-element_type="column"
-					data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8d25fb7 elementor-invisible" data-id="8d25fb7" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
 					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-0f96f60 elementor-align-justify elementor-widget elementor-widget-button"
-							data-id="0f96f60" data-element_type="widget" data-widget_type="button.default">
+						<div class="elementor-element elementor-element-0f96f60 elementor-align-justify elementor-widget elementor-widget-button" data-id="0f96f60" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<a class="elementor-button elementor-button-link elementor-size-lg"
-										href="register.html?a=signup">
+									<a class="elementor-button elementor-button-link elementor-size-lg" href="register.html?a=signup">
 										<span class="elementor-button-content-wrapper">
 											<span class="elementor-button-icon elementor-align-icon-right">
 												<i aria-hidden="true" class="fas fa-chevron-circle-right"></i> </span>
@@ -508,32 +438,21 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 				</div>
 			</div>
 		</section>
-		<section
-			class="elementor-section elementor-top-section elementor-element elementor-element-7609856 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-			data-id="7609856" data-element_type="section"
-			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-7609856 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7609856" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 			<div class="elementor-background-overlay"></div>
 			<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4c17d30"
-					data-id="4c17d30" data-element_type="column">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4c17d30" data-id="4c17d30" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
-						<section
-							class="elementor-section elementor-inner-section elementor-element elementor-element-e49f2cd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-							data-id="e49f2cd" data-element_type="section">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-e49f2cd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e49f2cd" data-element_type="section">
 							<div class="elementor-container elementor-column-gap-default">
-								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9f97dd7"
-									data-id="9f97dd7" data-element_type="column">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9f97dd7" data-id="9f97dd7" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-90ddedc elementor-widget elementor-widget-heading"
-											data-id="90ddedc" data-element_type="widget"
-											data-widget_type="heading.default">
+										<div class="elementor-element elementor-element-90ddedc elementor-widget elementor-widget-heading" data-id="90ddedc" data-element_type="widget" data-widget_type="heading.default">
 											<div class="elementor-widget-container">
 												<h2 class="elementor-heading-title elementor-size-default">Products</h2>
 											</div>
 										</div>
-										<div class="elementor-element elementor-element-7beb364 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="7beb364" data-element_type="widget"
-											data-widget_type="icon-list.default">
+										<div class="elementor-element elementor-element-7beb364 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7beb364" data-element_type="widget" data-widget_type="icon-list.default">
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
@@ -560,19 +479,14 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 										</div>
 									</div>
 								</div>
-								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-14dfb36"
-									data-id="14dfb36" data-element_type="column">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-14dfb36" data-id="14dfb36" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-46bce71 elementor-widget elementor-widget-heading"
-											data-id="46bce71" data-element_type="widget"
-											data-widget_type="heading.default">
+										<div class="elementor-element elementor-element-46bce71 elementor-widget elementor-widget-heading" data-id="46bce71" data-element_type="widget" data-widget_type="heading.default">
 											<div class="elementor-widget-container">
 												<h2 class="elementor-heading-title elementor-size-default">Company</h2>
 											</div>
 										</div>
-										<div class="elementor-element elementor-element-53cca00 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="53cca00" data-element_type="widget"
-											data-widget_type="icon-list.default">
+										<div class="elementor-element elementor-element-53cca00 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="53cca00" data-element_type="widget" data-widget_type="icon-list.default">
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
@@ -588,20 +502,15 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 										</div>
 									</div>
 								</div>
-								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2ca8251"
-									data-id="2ca8251" data-element_type="column">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2ca8251" data-id="2ca8251" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-818f664 elementor-widget elementor-widget-heading"
-											data-id="818f664" data-element_type="widget"
-											data-widget_type="heading.default">
+										<div class="elementor-element elementor-element-818f664 elementor-widget elementor-widget-heading" data-id="818f664" data-element_type="widget" data-widget_type="heading.default">
 											<div class="elementor-widget-container">
 												<h2 class="elementor-heading-title elementor-size-default">Customers
 												</h2>
 											</div>
 										</div>
-										<div class="elementor-element elementor-element-7fec87a elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="7fec87a" data-element_type="widget"
-											data-widget_type="icon-list.default">
+										<div class="elementor-element elementor-element-7fec87a elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7fec87a" data-element_type="widget" data-widget_type="icon-list.default">
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
@@ -627,22 +536,14 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 										</div>
 									</div>
 								</div>
-								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6bee7ce"
-									data-id="6bee7ce" data-element_type="column">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6bee7ce" data-id="6bee7ce" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-8ec0242 elementor-widget__width-auto elementor-widget elementor-widget-image"
-											data-id="8ec0242" data-element_type="widget"
-											data-widget_type="image.default">
+										<div class="elementor-element elementor-element-8ec0242 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="8ec0242" data-element_type="widget" data-widget_type="image.default">
 											<div class="elementor-widget-container">
-												<img width="300" height="79"
-													src="wp-content/uploads/sites/8/2022/11/logo1.png"
-													class="attachment-full size-full wp-image-41" alt=""
-													loading="lazy" />
+												<img width="300" height="79" src="wp-content/uploads/sites/8/2022/11/logo1.png" class="attachment-full size-full wp-image-41" alt="" loading="lazy" />
 											</div>
 										</div>
-										<div class="elementor-element elementor-element-8c3c6a3 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="8c3c6a3" data-element_type="widget"
-											data-widget_type="icon-list.default">
+										<div class="elementor-element elementor-element-8c3c6a3 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="8c3c6a3" data-element_type="widget" data-widget_type="icon-list.default">
 											<div class="elementor-widget-container">
 												<ul class="elementor-icon-list-items">
 													<li class="elementor-icon-list-item">
@@ -654,9 +555,8 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 													<li class="elementor-icon-list-item">
 														<span class="elementor-icon-list-icon">
 															<i aria-hidden="true" class="mdi mdi-email"></i> </span>
-                                                            <a href="mailto:support@legator.pro" target="_blank">
-														<span
-															class="elementor-icon-list-text">support@legator.pro</span></a>
+														<a href="mailto:support@legator.pro" target="_blank">
+															<span class="elementor-icon-list-text">support@legator.pro</span></a>
 													</li>
 
 												</ul>
@@ -666,28 +566,20 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 								</div>
 							</div>
 						</section>
-						<section
-							class="elementor-section elementor-inner-section elementor-element elementor-element-c347bd0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-							data-id="c347bd0" data-element_type="section">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-c347bd0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c347bd0" data-element_type="section">
 							<div class="elementor-container elementor-column-gap-default">
-								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-60e6197"
-									data-id="60e6197" data-element_type="column">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-60e6197" data-id="60e6197" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-d06889f elementor-widget elementor-widget-heading"
-											data-id="d06889f" data-element_type="widget"
-											data-widget_type="heading.default">
+										<div class="elementor-element elementor-element-d06889f elementor-widget elementor-widget-heading" data-id="d06889f" data-element_type="widget" data-widget_type="heading.default">
 											<div class="elementor-widget-container">
 												<div class="elementor-heading-title elementor-size-default">Copyright © 2024 Legator Digital, All rights reserved.</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-363a472"
-									data-id="363a472" data-element_type="column">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-363a472" data-id="363a472" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-c55959d elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-											data-id="c55959d" data-element_type="widget"
-											data-widget_type="divider.default">
+										<div class="elementor-element elementor-element-c55959d elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="c55959d" data-element_type="widget" data-widget_type="divider.default">
 											<div class="elementor-widget-container">
 												<style>
 													/*! elementor - v3.17.0 - 08-11-2023 */
@@ -819,12 +711,9 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 										</div>
 									</div>
 								</div>
-								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5c9e465"
-									data-id="5c9e465" data-element_type="column">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5c9e465" data-id="5c9e465" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-7c0a99d e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons"
-											data-id="7c0a99d" data-element_type="widget"
-											data-widget_type="social-icons.default">
+										<div class="elementor-element elementor-element-7c0a99d e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="7c0a99d" data-element_type="widget" data-widget_type="social-icons.default">
 											<div class="elementor-widget-container">
 												<style>
 													/*! elementor - v3.17.0 - 08-11-2023 */
@@ -1127,32 +1016,27 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 												</style>
 												<div class="elementor-social-icons-wrapper elementor-grid">
 													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-square elementor-animation-float elementor-repeater-item-1989fa1"
-															href="#" target="_blank">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-square elementor-animation-float elementor-repeater-item-1989fa1" href="#" target="_blank">
 															<span class="elementor-screen-only">Facebook-square</span>
 															<i class="fab fa-facebook-square"></i> </a>
 													</span>
 													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-float elementor-repeater-item-57a6886"
-															href="#" target="_blank">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-float elementor-repeater-item-57a6886" href="#" target="_blank">
 															<span class="elementor-screen-only">Twitter</span>
 															<i class="fab fa-twitter"></i> </a>
 													</span>
 													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-float elementor-repeater-item-c7ff3d1"
-															href="#" target="_blank">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-float elementor-repeater-item-c7ff3d1" href="#" target="_blank">
 															<span class="elementor-screen-only">Youtube</span>
 															<i class="fab fa-youtube"></i> </a>
 													</span>
 													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-float elementor-repeater-item-0d74d77"
-															href="#" target="_blank">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-float elementor-repeater-item-0d74d77" href="#" target="_blank">
 															<span class="elementor-screen-only">Instagram</span>
 															<i class="fab fa-instagram"></i> </a>
 													</span>
 													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-float elementor-repeater-item-46e6f72"
-															href="#" target="_blank">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-float elementor-repeater-item-46e6f72" href="#" target="_blank">
 															<span class="elementor-screen-only">Linkedin-in</span>
 															<i class="fab fa-linkedin-in"></i> </a>
 													</span>
@@ -1163,16 +1047,11 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 								</div>
 							</div>
 						</section>
-						<section
-							class="elementor-section elementor-inner-section elementor-element elementor-element-1f98092 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-							data-id="1f98092" data-element_type="section">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-1f98092 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f98092" data-element_type="section">
 							<div class="elementor-container elementor-column-gap-default">
-								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4016c34"
-									data-id="4016c34" data-element_type="column">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4016c34" data-id="4016c34" data-element_type="column">
 									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-1dbb54c elementor-widget elementor-widget-text-editor"
-											data-id="1dbb54c" data-element_type="widget"
-											data-widget_type="text-editor.default">
+										<div class="elementor-element elementor-element-1dbb54c elementor-widget elementor-widget-text-editor" data-id="1dbb54c" data-element_type="widget" data-widget_type="text-editor.default">
 											<!-- <div class="elementor-widget-container">
 												<p>1) or fractional share<br />Investing in the stock markets carries
 													risk: the value of investments can go up as well as down and you may
@@ -1191,69 +1070,255 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 		</section>
 	</div>
 
-	<link rel='stylesheet' id='e-animations-css'
-		href='wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.17.3' media='all' />
-		
-	<script src="wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0"
-		id="hello-theme-frontend-js"></script>
-	<script src="wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script5b75.js?ver=3.0.2"
-		id="elementskit-framework-js-frontend-js"></script>
+	<link rel='stylesheet' id='e-animations-css' href='wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.17.3' media='all' />
+
+	<script src="wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
+	<script src="wp-content/plugins/elementskit-lite/frontend-script.js?ver=3.0.2" id="elementskit-framework-js-frontend-js"></script>
 	<script id="elementskit-framework-js-frontend-js-after">
 		var elementskit = {
 			resturl: 'https://kitnew.moxcreative.com/gettrade/wp-json/elementskit/v1/',
 		}
 	</script>
-	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts5b75.js?ver=3.0.2"
-		id="ekit-widget-scripts-js"></script>
-	<script src="wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1"
-		id="smartmenus-js"></script>
-	<script src="wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1"
-		id="jquery-numerator-js"></script>
+	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts5b75.js?ver=3.0.2" id="ekit-widget-scripts-js"></script>
+	<script src="wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1" id="smartmenus-js"></script>
+	<script src="wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1" id="jquery-numerator-js"></script>
 	<script src="wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-	<script src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.15.1"
-		id="elementor-pro-webpack-runtime-js"></script>
-	<script src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.17.3"
-		id="elementor-webpack-runtime-js"></script>
-	<script src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.17.3"
-		id="elementor-frontend-modules-js"></script>
+	<script src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.15.1" id="elementor-pro-webpack-runtime-js"></script>
+	<script src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.17.3" id="elementor-webpack-runtime-js"></script>
+	<script src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.17.3" id="elementor-frontend-modules-js"></script>
 	<script src="wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
 	<script src="wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
 	<script src="wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
 	<script src="wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
 	<script src="wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
 	<script id="wp-i18n-js-after">
-		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+		wp.i18n.setLocaleData({
+			'text direction\u0004ltr': ['ltr']
+		});
 	</script>
 	<script id="elementor-pro-frontend-js-before">
-		var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-admin\/admin-ajax.php", "nonce": "69f58bfb4f", "urls": { "assets": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
+		var ElementorProFrontendConfig = {
+			"ajaxurl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-admin\/admin-ajax.php",
+			"nonce": "69f58bfb4f",
+			"urls": {
+				"assets": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor-pro\/assets\/",
+				"rest": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-json\/"
+			},
+			"shareButtonsNetworks": {
+				"facebook": {
+					"title": "Facebook",
+					"has_counter": true
+				},
+				"twitter": {
+					"title": "Twitter"
+				},
+				"linkedin": {
+					"title": "LinkedIn",
+					"has_counter": true
+				},
+				"pinterest": {
+					"title": "Pinterest",
+					"has_counter": true
+				},
+				"reddit": {
+					"title": "Reddit",
+					"has_counter": true
+				},
+				"vk": {
+					"title": "VK",
+					"has_counter": true
+				},
+				"odnoklassniki": {
+					"title": "OK",
+					"has_counter": true
+				},
+				"tumblr": {
+					"title": "Tumblr"
+				},
+				"digg": {
+					"title": "Digg"
+				},
+				"skype": {
+					"title": "Skype"
+				},
+				"stumbleupon": {
+					"title": "StumbleUpon",
+					"has_counter": true
+				},
+				"mix": {
+					"title": "Mix"
+				},
+				"telegram": {
+					"title": "Telegram"
+				},
+				"pocket": {
+					"title": "Pocket",
+					"has_counter": true
+				},
+				"xing": {
+					"title": "XING",
+					"has_counter": true
+				},
+				"whatsapp": {
+					"title": "WhatsApp"
+				},
+				"email": {
+					"title": "Email"
+				},
+				"print": {
+					"title": "Print"
+				}
+			},
+			"facebook_sdk": {
+				"lang": "en_US",
+				"app_id": ""
+			},
+			"lottie": {
+				"defaultAnimationUrl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"
+			}
+		};
 	</script>
-	<script src="wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.15.1"
-		id="elementor-pro-frontend-js"></script>
-	<script src="wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
-		id="elementor-waypoints-js"></script>
+	<script src="wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.15.1" id="elementor-pro-frontend-js"></script>
+	<script src="wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
 	<script src="wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
 	<script id="elementor-frontend-js-before">
-		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.17.3", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "additional_custom_breakpoints": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "landing-pages": true, "page-transitions": true, "notes": true, "loop": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper-container", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 99, "title": "Homepage%20%E2%80%93%20GetTrade", "excerpt": "", "featuredImage": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/uploads\/sites\/8\/2022\/11\/Homepage-192x1024.jpg" } };
+		var elementorFrontendConfig = {
+			"environmentMode": {
+				"edit": false,
+				"wpPreview": false,
+				"isScriptDebug": false
+			},
+			"i18n": {
+				"shareOnFacebook": "Share on Facebook",
+				"shareOnTwitter": "Share on Twitter",
+				"pinIt": "Pin it",
+				"download": "Download",
+				"downloadImage": "Download image",
+				"fullscreen": "Fullscreen",
+				"zoom": "Zoom",
+				"share": "Share",
+				"playVideo": "Play Video",
+				"previous": "Previous",
+				"next": "Next",
+				"close": "Close",
+				"a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
+				"a11yCarouselPrevSlideMessage": "Previous slide",
+				"a11yCarouselNextSlideMessage": "Next slide",
+				"a11yCarouselFirstSlideMessage": "This is the first slide",
+				"a11yCarouselLastSlideMessage": "This is the last slide",
+				"a11yCarouselPaginationBulletMessage": "Go to slide"
+			},
+			"is_rtl": false,
+			"breakpoints": {
+				"xs": 0,
+				"sm": 480,
+				"md": 768,
+				"lg": 1025,
+				"xl": 1440,
+				"xxl": 1600
+			},
+			"responsive": {
+				"breakpoints": {
+					"mobile": {
+						"label": "Mobile Portrait",
+						"value": 767,
+						"default_value": 767,
+						"direction": "max",
+						"is_enabled": true
+					},
+					"mobile_extra": {
+						"label": "Mobile Landscape",
+						"value": 880,
+						"default_value": 880,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"tablet": {
+						"label": "Tablet Portrait",
+						"value": 1024,
+						"default_value": 1024,
+						"direction": "max",
+						"is_enabled": true
+					},
+					"tablet_extra": {
+						"label": "Tablet Landscape",
+						"value": 1200,
+						"default_value": 1200,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"laptop": {
+						"label": "Laptop",
+						"value": 1366,
+						"default_value": 1366,
+						"direction": "max",
+						"is_enabled": false
+					},
+					"widescreen": {
+						"label": "Widescreen",
+						"value": 2400,
+						"default_value": 2400,
+						"direction": "min",
+						"is_enabled": false
+					}
+				}
+			},
+			"version": "3.17.3",
+			"is_static": false,
+			"experimentalFeatures": {
+				"e_dom_optimization": true,
+				"e_optimized_assets_loading": true,
+				"e_optimized_css_loading": true,
+				"additional_custom_breakpoints": true,
+				"theme_builder_v2": true,
+				"hello-theme-header-footer": true,
+				"landing-pages": true,
+				"page-transitions": true,
+				"notes": true,
+				"loop": true,
+				"form-submissions": true,
+				"e_scroll_snap": true
+			},
+			"urls": {
+				"assets": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/plugins\/elementor\/assets\/"
+			},
+			"swiperClass": "swiper-container",
+			"settings": {
+				"page": [],
+				"editorPreferences": []
+			},
+			"kit": {
+				"active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+				"global_image_lightbox": "yes",
+				"lightbox_enable_counter": "yes",
+				"lightbox_enable_fullscreen": "yes",
+				"lightbox_enable_zoom": "yes",
+				"lightbox_enable_share": "yes",
+				"lightbox_title_src": "title",
+				"lightbox_description_src": "description",
+				"hello_header_logo_type": "title",
+				"hello_header_menu_layout": "horizontal",
+				"hello_footer_logo_type": "logo"
+			},
+			"post": {
+				"id": 99,
+				"title": "Homepage%20%E2%80%93%20GetTrade",
+				"excerpt": "",
+				"featuredImage": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-content\/uploads\/sites\/8\/2022\/11\/Homepage-192x1024.jpg"
+			}
+		};
 	</script>
 	<script src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.17.3" id="elementor-frontend-js"></script>
-	<script src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.15.1"
-		id="pro-elements-handlers-js"></script>
-	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min5b75.js?ver=3.0.2"
-		id="animate-circle-js"></script>
+	<script src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.15.1" id="pro-elements-handlers-js"></script>
+	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min5b75.js?ver=3.0.2" id="animate-circle-js"></script>
 	<script id="elementskit-elementor-js-extra">
-		var ekit_config = { "ajaxurl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-admin\/admin-ajax.php", "nonce": "a92f852f50" };
+		var ekit_config = {
+			"ajaxurl": "https:\/\/kitnew.moxcreative.com\/gettrade\/wp-admin\/admin-ajax.php",
+			"nonce": "a92f852f50"
+		};
 	</script>
-	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor5b75.js?ver=3.0.2"
-		id="elementskit-elementor-js"></script>
-
-
-    <!-- External JS libraries -->
-    <script src="assets/js/jquery-2.2.0.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Custom JS Script -->
+	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor5b75.js?ver=3.0.2" id="elementskit-elementor-js"></script>
 
 </body>
-<script src="//code.tidio.co_443/9quipgijvkwhsexreqqfpjeri9h4jp0o.js" async></script>
 
 </html>
