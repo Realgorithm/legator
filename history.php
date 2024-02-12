@@ -9,6 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 $amount = null;
 $date = null;
 $type = null;
+
+// Retrieve the selected option from the URL parameter
+$selectedOption = $_GET['option'] ?? '';
+
 // Convert the date string to a Unix timestamp
 $timestamp = strtotime($registrationTimestamp);
 
@@ -17,13 +21,6 @@ $userRegistrationDate = date('Y-m-d', $timestamp); ?>
 <div class="card">
     <h5 class="card-header bg-primary text-white">Earnings</h5>
     <div class="card-body">
-
-        <script language=javascript>
-            function go(p) {
-                document.opts.type.value = p;
-                document.opts.submit();
-            }
-        </script>
 
         <div class="row">
             <div class="col-md-12">
@@ -35,16 +32,16 @@ $userRegistrationDate = date('Y-m-d', $timestamp); ?>
                             <div class="row">
                                 <div class="col-md-6"><br>
                                     <select name="type" class="form-control">
-                                        <option value="" <?php if (empty($_POST['type']))
+                                        <option value="" <?php if (empty($selectedOption))
                                                                 echo 'selected'; ?>>
                                             All transactions</option>
-                                        <option value="deposit" <?php if (!isset($_POST['type']) || $_POST['type'] === 'deposit')
+                                        <option value="deposit" <?php if (!isset($selectedOption) || $selectedOption === 'deposit')
                                                                     echo 'selected'; ?>>Deposit</option>
-                                        <option value="withdrawal" <?php if (!isset($_POST['type']) || $_POST['type'] === 'withdrawal')
+                                        <option value="withdrawal" <?php if (!isset($selectedOption) || $selectedOption === 'withdrawal')
                                                                         echo 'selected'; ?>>Withdrawal</option>
-                                        <option value="earning" <?php if (!isset($_POST['type']) || $_POST['type'] === 'earning')
+                                        <option value="earning" <?php if (!isset($selectedOption) || $selectedOption === 'earning')
                                                                     echo 'selected'; ?>>Earning</option>
-                                        <option value="referral" <?php if (!isset($_POST['type']) || $_POST['type'] === 'referral')
+                                        <option value="referral" <?php if (!isset($selectedOption) || $selectedOption === 'referral')
                                                                         echo 'selected'; ?>>Referral commission
                                         </option>
                                     </select>
@@ -62,14 +59,14 @@ $userRegistrationDate = date('Y-m-d', $timestamp); ?>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>From:</label>
-                
+
                                     <!-- Add min attribute to set the minimum start date -->
                                     <input type="date" name="date_from" class="form-control" value="<?php echo $userRegistrationDate; ?>" min="<?php echo $userRegistrationDate; ?>" max="<?php echo date('Y-m-d'); ?>">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label style="text-align:center">To:</label>
-                                
+
                                     <!-- Add max attribute to set the maximum end date -->
                                     <input type="date" name="date_to" class="form-control" value="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d'); ?>">
                                 </div>

@@ -16,12 +16,11 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 ?>
 
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<title><?php echo $trimmedString ?> &#8211; Legator Pro - Crpyto Mining Website, Bitcoin Mining Investment, Cryptocurrency Mining Investment</title>
 	<title>Bitcoin Mining Investment: The Future of Digital Currency</title>
 	<meta name='robots' content='max-image-preview:large'>
