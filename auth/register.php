@@ -1,6 +1,10 @@
 <?php
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ E_NOTICE);
+session_start();
 include 'conn.php';
-include 'mail.php';
+include 'mail_auth.php';
+
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password2 = $_POST['password2'];
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $email1 = $_POST['email1'];
+    $isSignup = false;
 
     // Capture current date and time
     $registrationTimestamp = date('Y-m-d H:i:s');
@@ -34,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmtUsername->fetch()) {
             // Redirect to the register.html page with an error parameter
-            header("Location: ../index.php?page=signup&error=username_exists");
+            header("Location: ../signup?error=username_exists");
             $stmtUsername->close();
             $connect_db->close();
             exit();
@@ -50,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmtEmail->fetch()) {
             // Redirect to the register.html page with an error parameter
-            header("Location: ../index.php?page=signup&error=email_exists");
+            header("Location: ../signup?error=email_exists");
             $stmtEmail->close();
             $connect_db->close();
             exit();
@@ -58,8 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmtEmail->close();
 
-        // Store relevant user information in the session
-        $_SESSION['username'] = $username;
 
         // Insert data into the database (replace 'your_table' with your actual table name)
         // Assume you have columns: fullname, username, password, email
@@ -75,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         $sql = "INSERT INTO userdetails (fullname, email, pass, username,registration_timestamp) VALUES (?, ?, ?, ?, ?)";
-        $sql_user = "INSERT INTO userinformation (totalmining, total_balance, username, earning, withdraw, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0, 10, ?, 0, 0, 0, 0, 0, 0, current_timestamp())";
+        $sql_user = "INSERT INTO userinformation (totalmining, total_balance, username, earning, withdraw, withdrawal_amount, pending_withdraw, deposit, referal, rigs, lastaccess) VALUES (0, 10, ?, 0, 0, 0, 0, 0, 0, 0, current_timestamp())";
 
         // Use prepared statements to prevent SQL injection
         $stmt_user = $connect_db->prepare($sql_user);
@@ -85,9 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Execute the statement
         if ($stmt->execute() and $stmt_user->execute()) {
-            
-                $subject = 'Welcome to LEGATOR - Successful Signup!';
-                $body = "<pre>Dear $fullname,
+
+            // Store relevant user information in the session
+            $_SESSION['username'] = $username;
+
+            $subject = 'Welcome to LEGATOR - Successful Signup!';
+            $body = "<pre>Dear $fullname,
 
     Welcome to LEGATOR! We're thrilled to have you on board. Your signup was successful, and we're excited to provide you with a seamless trading experience.
                 
@@ -102,14 +108,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Best regards,
     The LEGATOR Team</pre>";
 
-                sendCustomEmail($subject,$body);
-            // Redirect to the dashboard.html page with an error parameter
-            header("Location: ../index2.php");
-            // exit;
-            echo"exit successfully";
-
+            sendCustomEmail($subject, $body);
+            $isSignup = true;
         } else {
-            echo "Error: " . $stmt->error;
+            $isSignup = false;
         }
 
         // Close the statement and database connection
@@ -117,5 +119,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt_user->close();
         $connect_db->close();
     }
+    echo $isSignup;
+    if ($isSignup) {
+        // Redirect to the dashboard.html page with an error parameter
+        header("Location: ../index2.php");
+        exit();
+    } else {
+        header("Location: ../signup?error=1");
+        exit();
+    }
 }
-?>

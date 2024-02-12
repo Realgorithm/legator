@@ -10,10 +10,10 @@
         // Check if the entered amount is less than or equal to the available amount
         if (isNaN(enteredAmount) || enteredAmount <= 0) {
             // document.getElementById('error-message').innerHTML = "Please enter a valid amount.";
-            showErrorMessage("Please enter a valid amount.");
+            showErrorMessage("⚠️ Please enter a valid amount.");
         } else if (enteredAmount < 200 || enteredAmount > 4000) {
             // document.getElementById('errorMessage').innerHTML = "Insufficient funds. or enter a big value";
-            showErrorMessage("Insufficient funds. or enter a big value");
+            showErrorMessage("Insufficient funds. 🙁 Please enter an amount that is within your available balance.");
         } else {
             // Submit the form if the validation passes
             document.getElementById('error-message').innerHTML = ""; // Clear previous error messages
@@ -62,7 +62,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td><img src="images/1008.gif" width=44 height=17 align=absmiddle> USDT TRC20</td>
+                            <td><img src="images/1008.gif" width=44 height=17 align=absmiddle> USDT ERC20</td>
                             <td><b style="color:green">$
                                     <?php echo $withdrawal_amount ?>
                                 </b></td>
@@ -75,12 +75,11 @@
                                         <?php echo $accountNo; ?>
                                     </span>
                                 <?php else: ?>
-                                    <a class="badge badge-danger" href="index2.php?page=account"><i>not
-                                            set</i></a>
+                                    <a class="badge badge-danger" href="index2.php?page=account"><i>'Not set'🚫 Please update your account</i></a>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($isAccountSet and $withdrawal_amount >= 200): ?>
+                                <?php if ($isAccountSet and $withdrawal_amount >= 100): ?>
                                     <input type=number name=amount id="withdrawAmount" class="form-control" value=''
                                         placeholder="Enter the Amount">
                                 </td>
@@ -101,9 +100,9 @@
             </div>
         </div>
         <br><br>
-        <?php if ($withdrawal_amount < 200): ?>
+        <?php if ($withdrawal_amount < 100): ?>
             <div class="alert alert-warning m-b-lg" role="alert">
-                You have no funds to withdraw.
+            💸 You have no funds available for withdrawal.
             </div>
         <?php endif; ?>
 </form>

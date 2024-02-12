@@ -19,7 +19,7 @@ switch ($page) {
         $pageContent = 'pricing.html';
         break;
     case 'support':
-        $pageContent = 'contact.html';
+        $pageContent = 'contact.php';
         break;
     case 'signup':
         $pageContent = 'register.html';
@@ -39,9 +39,15 @@ switch ($page) {
     case 'forgot_password':
         $pageContent = 'forget.html';
         break;
-    // default:
-    //     $pageContent = '404.html'; // or handle as needed
-    //     break;
+    case 'reset_password':
+        $pageContent = 'reset_password.php';
+        break;
+    case 'reset_success':
+        $pageContent = 'password_reset_success.php';
+        break;
+        // default:
+        //     $pageContent = '404.html'; // or handle as needed
+        //     break;
 }
 
 // Include the template with the selected page content

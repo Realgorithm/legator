@@ -7,23 +7,24 @@
         }
         return true;
     }
+    showGetMessage('success', '1', 'An email with instructions to reset your password has been sent to your email address', 'success');
+    showGetMessage('error', '1', 'Email does not exist create a new account', 'warning');
 </script>
-
-<h3>Forgot your password:</h3><br>
-
-<form method=post name=forgotform onsubmit="return checkform();"><input type="hidden" name="form_id"
-        value="17036584233154"><input type="hidden" name="form_token" value="8de9c9218b8a55ec03c1558a6d1a1749">
-    <input type=hidden name=a value="forgot_password">
-    <input type=hidden name=action value="forgot_password">
-    <table cellspacing=0 cellpadding=2 border=0>
-        <tr>
-            <td>Type your username or e-mail:</td>
-            <td><input type=text name='email' value="" class=inpts size=30></td>
-        </tr>
-
-        <tr>
-            <td>&nbsp;</td>
-            <td><input type=submit value="Forgot" class=sbmt></td>
-        </tr>
-    </table>
-</form><br><br>
+<div class="container">
+<div class="row">
+    <h2>Forgot Password</h2>
+</div>
+<form name=forgotform action="auth/send_reset_link.php" onsubmit="checkform()" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="email">Enter your email address:</label><br>
+        </div>
+        <div class="col-md-4">
+            <input type="email" id="email" name="email" class="form-control" required><br>
+        </div>
+        <div class="col-md-4">
+            <button type="submit">Reset Password</button>
+        </div>
+    </div>
+</form>
+</div>

@@ -1,6 +1,6 @@
 body,
 html {
-    font-size: 13px;
+    font-size: 16px;
     width: 100%;
     height: 100%
 }
@@ -12,9 +12,10 @@ html {
 body {
     /* background-color: #9ae153; */
     background-image: url(../../../wp-content/uploads/sites/8/2022/11/pexels-rdne-stock-project-8369677.jpg);
+    background-size: cover;
     font-weight: 400;
     color: linear-gradient(#9ae17b,#eb463f);
-    line-height: 1.6
+    line-height: 1.4
 }
 
 a,
@@ -532,7 +533,8 @@ strong {
 }
 
 .bg-info {
-    background-image:url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important
+    background-image:url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important;
+    background-size: cover;
 }
 
 .bg-light {
@@ -608,7 +610,7 @@ strong {
 
 .lime-header .navbar-brand {
     color:#6535fe;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 700;
     margin-right: 25px
 }
@@ -960,7 +962,7 @@ strong {
     color: rgba(107, 15, 159, 1);
     margin: 9px 0;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1000,7 +1002,7 @@ strong {
     text-transform: uppercase;
     font-weight: 700;
     color: rgba(30, 162, 214, 1);
-    font-size: 25px;
+    font-size: 40px;
     margin: 40px 0 10px 10px;
     display: block;
     overflow: hidden;
@@ -1188,9 +1190,10 @@ strong {
 }
 
 .card .card-body .card-title {
-    font-size: 14px;
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #000
+    color: #000;
+    font-weight: bold;
 }
 
 .card-img-top {
@@ -1359,7 +1362,7 @@ strong {
 
 .btn {
     padding: 6px 10px;
-    font-size: 13px;
+    font-size: 20px;
     border: none;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -1886,6 +1889,9 @@ body.modal-open {
 .table td,
 .table th {
     padding: 12px 20px
+}
+.table .title{
+    font-weight: bold;
 }
 
 .table thead th {

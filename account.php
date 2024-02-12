@@ -87,38 +87,38 @@ include('auth/get_user_details.php');
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <td>Account Name:</td>
+                        <td class="title">Account Name:</td>
                         <td>
                             <?php echo $username ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Registration date:</td>
+                        <td class="title">Registration date:</td>
                         <td>
                             <?php echo $formattedTimestamp ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Your Full Name:</td>
+                        <td class="title">Your Full Name:</td>
 
                         <td><input type=text name=fullname value='<?php echo $fullname ?>' class="form-control"></td>
 
                     </tr>
 
                     <tr>
-                        <td>New Password:</td>
+                        <td class="title">New Password:</td>
                         <td><input type=password name=password value="" class="form-control"></td>
                     </tr>
                     <tr>
-                        <td>Retype Password:</td>
+                        <td class="title">Retype Password:</td>
                         <td><input type=password name=password2 value="" class="form-control"></td>
                     </tr>
                     <tr>
-                        <td>Your USDT TRC20 Account ID:</td>
+                        <td class="title">Your USDT ERC20 Account ID:</td>
                         <td><input type=text class="form-control" name="account" value='<?php echo $accountNo ?>'></td>
                     </tr>
                     <tr>
-                        <td>Your E-mail address:</td>
+                        <td class="title">Your E-mail address:</td>
                         <td>
                             <?php echo $email ?>
                         </td>

@@ -1,3 +1,22 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the current page from the URL
+        var currentPage = window.location.href;
+
+        // Select all navigation links
+        var navLinks = document.querySelectorAll('.menu-item a.elementor-item');
+
+        // Loop through each link
+        navLinks.forEach(function (link) {
+            // Check if the link's href matches the current page URL
+            if (link.href === currentPage) {
+                // Add the 'active' class to the matching link
+                link.classList.add('elementor-item-active');
+            }
+        });
+    });
+</script>
+
 <div data-elementor-type="header" data-elementor-id="39" class="elementor elementor-39 elementor-location-header">
 	<section
 		class="elementor-section elementor-top-section elementor-element elementor-element-5d740e0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -27,9 +46,9 @@
 									vertical-align: middle;
 									display: inline-block
 								}
-							</style> <img width="300" height="79"
-								src="wp-content/uploads/sites/8/2022/11/Logo1.png"
-								class="attachment-full size-full wp-image-40" alt="" loading="lazy">
+							</style><a href="home"> <img width="300" height="79"
+								src="wp-content/uploads/sites/8/2022/11/logo1.png"
+								class="attachment-full size-full wp-image-40" alt="" loading="lazy"></a>
 						</div>
 					</div>
 				</div>
@@ -50,7 +69,7 @@
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6">
 										<a href="index.php?page=home" aria-current="page"
-											class="elementor-item elementor-item-active">Home</a>
+											class="elementor-item">Home</a>
 									</li>
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8">
@@ -101,7 +120,7 @@
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6">
 										<a href="index.php?page=home" aria-current="page"
-											class="elementor-item elementor-item-active" tabindex="-1">Home</a>
+											class="elementor-item" tabindex="-1">Home</a>
 									</li>
 									<li
 										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8">

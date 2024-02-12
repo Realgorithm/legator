@@ -45,10 +45,14 @@ include 'auth/conn.php';
                                                                     ' . $refereeName . '
                                                                 </td>
                                                             </tr>';
+                                                            $sno++;
                             }
-                        } else {
-                            // echo "No deposits to process.<br>";
-                        }
+                            
+                        } else {?>
+                        <script>
+                            showErrorMessage("Sorry 🤔, we couldn't find any referrals associated with your account<br>",'warning');
+                        </script>
+                       <?php }
                         ?>
 
                     </tbody>

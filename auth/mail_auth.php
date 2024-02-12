@@ -15,23 +15,24 @@ function sendCustomEmail( $subject, $message) {
 
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'localhost'; // Set your SMTP server
+        $mail->Host = $smtpHost; // Set your SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'your_username@example.com'; // SMTP username
-        $mail->Password = 'your_password'; // SMTP password
-        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
-        $mail->Port = 25; // TCP port to connect to
+        $mail->Username = $smtpUser; // SMTP username
+        $mail->Password = $smtpPass; // SMTP password
+        // $mail->SMTPSecure = $smtpEncryption; // Enable TLS encryption
+        $mail->Port = $smtpPort; // TCP port to connect to
 
         // Recipients
-        $mail->setFrom('Legatordigital@gmail.com', 'Legator');
+        $mail->setFrom('support@legator.pro', 'Legator');
         $mail->addAddress($email, $username);
 
         // Content
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body = $message;
+        $mail->Body ="<p style='font-size: 22px; color: green;'>". $message."</p>";
 
         $mail->send();
+        // echo "mail sent successfully";
 
     } catch (Exception $e) {
     }

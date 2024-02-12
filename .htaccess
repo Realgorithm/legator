@@ -1,7 +1,14 @@
 AddType application/x-httpd-php .HTML 
 DirectoryIndex index.php index2.php
 ErrorDocument 404 /error_page.html
+ErrorDocument 403 /error_page.html
 ErrorDocument 500 /error_page.html
 ErrorDocument 502 /error_page.html
 ErrorDocument 503 /error_page.html
 ErrorDocument 504 /error_page.html
+
+SetEnv ENCRYPTION_KEY 0cec6c66e0311924520741fba428f178
+# Allow access to the auth directory only for specific pages
+<FilesMatch "^(conn\.php|register\.php|deposit_auth\.php|get_user_details\.php|login_process\.php|logout\.php|mail_auth\.php|referral_auth\.php|register\.php|update_balance\.php|update_user_details\.php|upload\.php|user_details\.php|withdraw\.php|tfa\.php|send_reset_link\.php|reset_password_action\.php)$">
+    Allow from all
+</FilesMatch>

@@ -41,6 +41,8 @@
   letter-spacing: var(--e-global-typography-25fd629-letter-spacing);
   word-spacing: var(--e-global-typography-25fd629-word-spacing);
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  font-size: 60px;
+  color:silver;
 }
 
 .elementor-99 .elementor-element.elementor-element-d472bef {
@@ -236,7 +238,7 @@
 
 .elementor-99 .elementor-element.elementor-element-177374c {
   width: auto;
-  max-width: auto;
+  max-width: 100%;
   align-self: center;
 }
 
