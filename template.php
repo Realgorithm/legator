@@ -185,7 +185,6 @@
     <script src="1/assets/js/lime.min.js"></script>
     <script src="1/assets/js/pages/dashboard.js"></script>
 </body>
-<script src="../code.tidio.co_443/9quipgijvkwhsexreqqfpjeri9h4jp0o.js" async></script>
 
 
 </html>
