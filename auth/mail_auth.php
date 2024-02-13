@@ -26,6 +26,7 @@ function sendCustomEmail($subject, $message)
 
         // Recipients
         $mail->setFrom('support@legator.pro', 'Legator');
+        $mail->setFrom('support@legator.pro', 'Legator');
         $mail->addAddress($email, $username);
 
         // Content
