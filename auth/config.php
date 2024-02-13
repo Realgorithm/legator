@@ -24,4 +24,3 @@ if (file_exists($configFile)) {
 } else {
     die('Configuration file not found.');
 }
-?>

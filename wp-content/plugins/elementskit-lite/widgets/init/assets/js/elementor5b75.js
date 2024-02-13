@@ -714,17 +714,15 @@
               youtube: { index: "https://youtube.com/", id: "v=", src: "%id%" },
             },
           }),
-          n
-            .find("video")
-            .mediaelementplayer({
-              features: s,
-              videoVolume: o.videoVolume,
-              startVolume: o.startVolume,
-              stretching: "responsive",
-              enableAutosize: !0,
-              videoWidth: "100%",
-              videoHeight: "100%",
-            }),
+          n.find("video").mediaelementplayer({
+            features: s,
+            videoVolume: o.videoVolume,
+            startVolume: o.startVolume,
+            stretching: "responsive",
+            enableAutosize: !0,
+            videoWidth: "100%",
+            videoHeight: "100%",
+          }),
           i.magnificPopup(a);
       }
     },

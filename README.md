@@ -14,17 +14,17 @@ Follow these steps to get the website up and running on your local machine.
 
 1. Clone or download the Git repository.
 
-    ```bash
-    git clone https://github.com/Realgorithm/legator.git
-    ```
+   ```bash
+   git clone https://github.com/Realgorithm/legator.git
+   ```
 
 2. Extract the downloaded ZIP file.
 
 3. Move the extracted folder to the `htdocs` directory in your XAMPP installation folder.
 
-    ```bash
-    mv legator /path/to/xampp/htdocs/
-    ```
+   ```bash
+   mv legator /path/to/xampp/htdocs/
+   ```
 
 ### Database Setup
 

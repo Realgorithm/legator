@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Get the current timestamp
             $timestamp = date('Y-m-d H:i:s');
-            
+
             $stmtEmail->close();
             // Prepare SQL statement to insert the token, email, and timestamp into the database
             $sqltoken = "INSERT INTO tokens (token, email) VALUES (?, ?)";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error storing token: " . $conn->error;
             }
         } else {
-            
+
             header("Location: ../index.php?page=forgot_password&error=1");
             exit();
         }

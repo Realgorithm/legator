@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -7,8 +8,9 @@ require 'PHPMailer-6.9.1/src/Exception.php';
 require 'PHPMailer-6.9.1/src/PHPMailer.php';
 require 'PHPMailer-6.9.1/src/SMTP.php';
 // Function to send customized emails
-function sendCustomEmail( $subject, $message) {
-    
+function sendCustomEmail($subject, $message)
+{
+
     include 'get_user_details.php';
     try {
         $mail = new PHPMailer(true);
@@ -29,7 +31,7 @@ function sendCustomEmail( $subject, $message) {
         // Content
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body ="<p style='font-size: 22px; color: green;'>". $message."</p>";
+        $mail->Body = "<p style='font-size: 22px; color: green;'>" . $message . "</p>";
 
         $mail->send();
         // echo "mail sent successfully";
@@ -37,4 +39,3 @@ function sendCustomEmail( $subject, $message) {
     } catch (Exception $e) {
     }
 }
-?>

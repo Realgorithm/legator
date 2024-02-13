@@ -6,5 +6,3 @@ $headers = "legatordigital@gmail.com";
 
 mail($to, $subject, $message, $headers);
 // echo "Email sent!";
-
-?>

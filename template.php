@@ -155,19 +155,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="footer-text footer"><p style="margin-top:20px; margin-bottom:0px;">2024 © Legator <?php // Original string
-                                                                    $originalString = $pageContent;
+                    <span class="footer-text footer">
+                        <p style="margin-top:20px; margin-bottom:0px;">2024 © Legator <?php // Original string
+                                                                                        $originalString = $pageContent;
 
-                                                                    // Text to be removed from the end
-                                                                    $textToRemove = ".php";
+                                                                                        // Text to be removed from the end
+                                                                                        $textToRemove = ".php";
 
-                                                                    // Check if the original string ends with the text to be removed
-                                                                    if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
-                                                                        // Remove the text from the end
-                                                                        // $trimmedString = rtrim($originalString, $textToRemove);
-                                                                        $trimmedString = substr($originalString, 0, -strlen($textToRemove));
-                                                                        echo ucfirst($trimmedString);
-                                                                    } ?> 📅</p></span>
+                                                                                        // Check if the original string ends with the text to be removed
+                                                                                        if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
+                                                                                            // Remove the text from the end
+                                                                                            // $trimmedString = rtrim($originalString, $textToRemove);
+                                                                                            $trimmedString = substr($originalString, 0, -strlen($textToRemove));
+                                                                                            echo ucfirst($trimmedString);
+                                                                                        } ?> 📅</p>
+                    </span>
                 </div>
             </div>
         </div>

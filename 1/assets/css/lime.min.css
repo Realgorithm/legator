@@ -14,13 +14,13 @@ body {
     background-image: url(../../../wp-content/uploads/sites/8/2022/11/pexels-rdne-stock-project-8369677.jpg);
     background-size: cover;
     font-weight: 400;
-    color: linear-gradient(#9ae17b,#eb463f);
+    color: linear-gradient(#9ae17b, #eb463f);
     line-height: 1.4
 }
 
 a,
 a:hover {
-    color:#77abb7
+    color: #77abb7
 }
 
 p {
@@ -425,11 +425,11 @@ strong {
 }
 
 .b-primary {
-    border-color:#9ae17b
+    border-color: #9ae17b
 }
 
 .b-info {
-    border-color:#6535fe
+    border-color: #6535fe
 }
 
 .b-success {
@@ -513,7 +513,7 @@ strong {
 }
 
 .bg-primary {
-    background-color:#6535fe !important
+    background-color: #6535fe !important
 }
 
 .bg-secondary {
@@ -521,11 +521,11 @@ strong {
 }
 
 .bg-success {
-    background-color:#6535fe !important
+    background-color: #6535fe !important
 }
 
 .bg-danger {
-    background-color:#6535fe !important
+    background-color: #6535fe !important
 }
 
 .bg-warning {
@@ -533,7 +533,7 @@ strong {
 }
 
 .bg-info {
-    background-image:url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important;
+    background-image: url("../../../wp-content/uploads/sites/8/2022/11/trading_bar.jpg") !important;
     background-size: cover;
 }
 
@@ -546,7 +546,7 @@ strong {
 }
 
 .text-primary {
-    color:#6535fe !important
+    color: #6535fe !important
 }
 
 .text-secondary {
@@ -554,11 +554,11 @@ strong {
 }
 
 .text-success {
-    color:#6535fe !important
+    color: #6535fe !important
 }
 
 .text-danger {
-    color:#6535fe !important
+    color: #6535fe !important
 }
 
 .text-warning {
@@ -566,7 +566,7 @@ strong {
 }
 
 .text-info {
-    color:#6535fe !important
+    color: #6535fe !important
 }
 
 .text-light {
@@ -596,7 +596,7 @@ strong {
 
 .lime-header.scroll-header {
     padding: 0 30px;
-    background:#6535fe;
+    background: #6535fe;
     box-shadow: 0 3px 10px rgba(62, 85, 120, .045)
 }
 
@@ -609,7 +609,7 @@ strong {
 }
 
 .lime-header .navbar-brand {
-    color:#6535fe;
+    color: #6535fe;
     font-size: 30px;
     font-weight: 700;
     margin-right: 25px
@@ -762,7 +762,7 @@ strong {
 
 .lime-header .navbar-nav .dropdown .dropdown-menu a:hover {
     background: #f4f7fc;
-    color:#6535fe
+    color: #6535fe
 }
 
 .lime-header .navbar-nav .dropdown .dropdown-menu li.divider {
@@ -971,7 +971,7 @@ strong {
 
 .lime-sidebar .lime-sidebar-inner ul li a:hover,
 .lime-sidebar .lime-sidebar-inner ul li.open>a {
-    color:#77abb7
+    color: #77abb7
 }
 
 .lime-sidebar .lime-sidebar-inner ul li a i:not(.has-sub-menu) {
@@ -994,7 +994,7 @@ strong {
 }
 
 .lime-sidebar .lime-sidebar-inner ul li a.active {
-    color:#6535fe
+    color: #6535fe
 }
 
 .lime-sidebar .lime-sidebar-inner ul li.sidebar-title {
@@ -1033,11 +1033,11 @@ strong {
 }
 
 .lime-sidebar .lime-sidebar-inner ul li ul.sub-menu li a.active {
-    color:#6535fe
+    color: #6535fe
 }
 
 .lime-sidebar .lime-sidebar-inner ul li.active-page>a {
-    color:#6535fe
+    color: #6535fe
 }
 
 .theme-settings-sidebar {
@@ -1277,7 +1277,7 @@ strong {
 }
 
 .alert.alert-primary {
-    background:#6535fe;
+    background: #6535fe;
     color: #fff
 }
 
@@ -1327,7 +1327,7 @@ strong {
 }
 
 .badge.badge-primary {
-    background:#6535fe
+    background: #6535fe
 }
 
 .badge.badge-secondary {
@@ -1336,11 +1336,11 @@ strong {
 }
 
 .badge.badge-success {
-    background:#6535fe
+    background: #6535fe
 }
 
 .badge.badge-danger {
-    background:#6535fe
+    background: #6535fe
 }
 
 .badge.badge-warning {
@@ -1348,7 +1348,7 @@ strong {
 }
 
 .badge.badge-info {
-    background:#6535fe
+    background: #6535fe
 }
 
 .badge.badge-light {
@@ -1393,7 +1393,7 @@ strong {
 }
 
 .btn.btn-primary {
-    background:#6535fe
+    background: #6535fe
 }
 
 .btn.btn-primary:hover {
@@ -1437,7 +1437,7 @@ strong {
 }
 
 .btn.btn-success {
-    background:#6535fe
+    background: #6535fe
 }
 
 .btn.btn-success:hover {
@@ -1458,7 +1458,7 @@ strong {
 }
 
 .btn.btn-danger {
-    background:#6535fe
+    background: #6535fe
 }
 
 .btn.btn-danger:hover {
@@ -1500,7 +1500,7 @@ strong {
 }
 
 .btn.btn-info {
-    background:#6535fe
+    background: #6535fe
 }
 
 .btn.btn-info:hover {
@@ -1565,7 +1565,7 @@ strong {
 }
 
 .btn.btn-link {
-    color:#6535fe;
+    color: #6535fe;
     text-decoration: none !important
 }
 
@@ -1575,12 +1575,12 @@ strong {
 
 .btn.btn-outline-primary {
     border: 1px solid#6535fe;
-    color:#6535fe
+    color: #6535fe
 }
 
 .btn.btn-outline-primary:hover {
-    background:#6535fe;
-    border-color:#6535fe;
+    background: #6535fe;
+    border-color: #6535fe;
     color: #fff
 }
 
@@ -1597,23 +1597,23 @@ strong {
 
 .btn.btn-outline-success {
     border: 1px solid#6535fe;
-    color:#6535fe
+    color: #6535fe
 }
 
 .btn.btn-outline-success:hover {
-    background:#6535fe;
-    border-color:#6535fe;
+    background: #6535fe;
+    border-color: #6535fe;
     color: #fff
 }
 
 .btn.btn-outline-danger {
     border: 1px solid#6535fe;
-    color:#6535fe
+    color: #6535fe
 }
 
 .btn.btn-outline-danger:hover {
-    background:#6535fe;
-    border-color:#6535fe;
+    background: #6535fe;
+    border-color: #6535fe;
     color: #fff
 }
 
@@ -1630,12 +1630,12 @@ strong {
 
 .btn.btn-outline-info {
     border: 1px solid#6535fe;
-    color:#6535fe
+    color: #6535fe
 }
 
 .btn.btn-outline-info:hover {
-    background:#6535fe;
-    border-color:#6535fe;
+    background: #6535fe;
+    border-color: #6535fe;
     color: #fff
 }
 
@@ -1690,7 +1690,7 @@ strong {
 
 .dropdown-menu a:hover {
     background: #f4f7fc;
-    color:#6535fe
+    color: #6535fe
 }
 
 .dropdown-divider {
@@ -1721,8 +1721,8 @@ strong {
 }
 
 .list-group-item.active {
-    background-color:#6535fe;
-    border-color:#6535fe
+    background-color: #6535fe;
+    border-color: #6535fe
 }
 
 .media img {
@@ -1783,7 +1783,7 @@ body.modal-open {
 
 .nav-link.active,
 .nav-link:hover {
-    color:#6535fe
+    color: #6535fe
 }
 
 .nav-tabs {
@@ -1797,7 +1797,7 @@ body.modal-open {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color:#6535fe
+    background-color: #6535fe
 }
 
 .page-link {
@@ -1816,7 +1816,7 @@ body.modal-open {
 .page-link:focus,
 .page-link:hover {
     border: none;
-    background:#6535fe;
+    background: #6535fe;
     color: #fff;
     outline: 0 !important;
     box-shadow: none !important
@@ -1890,7 +1890,8 @@ body.modal-open {
 .table th {
     padding: 12px 20px
 }
-.table .title{
+
+.table .title {
     font-weight: bold;
 }
 
@@ -2002,7 +2003,7 @@ body.modal-open {
     height: 19px !important;
     border: 0 !important;
     background: #f4f7fc !important;
-    color:#6535fe !important;
+    color: #6535fe !important;
     font-size: 12px !important;
     font-weight: 500 !important
 }
@@ -2024,7 +2025,7 @@ body.modal-open {
 .select2-container--default .select2-results__option--highlighted[aria-selected],
 .select2-container--default .select2-results__option[aria-selected=true]:hover {
     background: #f4f7fc;
-    color:#6535fe
+    color: #6535fe
 }
 
 .select2-container--default .select2-results__group {
@@ -2147,7 +2148,7 @@ li.plupload_delete a:hover::before {
 }
 
 #toast-container .toast.toast-info {
-    background:#6535fe !important
+    background: #6535fe !important
 }
 
 #toast-container .toast.toast-info .toast-message::before {
@@ -2189,7 +2190,7 @@ li.plupload_delete a:hover::before {
 .irs--flat .irs-handle>i:first-child,
 .irs--flat .irs-single,
 .irs--flat .irs-to {
-    background-color:#6535fe
+    background-color: #6535fe
 }
 
 .irs--flat .irs-handle.state_hover>i:first-child,
@@ -2201,7 +2202,7 @@ li.plupload_delete a:hover::before {
 .irs--flat .irs-from:before,
 .irs--flat .irs-single:before,
 .irs--flat .irs-to:before {
-    border-top-color:#6535fe
+    border-top-color: #6535fe
 }
 
 .form-control {
@@ -2229,8 +2230,8 @@ li.plupload_delete a:hover::before {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color:#6535fe;
-    background-color:#6535fe
+    border-color: #6535fe;
+    background-color: #6535fe
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -2268,7 +2269,7 @@ li.plupload_delete a:hover::before {
 }
 
 .custom-range::-webkit-slider-thumb {
-    background-color:#6535fe
+    background-color: #6535fe
 }
 
 .custom-range::-webkit-slider-thumb:active {
@@ -2276,7 +2277,7 @@ li.plupload_delete a:hover::before {
 }
 
 .custom-range::-moz-range-thumb {
-    background-color:#6535fe
+    background-color: #6535fe
 }
 
 .custom-range::-moz-range-thumb:active {
@@ -2284,7 +2285,7 @@ li.plupload_delete a:hover::before {
 }
 
 .custom-range::-ms-thumb {
-    background-color:#6535fe
+    background-color: #6535fe
 }
 
 .custom-range::-ms-thumb:active {
@@ -2385,7 +2386,7 @@ li.plupload_delete a:hover::before {
 .help-menu h3 {
     font-size: 12px;
     font-weight: 600;
-    color:#6535fe;
+    color: #6535fe;
     text-transform: uppercase;
     margin-bottom: 10px
 }
@@ -2402,12 +2403,12 @@ li.plupload_delete a:hover::before {
 
 .help-menu ul li a.active,
 .help-menu ul li a.active:hover {
-    color:#6535fe;
+    color: #6535fe;
     font-weight: 400
 }
 
 .help-menu ul li a:hover {
-    color:#6535fe
+    color: #6535fe
 }
 
 .help-topics li a {
@@ -2421,7 +2422,7 @@ li.plupload_delete a:hover::before {
 }
 
 .help-topics li a:hover {
-    color:#6535fe
+    color: #6535fe
 }
 
 .help-topics {
@@ -2935,7 +2936,7 @@ body.err-500 .error-image {
 
 .mailbox-menu ul li a.active,
 .mailbox-menu ul li a:hover {
-    color:#6535fe
+    color: #6535fe
 }
 
 .mailbox-menu ul li a i {
@@ -3115,7 +3116,7 @@ body.err-500 .error-image {
 
 .todo-menu ul li a:hover,
 .todo-menu ul li.active a {
-    color:#6535fe
+    color: #6535fe
 }
 
 .todo-menu ul li a i {
@@ -3165,7 +3166,7 @@ body.err-500 .error-image {
 
 .file-manager-menu ul li a.active,
 .file-manager-menu ul li a:hover {
-    color:#6535fe;
+    color: #6535fe;
     opacity: 1
 }
 
@@ -3265,7 +3266,7 @@ body.err-500 .error-image {
 }
 
 .file.photo .file-icon i {
-    color:#6535fe
+    color: #6535fe
 }
 
 .file.pdf .file-icon i {
@@ -3388,7 +3389,7 @@ body.err-500 .error-image {
     margin-right: 5px;
     border-radius: 100%;
     width: 40px;
-    background:#6535fe;
+    background: #6535fe;
     height: 40px;
     text-align: center;
     color: #fff;

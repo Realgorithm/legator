@@ -63,11 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $msg = "<h2>Thank you for your submission!</h2><p> We'll get back to you soon.</p>";
 }
-if(isset($msg)){
+if (isset($msg)) {
 ?>
-<script>
-    showErrorMessage("<?php echo $msg ?>", 'success')
-</script>
+    <script>
+        showErrorMessage("<?php echo $msg ?>", 'success')
+    </script>
 <?php } ?>
 <div class="container">
     <h2>Contact Us</h2>

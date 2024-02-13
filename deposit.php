@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ E_NOTICE);
 include 'auth/user_details.php';
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <script language="javascript">
     showGetMessage('success', '1', 'The deposit is saved and will activate upon administrator review of statistics. 📊', 'success');
     showGetMessage('error', '1', ' Your deposit is incomplete. Please reach out to support for assistance. 🛠️', 'warning');
+
     function updateCompound() {
         var id = 0;
         var tt = document.spendform.h_id.type;
@@ -62,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             var selectedPlan = document.spendform.h_id.value;
             var successMsg = showErrorMessage('🔄 Your deposit is currently being processed. Please wait for confirmation.', 'success')
-            var errorMsg= showErrorMessage('⚠️ Invalid amount. Please choose a different plan or enter a valid amount', 'danger')
+            var errorMsg = showErrorMessage('⚠️ Invalid amount. Please choose a different plan or enter a valid amount', 'danger')
 
             // Validate amount based on the selected plan
             switch (selectedPlan) {
@@ -211,9 +212,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </tr>
                     <tr>
                         <td>Amount to Spend ($):</td>
-                        <td><input type=text id=amount name=amount
-                                value="<?php echo isset($depositData['amount']) ? $depositData['amount'] : ''; ?>"
-                                class="form-control" placeholder="Enter the amount here"size=15></td>
+                        <td><input type=text id=amount name=amount value="<?php echo isset($depositData['amount']) ? $depositData['amount'] : ''; ?>" class="form-control" placeholder="Enter the amount here" size=15></td>
                     </tr>
                     <tr id="coumpond_block" style="display:none">
                         <td>Compounding(%):</td>
@@ -228,8 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                     </tr>
                     <tr>
-                        <td colspan=2><input type="button" value="Deposit" class="btn btn-primary ml-auto"
-                                onclick="validateAmount()">
+                        <td colspan=2><input type="button" value="Deposit" class="btn btn-primary ml-auto" onclick="validateAmount()">
                         </td>
                     </tr>
                 </table>

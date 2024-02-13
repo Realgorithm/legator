@@ -70,24 +70,22 @@
                                     <?php echo $pending_withdraw ?>
                                 </b></td>
                             <td>
-                                <?php if ($isAccountSet): ?>
+                                <?php if ($isAccountSet) : ?>
                                     <span>Account:
                                         <?php echo $accountNo; ?>
                                     </span>
-                                <?php else: ?>
+                                <?php else : ?>
                                     <a class="badge badge-danger" href="index2.php?page=account"><i>'Not set'🚫 Please update your account</i></a>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($isAccountSet and $withdrawal_amount >= 100): ?>
-                                    <input type=number name=amount id="withdrawAmount" class="form-control" value=''
-                                        placeholder="Enter the Amount">
-                                </td>
+                                <?php if ($isAccountSet and $withdrawal_amount >= 100) : ?>
+                                    <input type=number name=amount id="withdrawAmount" class="form-control" value='' placeholder="Enter the Amount">
+                            </td>
 
-                                <td>
-                                    <button class="btn btn-success" type="button"
-                                        onclick="validateWithdrawal()">Withdraw</button>
-                                <?php endif; ?>
+                            <td>
+                                <button class="btn btn-success" type="button" onclick="validateWithdrawal()">Withdraw</button>
+                            <?php endif; ?>
                             </td>
                         </tr>
                     </table>
@@ -100,9 +98,9 @@
             </div>
         </div>
         <br><br>
-        <?php if ($withdrawal_amount < 100): ?>
+        <?php if ($withdrawal_amount < 100) : ?>
             <div class="alert alert-warning m-b-lg" role="alert">
-            💸 You have no funds available for withdrawal.
+                💸 You have no funds available for withdrawal.
             </div>
         <?php endif; ?>
 </form>

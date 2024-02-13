@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $decryptedSecretKey = openssl_decrypt($encryptedSecretKey, 'aes-128-cbc', $encryptionKey1, 0, $encryptionKey1);
                             $secret = $decryptedSecretKey;
                             $isTFAEnabled = true; // TFA is enabled for the user
-                            $_SESSION['data']=$secret;
+                            $_SESSION['data'] = $secret;
                             header("Location: ../tfa_home.php");
                             exit();
                         }

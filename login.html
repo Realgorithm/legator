@@ -1,5 +1,5 @@
 <script>
-  showGetMessage('error','1','Oops! It seems like the username or password you entered is incorrect. Please double-check your credentials and try again. 🛑','danger')
+  showGetMessage('error', '1', 'Oops! It seems like the username or password you entered is incorrect. Please double-check your credentials and try again. 🛑', 'danger')
 </script>
 
 <body id="top">
@@ -22,8 +22,11 @@
                 style="background-color: #c40d3b !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Register</a>
             </div>
             <h5>Your Gateway to Financial Excellence! 🚀</h5>
-            <h2>Learn <br class="custom-line-break">Earn <br class="custom-line-break">Grow  <br class="custom-line-break">Analyse <br class="custom-line-break">Trade <br class="custom-line-break">Overcome  <br class="custom-line-break">Re-invest</h2>
-            <h4>Unleash the Power of Financial Mastery and Secure Your Seat in the Future of Trading and Investment.</h4>
+            <h2>Learn <br class="custom-line-break">Earn <br class="custom-line-break">Grow <br
+                class="custom-line-break">Analyse <br class="custom-line-break">Trade <br
+                class="custom-line-break">Overcome <br class="custom-line-break">Re-invest</h2>
+            <h4>Unleash the Power of Financial Mastery and Secure Your Seat in the Future of Trading and Investment.
+            </h4>
 
           </div>
 
@@ -33,77 +36,75 @@
           <div class="login-inner-form">
             <div class="details">
               <a href="home">
-                <img
-                  src="wp-content/uploads/sites/8/2022/11/logo1.png"
-                  alt="logo">
+                <img src="wp-content/uploads/sites/8/2022/11/logo1.png" alt="logo">
               </a>
               <h3>Log In </h3>
 
-                <script language=javascript>
-                  function checkform() {
-                    if (document.mainform.username.value == '') {
-                      alert("Please type your username!");
-                      document.mainform.username.focus();
-                      return false;
-                    }
-                    if (document.mainform.password.value == '') {
-                      alert("Please type your password!");
-                      document.mainform.password.focus();
-                      return false;
-                    }
-                    return true;
+              <script language=javascript>
+                function checkform() {
+                  if (document.mainform.username.value == '') {
+                    alert("Please type your username!");
+                    document.mainform.username.focus();
+                    return false;
                   }
-                </script>
+                  if (document.mainform.password.value == '') {
+                    alert("Please type your password!");
+                    document.mainform.password.focus();
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
 
 
 
-                <form method=post name=mainform action="auth/login_process.php" onsubmit="return checkform()">
+              <form method=post name=mainform action="auth/login_process.php" onsubmit="return checkform()">
 
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type=text name=username value='' class="form-control"
-                            placeholder="Enter your username">
-                        </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type=text name=username value='' class="form-control" placeholder="Enter your username">
                       </div>
                     </div>
+                  </div>
 
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                          <input type=password name=password value='' class="form-control"
-                            placeholder="Enter your password">
-                        </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type=password name=password value='' class="form-control"
+                          placeholder="Enter your password">
                       </div>
-
-                    </div>
-                    
-                    <div class="col-md-12">
-                      <button name="submit" type="submit" class="btn-md btn-theme btn-block  bg-primary"
-                        style="background-color: #55C2C3 !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Sign In</button>
-
-                    </div>
-                    <br><br><br>
-                    <div class="table-row d-flex align-items-center flex-column">
-                      <p class="mb-0" style="color:rgb(255, 0, 0);">Do not have a Legator Account?
-                        <a style="color:#55C2C3; " href="index.php?page=signup">Create an account</a>
-                      </p>
-                    </div>
-                    <br>
-                    <div class="col-md-12">
-
-                      <label>
-                        <a href="index.php?page=forgot_password" style="color: #ffffff;">Forgot Password</a>
-                      </label>
-
                     </div>
 
                   </div>
 
-                </form>
+                  <div class="col-md-12">
+                    <button name="submit" type="submit" class="btn-md btn-theme btn-block  bg-primary"
+                      style="background-color: #55C2C3 !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Sign
+                      In</button>
+
+                  </div>
+                  <br><br><br>
+                  <div class="table-row d-flex align-items-center flex-column">
+                    <p class="mb-0" style="color:rgb(255, 0, 0);">Do not have a Legator Account?
+                      <a style="color:#55C2C3; " href="index.php?page=signup">Create an account</a>
+                    </p>
+                  </div>
+                  <br>
+                  <div class="col-md-12">
+
+                    <label>
+                      <a href="index.php?page=forgot_password" style="color: #ffffff;">Forgot Password</a>
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </form>
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@
   <!-- Login 2 end -->
 
 </body>
- <!-- External JS libraries -->
- <script src="loginasset/assets/js/jquery-2.2.0.min.js"></script>
- <script src="loginasset/assets/js/popper.min.js"></script>
- <script src="loginasset/assets/js/bootstrap.min.js"></script>
+<!-- External JS libraries -->
+<script src="loginasset/assets/js/jquery-2.2.0.min.js"></script>
+<script src="loginasset/assets/js/popper.min.js"></script>
+<script src="loginasset/assets/js/bootstrap.min.js"></script>

@@ -32,7 +32,7 @@ if ($result->num_rows === 1) {
 
         // Format the timestamp as needed
         $formattedTimestamp = date('F j, Y, g:i a', strtotime($registrationTimestamp));
-        
+
         // echo $userId . ' ' . $fullname . ' ' . $email . ' ' . $password . '';
     } else {
         // Handle the case where $userDetails is null
@@ -45,4 +45,3 @@ if ($result->num_rows === 1) {
 
 // Close the statement and database connection
 $stmtGetUser->close();
-?>

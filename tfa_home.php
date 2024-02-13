@@ -63,19 +63,19 @@
         <?php
         session_start();
         require_once 'auth/GoogleAuthenticator.php';
-        $secretKey=$_SESSION['data'];
+        $secretKey = $_SESSION['data'];
         // Check if the form is submitted
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Handle login form submission
             $tfaCode = $_POST['code'];
-             // TFA code entered by the use
+            // TFA code entered by the use
 
             $ga = new PHPGangsta_GoogleAuthenticator();
             // Verify the TFA code entered by the user
             $isVerified = $ga->verifyCode($secretKey, $tfaCode, 2);
 
             if ($isVerified) {
-                $_SESSION['authenticated']=true;
+                $_SESSION['authenticated'] = true;
                 header("Location: index2.php?page=dashboard");
                 exit();
             } else {
@@ -94,7 +94,6 @@
     </div>
 
     <script>
-
         function checkform() {
             if (!document.mainform.code.value.match(/^[0-9]{6}$/)) {
                 alert("Please type code!");

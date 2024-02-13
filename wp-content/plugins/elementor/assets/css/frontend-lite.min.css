@@ -3278,7 +3278,8 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper,
 .swiper-container-flip .swiper-wrapper {
     /* -ms-perspective: 1200px */
-    perspective: 1200px;   /* Fixed by Terminator*/
+    perspective: 1200px;
+    /* Fixed by Terminator*/
 }
 
 .swiper-container-cube,
@@ -3387,7 +3388,8 @@ button.swiper-pagination-bullet {
     border-radius: 10px;
     position: relative;
     /* -ms-touch-action: none; */
-    touch-action: none;     /* Fixed by Terminator*/
+    touch-action: none;
+    /* Fixed by Terminator*/
     background: rgba(0, 0, 0, .1)
 }
 

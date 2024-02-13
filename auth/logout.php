@@ -22,4 +22,3 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 $redirectUrl = "../index.php?page=home&nocache=" . uniqid();
 header("Location: $redirectUrl");
 exit();
-?>

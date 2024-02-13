@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle login form submission
     $tfaCode = $_POST['code'];
     $secretKey = $_POST['tfa_secret']; // TFA code entered by the use
-    
+
     $ga = new PHPGangsta_GoogleAuthenticator();
     // Verify the TFA code entered by the user
     $isVerified = $ga->verifyCode($secretKey, $tfaCode, 2);
@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Encrypt the secret key
         // $encryptionKey = openssl_random_pseudo_bytes(16); // Generate a 128-bit (16-byte) encryption key
         // $hexKey = bin2hex($encryptionKey);
-        $hexKey =getenv('ENCRYPTION_KEY');
-        $encryptionKey= hex2bin($hexKey);
+        $hexKey = getenv('ENCRYPTION_KEY');
+        $encryptionKey = hex2bin($hexKey);
         // echo $hexKey;
         $encryptedSecretKey = openssl_encrypt($secretKey, 'aes-128-cbc', $encryptionKey, 0, $encryptionKey);
 
@@ -44,5 +44,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: ../index2.php?page=security&error=2");
     }
 }
-
-?>

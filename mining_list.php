@@ -72,11 +72,11 @@ function processGetOption($username, $getAmount)
 function updateAllclaimed($username, $amount)
 {
     global $connect_db;
-    if($amount){
-    $updateclaimedQuery = "UPDATE deposits SET allclaimed = 1 WHERE username = ?";
-    $stmtclaimedOption = $connect_db->prepare($updateclaimedQuery);
-    $stmtclaimedOption->bind_param("s",  $username);
-    $stmtclaimedOption->execute();
+    if ($amount) {
+        $updateclaimedQuery = "UPDATE deposits SET allclaimed = 1 WHERE username = ?";
+        $stmtclaimedOption = $connect_db->prepare($updateclaimedQuery);
+        $stmtclaimedOption->bind_param("s",  $username);
+        $stmtclaimedOption->execute();
     }
 }
 ?>
@@ -182,7 +182,7 @@ function updateAllclaimed($username, $amount)
                                                         $stmtRigsOption = $connect_db->prepare($updateRigsQuery);
                                                         $stmtRigsOption->bind_param("s", $username);
                                                         $stmtRigsOption->execute();
-                                                        updateAllclaimed($username,$isAllClaimed);
+                                                        updateAllclaimed($username, $isAllClaimed);
                                                     }
                                                     // Check if the user is eligible for the option
                                                     if ($recievedAmount !== ($claimed - $getAmount)) {
@@ -220,7 +220,7 @@ function updateAllclaimed($username, $amount)
                                                     } else {
                                                         $ifclicked = 1;
                                                         echo "All rewards claimed! 🎉";
-                                                        updateAllclaimed($username,$isAllClaimed);
+                                                        updateAllclaimed($username, $isAllClaimed);
                                                     }
                                                     ?>
 

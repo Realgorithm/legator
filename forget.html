@@ -11,20 +11,20 @@
     showGetMessage('error', '1', 'Email does not exist create a new account', 'warning');
 </script>
 <div class="container">
-<div class="row">
-    <h2>Forgot Password</h2>
-</div>
-<form name=forgotform action="auth/send_reset_link.php" onsubmit="checkform()" method="post">
     <div class="row">
-        <div class="col-md-4">
-            <label for="email">Enter your email address:</label><br>
-        </div>
-        <div class="col-md-4">
-            <input type="email" id="email" name="email" class="form-control" required><br>
-        </div>
-        <div class="col-md-4">
-            <button type="submit">Reset Password</button>
-        </div>
+        <h2>Forgot Password</h2>
     </div>
-</form>
+    <form name=forgotform action="auth/send_reset_link.php" onsubmit="checkform()" method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="email">Enter your email address:</label><br>
+            </div>
+            <div class="col-md-4">
+                <input type="email" id="email" name="email" class="form-control" required><br>
+            </div>
+            <div class="col-md-4">
+                <button type="submit">Reset Password</button>
+            </div>
+        </div>
+    </form>
 </div>

@@ -16,15 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $connect_db->prepare($updateQuery);
         $stmt->bind_param("s", $username);
         $stmt->execute();
-        if( $stmt->affected_rows > 0) {
+        if ($stmt->affected_rows > 0) {
             $query = "INSERT INTO `withdrawals` ( `accountno`, `username`, `amount`, `withdrawalinitiated`, `processed`) VALUES (?, ?, ?, 0, 0)";
             $stmt = $connect_db->prepare($query);
-            $stmt->bind_param("sss", $accountNo, $username ,$amount);
+            $stmt->bind_param("sss", $accountNo, $username, $amount);
             $stmt->execute();
             $stmt->close();
             header("Location: ../index2.php?page=withdraw&w=success");
             exit();
-        // return true; // Withdrawal initiated successfully
+            // return true; // Withdrawal initiated successfully
         } else {
         }
     } else {
@@ -33,4 +33,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // return false; // Insufficient balance
     }
 }
-?>

@@ -26,7 +26,7 @@ if ($result->num_rows === 1) {
         $earning = $userDetails['earning'];
         $withdraw = $userDetails['withdraw'];
         $pending_withdraw = $userDetails['pending_withdraw'];
-        $withdrawal_amount =$userDetails['withdrawal_amount'];
+        $withdrawal_amount = $userDetails['withdrawal_amount'];
         $deposit = $userDetails['deposit'];
         $referal = $userDetails['referal'];
         $rigs = $userDetails['rigs'];
@@ -37,10 +37,8 @@ if ($result->num_rows === 1) {
     }
 } else {
     // Handle the case where the user doesn't exist
-    
+
 }
 
 // Close the statement and database connection
 $stmtGetUser->close();
-
-?>
