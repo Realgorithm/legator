@@ -11,7 +11,7 @@ $textToRemove = ".html";
 if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 	// Remove the text from the end
 	// $trimmedString = rtrim($originalString, $textToRemove);
-	$trimmedString = substr($originalString, 0, -strlen($textToRemove));
+	$trimmedString = ucfirst(substr($originalString, 0, -strlen($textToRemove)));
 }
 ?>
 

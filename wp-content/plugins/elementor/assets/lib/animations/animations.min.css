@@ -1,5 +1,4 @@
 @keyframes bounce {
-
   20%,
   53%,
   80%,
@@ -31,7 +30,6 @@
 }
 
 @keyframes flash {
-
   50%,
   from,
   to {
@@ -49,7 +47,6 @@
 }
 
 @keyframes pulse {
-
   from,
   to {
     transform: scale3d(1, 1, 1);
@@ -65,7 +62,6 @@
 }
 
 @keyframes rubberBand {
-
   from,
   to {
     transform: scale3d(1, 1, 1);
@@ -97,7 +93,6 @@
 }
 
 @keyframes shake {
-
   from,
   to {
     transform: translate3d(0, 0, 0);
@@ -182,7 +177,6 @@
 }
 
 @keyframes tada {
-
   from,
   to {
     transform: scale3d(1, 1, 1);
@@ -212,7 +206,6 @@
 }
 
 @keyframes wobble {
-
   from,
   to {
     transform: none;
@@ -244,7 +237,6 @@
 }
 
 @keyframes jello {
-
   11.1%,
   from,
   to {
@@ -286,7 +278,6 @@
 }
 
 @keyframes bounceIn {
-
   20%,
   40%,
   60%,
@@ -329,7 +320,6 @@
 }
 
 @keyframes bounceInDown {
-
   60%,
   75%,
   90%,
@@ -366,7 +356,6 @@
 }
 
 @keyframes bounceInLeft {
-
   60%,
   75%,
   90%,
@@ -403,7 +392,6 @@
 }
 
 @keyframes bounceInRight {
-
   60%,
   75%,
   90%,
@@ -440,7 +428,6 @@
 }
 
 @keyframes bounceInUp {
-
   60%,
   75%,
   90%,

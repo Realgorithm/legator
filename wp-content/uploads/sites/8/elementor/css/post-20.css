@@ -1,181 +1,181 @@
 .elementor-kit-20 {
-    --e-global-color-primary: #239c98;
-    --e-global-color-secondary: #C561D5;
-    --e-global-color-text: #25106c;
-    --e-global-color-accent: #a7cd78;
-    --e-global-color-a185853: #FFD10F;
-    --e-global-color-308e809: #F5F5F5;
-    --e-global-color-a291686: #FFFFFF;
-    --e-global-typography-primary-font-family: "Oxygen";
-    --e-global-typography-primary-font-size: 65px;
-    --e-global-typography-primary-font-weight: bold;
-    --e-global-typography-primary-text-transform: capitalize;
-    --e-global-typography-primary-line-height: 1em;
-    --e-global-typography-primary-letter-spacing: -2px;
-    --e-global-typography-secondary-font-family: "Oxygen";
-    --e-global-typography-secondary-font-size: 46px;
-    --e-global-typography-secondary-font-weight: bold;
-    --e-global-typography-secondary-line-height: 1.1em;
-    --e-global-typography-text-font-family: "Noto Sans";
-    --e-global-typography-text-font-size: 16px;
-    --e-global-typography-accent-font-family: "Noto Sans";
-    --e-global-typography-accent-font-size: 18px;
-    --e-global-typography-accent-font-weight: 500;
-    --e-global-typography-accent-text-transform: uppercase;
-    --e-global-typography-accent-line-height: 1.2em;
-    --e-global-typography-accent-letter-spacing: 2.5px;
-    --e-global-typography-b2ce6af-font-family: "Noto Sans";
-    --e-global-typography-b2ce6af-font-size: 16px;
-    --e-global-typography-b2ce6af-line-height: 1.5em;
-    --e-global-typography-69c152f-font-family: "Noto Sans";
-    --e-global-typography-69c152f-font-size: 14px;
-    --e-global-typography-69c152f-line-height: 1.6em;
-    --e-global-typography-520c191-font-family: "Oxygen";
-    --e-global-typography-520c191-font-size: 17px;
-    --e-global-typography-520c191-font-weight: bold;
-    --e-global-typography-520c191-text-transform: uppercase;
-    --e-global-typography-520c191-letter-spacing: 1px;
-    --e-global-typography-583e54c-font-family: "Oxygen";
-    --e-global-typography-583e54c-font-size: 65px;
-    --e-global-typography-583e54c-font-weight: bold;
-    --e-global-typography-583e54c-text-transform: capitalize;
-    --e-global-typography-583e54c-line-height: 1em;
-    --e-global-typography-583e54c-letter-spacing: -2px;
-    --e-global-typography-5d167aa-font-family: "Oxygen";
-    --e-global-typography-5d167aa-font-size: 46px;
-    --e-global-typography-5d167aa-font-weight: bold;
-    --e-global-typography-5d167aa-line-height: 1.1em;
-    --e-global-typography-d3dae9a-font-family: "Oxygen";
-    --e-global-typography-d3dae9a-font-size: 35px;
-    --e-global-typography-d3dae9a-font-weight: bold;
-    --e-global-typography-d3dae9a-line-height: 1.1em;
-    --e-global-typography-83682a1-font-family: "Oxygen";
-    --e-global-typography-83682a1-font-size: 25px;
-    --e-global-typography-83682a1-font-weight: bold;
-    --e-global-typography-83682a1-line-height: 1.1em;
-    --e-global-typography-7044a64-font-family: "Oxygen";
-    --e-global-typography-7044a64-font-size: 18px;
-    --e-global-typography-7044a64-font-weight: bold;
-    --e-global-typography-7044a64-line-height: 1.2em;
-    --e-global-typography-84ca66e-font-family: "Noto Sans";
-    --e-global-typography-84ca66e-font-size: 20px;
-    --e-global-typography-84ca66e-font-weight: "bold";
-    --e-global-typography-84ca66e-text-transform: uppercase;
-    --e-global-typography-84ca66e-line-height: 1.2em;
-    --e-global-typography-84ca66e-letter-spacing: 2.5px;
-    --e-global-typography-112b6c4-font-family: "Heebo";
-    --e-global-typography-112b6c4-font-size: 13px;
-    --e-global-typography-112b6c4-font-weight: 300;
-    --e-global-typography-5f1e0c6-font-family: "Noto Sans";
-    --e-global-typography-5f1e0c6-font-size: 17px;
-    --e-global-typography-5f1e0c6-font-weight: 600;
-    --e-global-typography-5f1e0c6-text-transform: capitalize;
-    --e-global-typography-5f1e0c6-line-height: 1em;
-    --e-global-typography-5f1e0c6-letter-spacing: 0.3px;
-    --e-global-typography-25fd629-font-family: "Oxygen";
-    --e-global-typography-25fd629-font-size: 72px;
-    --e-global-typography-25fd629-font-weight: bold;
-    --e-global-typography-25fd629-text-transform: capitalize;
-    --e-global-typography-25fd629-line-height: 1em;
-    --e-global-typography-25fd629-letter-spacing: -2px;
-    --e-global-typography-1c4c200-font-family: "Noto Sans";
-    --e-global-typography-1c4c200-font-size: 22px;
-    --e-global-typography-1c4c200-line-height: 1.4em;
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-b2ce6af-font-family), Sans-serif;
-    font-size: var(--e-global-typography-b2ce6af-font-size);
-    line-height: var(--e-global-typography-b2ce6af-line-height);
-    letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
-    word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
+  --e-global-color-primary: #239c98;
+  --e-global-color-secondary: #c561d5;
+  --e-global-color-text: #25106c;
+  --e-global-color-accent: #a7cd78;
+  --e-global-color-a185853: #ffd10f;
+  --e-global-color-308e809: #f5f5f5;
+  --e-global-color-a291686: #ffffff;
+  --e-global-typography-primary-font-family: "Oxygen";
+  --e-global-typography-primary-font-size: 65px;
+  --e-global-typography-primary-font-weight: bold;
+  --e-global-typography-primary-text-transform: capitalize;
+  --e-global-typography-primary-line-height: 1em;
+  --e-global-typography-primary-letter-spacing: -2px;
+  --e-global-typography-secondary-font-family: "Oxygen";
+  --e-global-typography-secondary-font-size: 46px;
+  --e-global-typography-secondary-font-weight: bold;
+  --e-global-typography-secondary-line-height: 1.1em;
+  --e-global-typography-text-font-family: "Noto Sans";
+  --e-global-typography-text-font-size: 16px;
+  --e-global-typography-accent-font-family: "Noto Sans";
+  --e-global-typography-accent-font-size: 18px;
+  --e-global-typography-accent-font-weight: 500;
+  --e-global-typography-accent-text-transform: uppercase;
+  --e-global-typography-accent-line-height: 1.2em;
+  --e-global-typography-accent-letter-spacing: 2.5px;
+  --e-global-typography-b2ce6af-font-family: "Noto Sans";
+  --e-global-typography-b2ce6af-font-size: 16px;
+  --e-global-typography-b2ce6af-line-height: 1.5em;
+  --e-global-typography-69c152f-font-family: "Noto Sans";
+  --e-global-typography-69c152f-font-size: 14px;
+  --e-global-typography-69c152f-line-height: 1.6em;
+  --e-global-typography-520c191-font-family: "Oxygen";
+  --e-global-typography-520c191-font-size: 17px;
+  --e-global-typography-520c191-font-weight: bold;
+  --e-global-typography-520c191-text-transform: uppercase;
+  --e-global-typography-520c191-letter-spacing: 1px;
+  --e-global-typography-583e54c-font-family: "Oxygen";
+  --e-global-typography-583e54c-font-size: 65px;
+  --e-global-typography-583e54c-font-weight: bold;
+  --e-global-typography-583e54c-text-transform: capitalize;
+  --e-global-typography-583e54c-line-height: 1em;
+  --e-global-typography-583e54c-letter-spacing: -2px;
+  --e-global-typography-5d167aa-font-family: "Oxygen";
+  --e-global-typography-5d167aa-font-size: 46px;
+  --e-global-typography-5d167aa-font-weight: bold;
+  --e-global-typography-5d167aa-line-height: 1.1em;
+  --e-global-typography-d3dae9a-font-family: "Oxygen";
+  --e-global-typography-d3dae9a-font-size: 35px;
+  --e-global-typography-d3dae9a-font-weight: bold;
+  --e-global-typography-d3dae9a-line-height: 1.1em;
+  --e-global-typography-83682a1-font-family: "Oxygen";
+  --e-global-typography-83682a1-font-size: 25px;
+  --e-global-typography-83682a1-font-weight: bold;
+  --e-global-typography-83682a1-line-height: 1.1em;
+  --e-global-typography-7044a64-font-family: "Oxygen";
+  --e-global-typography-7044a64-font-size: 18px;
+  --e-global-typography-7044a64-font-weight: bold;
+  --e-global-typography-7044a64-line-height: 1.2em;
+  --e-global-typography-84ca66e-font-family: "Noto Sans";
+  --e-global-typography-84ca66e-font-size: 20px;
+  --e-global-typography-84ca66e-font-weight: "bold";
+  --e-global-typography-84ca66e-text-transform: uppercase;
+  --e-global-typography-84ca66e-line-height: 1.2em;
+  --e-global-typography-84ca66e-letter-spacing: 2.5px;
+  --e-global-typography-112b6c4-font-family: "Heebo";
+  --e-global-typography-112b6c4-font-size: 13px;
+  --e-global-typography-112b6c4-font-weight: 300;
+  --e-global-typography-5f1e0c6-font-family: "Noto Sans";
+  --e-global-typography-5f1e0c6-font-size: 17px;
+  --e-global-typography-5f1e0c6-font-weight: 600;
+  --e-global-typography-5f1e0c6-text-transform: capitalize;
+  --e-global-typography-5f1e0c6-line-height: 1em;
+  --e-global-typography-5f1e0c6-letter-spacing: 0.3px;
+  --e-global-typography-25fd629-font-family: "Oxygen";
+  --e-global-typography-25fd629-font-size: 72px;
+  --e-global-typography-25fd629-font-weight: bold;
+  --e-global-typography-25fd629-text-transform: capitalize;
+  --e-global-typography-25fd629-line-height: 1em;
+  --e-global-typography-25fd629-letter-spacing: -2px;
+  --e-global-typography-1c4c200-font-family: "Noto Sans";
+  --e-global-typography-1c4c200-font-size: 22px;
+  --e-global-typography-1c4c200-line-height: 1.4em;
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-b2ce6af-font-family), Sans-serif;
+  font-size: var(--e-global-typography-b2ce6af-font-size);
+  line-height: var(--e-global-typography-b2ce6af-line-height);
+  letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
+  word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
 }
 
 .elementor-kit-20 a {
-    color: var(--e-global-color-text);
+  color: var(--e-global-color-text);
 }
 
 .elementor-kit-20 a:hover {
-    color: var(--e-global-color-accent);
+  color: var(--e-global-color-accent);
 }
 
 .elementor-kit-20 h1 {
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-583e54c-font-family), Sans-serif;
-    font-size: var(--e-global-typography-583e54c-font-size);
-    font-weight: var(--e-global-typography-583e54c-font-weight);
-    text-transform: var(--e-global-typography-583e54c-text-transform);
-    line-height: var(--e-global-typography-583e54c-line-height);
-    letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
-    word-spacing: var(--e-global-typography-583e54c-word-spacing);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-583e54c-font-family), Sans-serif;
+  font-size: var(--e-global-typography-583e54c-font-size);
+  font-weight: var(--e-global-typography-583e54c-font-weight);
+  text-transform: var(--e-global-typography-583e54c-text-transform);
+  line-height: var(--e-global-typography-583e54c-line-height);
+  letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
+  word-spacing: var(--e-global-typography-583e54c-word-spacing);
 }
 
 .elementor-kit-20 h2 {
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-5d167aa-font-family), Sans-serif;
-    font-size: var(--e-global-typography-5d167aa-font-size);
-    font-weight: var(--e-global-typography-5d167aa-font-weight);
-    line-height: var(--e-global-typography-5d167aa-line-height);
-    letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
-    word-spacing: var(--e-global-typography-5d167aa-word-spacing);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-5d167aa-font-family), Sans-serif;
+  font-size: var(--e-global-typography-5d167aa-font-size);
+  font-weight: var(--e-global-typography-5d167aa-font-weight);
+  line-height: var(--e-global-typography-5d167aa-line-height);
+  letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
+  word-spacing: var(--e-global-typography-5d167aa-word-spacing);
 }
 
 .elementor-kit-20 h3 {
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-d3dae9a-font-family), Sans-serif;
-    font-size: var(--e-global-typography-d3dae9a-font-size);
-    font-weight: var(--e-global-typography-d3dae9a-font-weight);
-    line-height: var(--e-global-typography-d3dae9a-line-height);
-    letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
-    word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-d3dae9a-font-family), Sans-serif;
+  font-size: var(--e-global-typography-d3dae9a-font-size);
+  font-weight: var(--e-global-typography-d3dae9a-font-weight);
+  line-height: var(--e-global-typography-d3dae9a-line-height);
+  letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
+  word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
 }
 
 .elementor-kit-20 h4 {
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-83682a1-font-family), Sans-serif;
-    font-size: var(--e-global-typography-83682a1-font-size);
-    font-weight: var(--e-global-typography-83682a1-font-weight);
-    line-height: var(--e-global-typography-83682a1-line-height);
-    letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
-    word-spacing: var(--e-global-typography-83682a1-word-spacing);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-83682a1-font-family), Sans-serif;
+  font-size: var(--e-global-typography-83682a1-font-size);
+  font-weight: var(--e-global-typography-83682a1-font-weight);
+  line-height: var(--e-global-typography-83682a1-line-height);
+  letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
+  word-spacing: var(--e-global-typography-83682a1-word-spacing);
 }
 
 .elementor-kit-20 h5 {
-    color: var(--e-global-color-text);
-    font-family: var(--e-global-typography-7044a64-font-family), Sans-serif;
-    font-size: var(--e-global-typography-7044a64-font-size);
-    font-weight: var(--e-global-typography-7044a64-font-weight);
-    line-height: var(--e-global-typography-7044a64-line-height);
-    letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
-    word-spacing: var(--e-global-typography-7044a64-word-spacing);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-7044a64-font-family), Sans-serif;
+  font-size: var(--e-global-typography-7044a64-font-size);
+  font-weight: var(--e-global-typography-7044a64-font-weight);
+  line-height: var(--e-global-typography-7044a64-line-height);
+  letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
+  word-spacing: var(--e-global-typography-7044a64-word-spacing);
 }
 
 .elementor-kit-20 h6 {
-    color: var(--e-global-color-accent);
-    font-family: var(--e-global-typography-84ca66e-font-family), Sans-serif;
-    font-size: var(--e-global-typography-84ca66e-font-size);
-    font-weight: var(--e-global-typography-84ca66e-font-weight);
-    text-transform: var(--e-global-typography-84ca66e-text-transform);
-    line-height: var(--e-global-typography-84ca66e-line-height);
-    letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
-    word-spacing: var(--e-global-typography-84ca66e-word-spacing);
+  color: var(--e-global-color-accent);
+  font-family: var(--e-global-typography-84ca66e-font-family), Sans-serif;
+  font-size: var(--e-global-typography-84ca66e-font-size);
+  font-weight: var(--e-global-typography-84ca66e-font-weight);
+  text-transform: var(--e-global-typography-84ca66e-text-transform);
+  line-height: var(--e-global-typography-84ca66e-line-height);
+  letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
+  word-spacing: var(--e-global-typography-84ca66e-word-spacing);
 }
 
 .elementor-kit-20 button,
 .elementor-kit-20 input[type="button"],
 .elementor-kit-20 input[type="submit"],
 .elementor-kit-20 .elementor-button {
-    font-family: var(--e-global-typography-5f1e0c6-font-family), Sans-serif;
-    font-size: var(--e-global-typography-5f1e0c6-font-size);
-    font-weight: var(--e-global-typography-5f1e0c6-font-weight);
-    text-transform: var(--e-global-typography-5f1e0c6-text-transform);
-    line-height: var(--e-global-typography-5f1e0c6-line-height);
-    letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
-    word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
-    color: var(--e-global-color-text);
-    background-color: var(--e-global-color-accent);
-    border-style: solid;
-    border-width: 3px 3px 3px 3px;
-    border-color: #02010100;
-    border-radius: 5px 5px 5px 5px;
+  font-family: var(--e-global-typography-5f1e0c6-font-family), Sans-serif;
+  font-size: var(--e-global-typography-5f1e0c6-font-size);
+  font-weight: var(--e-global-typography-5f1e0c6-font-weight);
+  text-transform: var(--e-global-typography-5f1e0c6-text-transform);
+  line-height: var(--e-global-typography-5f1e0c6-line-height);
+  letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
+  word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
+  color: var(--e-global-color-text);
+  background-color: var(--e-global-color-accent);
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: #02010100;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .elementor-kit-20 button:hover,
@@ -186,237 +186,237 @@
 .elementor-kit-20 input[type="submit"]:focus,
 .elementor-kit-20 .elementor-button:hover,
 .elementor-kit-20 .elementor-button:focus {
-    color: var(--e-global-color-text);
-    background-color: #0C243C00;
-    border-style: solid;
-    border-width: 3px 3px 3px 3px;
-    border-color: var(--e-global-color-accent);
+  color: var(--e-global-color-text);
+  background-color: #0c243c00;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: var(--e-global-color-accent);
 }
 
 .elementor-kit-20 label {
-    font-weight: 600;
-    line-height: 1.5em;
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 .elementor-kit-20 input:not([type="button"]):not([type="submit"]),
 .elementor-kit-20 textarea,
 .elementor-kit-20 .elementor-field-textual {
-    color: var(--e-global-color-primary);
-    background-color: var(--e-global-color-308e809);
-    border-style: solid;
-    border-width: 1.5px 1.5px 1.5px 1.5px;
-    border-color: var(--e-global-color-primary);
-    border-radius: 5px 5px 5px 5px;
+  color: var(--e-global-color-primary);
+  background-color: var(--e-global-color-308e809);
+  border-style: solid;
+  border-width: 1.5px 1.5px 1.5px 1.5px;
+  border-color: var(--e-global-color-primary);
+  border-radius: 5px 5px 5px 5px;
 }
 
 .elementor-kit-20 input:focus:not([type="button"]):not([type="submit"]),
 .elementor-kit-20 textarea:focus,
 .elementor-kit-20 .elementor-field-textual:focus {
-    color: var(--e-global-color-text);
-    background-color: var(--e-global-color-a291686);
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: var(--e-global-color-primary);
+  color: var(--e-global-color-text);
+  background-color: var(--e-global-color-a291686);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--e-global-color-primary);
 }
 
-.elementor-section.elementor-section-boxed>.elementor-container {
-    max-width: 1280px;
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 1280px;
 }
 
 .e-con {
-    --container-max-width: 1280px;
+  --container-max-width: 1280px;
 }
 
 .elementor-widget:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .elementor-element {
-    --widgets-spacing: 20px;
+  --widgets-spacing: 20px;
 }
 
 h1.entry-title {
-    display: var(--page-title-display);
+  display: var(--page-title-display);
 }
 
 .elementor-kit-20 e-page-transition {
-    background-color: #FFBC7D;
+  background-color: #ffbc7d;
 }
 
 .site-header {
-    padding-right: 0px;
-    padding-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
-@media(max-width:1024px) {
-    .elementor-kit-20 {
-        --e-global-typography-primary-font-size: 43px;
-        --e-global-typography-secondary-font-size: 33px;
-        --e-global-typography-text-font-size: 15px;
-        --e-global-typography-accent-font-size: 16px;
-        --e-global-typography-b2ce6af-font-size: 15px;
-        --e-global-typography-69c152f-font-size: 13px;
-        --e-global-typography-520c191-font-size: 15px;
-        --e-global-typography-583e54c-font-size: 43px;
-        --e-global-typography-5d167aa-font-size: 33px;
-        --e-global-typography-d3dae9a-font-size: 27px;
-        --e-global-typography-83682a1-font-size: 21px;
-        --e-global-typography-7044a64-font-size: 17px;
-        --e-global-typography-84ca66e-font-size: 16px;
-        --e-global-typography-112b6c4-font-size: 12px;
-        --e-global-typography-5f1e0c6-font-size: 15px;
-        --e-global-typography-25fd629-font-size: 54px;
-        --e-global-typography-1c4c200-font-size: 20px;
-        --e-global-typography-1c4c200-line-height: 1.2em;
-        font-size: var(--e-global-typography-b2ce6af-font-size);
-        line-height: var(--e-global-typography-b2ce6af-line-height);
-        letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
-        word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
-    }
+@media (max-width: 1024px) {
+  .elementor-kit-20 {
+    --e-global-typography-primary-font-size: 43px;
+    --e-global-typography-secondary-font-size: 33px;
+    --e-global-typography-text-font-size: 15px;
+    --e-global-typography-accent-font-size: 16px;
+    --e-global-typography-b2ce6af-font-size: 15px;
+    --e-global-typography-69c152f-font-size: 13px;
+    --e-global-typography-520c191-font-size: 15px;
+    --e-global-typography-583e54c-font-size: 43px;
+    --e-global-typography-5d167aa-font-size: 33px;
+    --e-global-typography-d3dae9a-font-size: 27px;
+    --e-global-typography-83682a1-font-size: 21px;
+    --e-global-typography-7044a64-font-size: 17px;
+    --e-global-typography-84ca66e-font-size: 16px;
+    --e-global-typography-112b6c4-font-size: 12px;
+    --e-global-typography-5f1e0c6-font-size: 15px;
+    --e-global-typography-25fd629-font-size: 54px;
+    --e-global-typography-1c4c200-font-size: 20px;
+    --e-global-typography-1c4c200-line-height: 1.2em;
+    font-size: var(--e-global-typography-b2ce6af-font-size);
+    line-height: var(--e-global-typography-b2ce6af-line-height);
+    letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
+    word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
+  }
 
-    .elementor-kit-20 h1 {
-        font-size: var(--e-global-typography-583e54c-font-size);
-        line-height: var(--e-global-typography-583e54c-line-height);
-        letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
-        word-spacing: var(--e-global-typography-583e54c-word-spacing);
-    }
+  .elementor-kit-20 h1 {
+    font-size: var(--e-global-typography-583e54c-font-size);
+    line-height: var(--e-global-typography-583e54c-line-height);
+    letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
+    word-spacing: var(--e-global-typography-583e54c-word-spacing);
+  }
 
-    .elementor-kit-20 h2 {
-        font-size: var(--e-global-typography-5d167aa-font-size);
-        line-height: var(--e-global-typography-5d167aa-line-height);
-        letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
-        word-spacing: var(--e-global-typography-5d167aa-word-spacing);
-    }
+  .elementor-kit-20 h2 {
+    font-size: var(--e-global-typography-5d167aa-font-size);
+    line-height: var(--e-global-typography-5d167aa-line-height);
+    letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
+    word-spacing: var(--e-global-typography-5d167aa-word-spacing);
+  }
 
-    .elementor-kit-20 h3 {
-        font-size: var(--e-global-typography-d3dae9a-font-size);
-        line-height: var(--e-global-typography-d3dae9a-line-height);
-        letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
-        word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
-    }
+  .elementor-kit-20 h3 {
+    font-size: var(--e-global-typography-d3dae9a-font-size);
+    line-height: var(--e-global-typography-d3dae9a-line-height);
+    letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
+    word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
+  }
 
-    .elementor-kit-20 h4 {
-        font-size: var(--e-global-typography-83682a1-font-size);
-        line-height: var(--e-global-typography-83682a1-line-height);
-        letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
-        word-spacing: var(--e-global-typography-83682a1-word-spacing);
-    }
+  .elementor-kit-20 h4 {
+    font-size: var(--e-global-typography-83682a1-font-size);
+    line-height: var(--e-global-typography-83682a1-line-height);
+    letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
+    word-spacing: var(--e-global-typography-83682a1-word-spacing);
+  }
 
-    .elementor-kit-20 h5 {
-        font-size: var(--e-global-typography-7044a64-font-size);
-        line-height: var(--e-global-typography-7044a64-line-height);
-        letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
-        word-spacing: var(--e-global-typography-7044a64-word-spacing);
-    }
+  .elementor-kit-20 h5 {
+    font-size: var(--e-global-typography-7044a64-font-size);
+    line-height: var(--e-global-typography-7044a64-line-height);
+    letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
+    word-spacing: var(--e-global-typography-7044a64-word-spacing);
+  }
 
-    .elementor-kit-20 h6 {
-        font-size: var(--e-global-typography-84ca66e-font-size);
-        line-height: var(--e-global-typography-84ca66e-line-height);
-        letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
-        word-spacing: var(--e-global-typography-84ca66e-word-spacing);
-    }
+  .elementor-kit-20 h6 {
+    font-size: var(--e-global-typography-84ca66e-font-size);
+    line-height: var(--e-global-typography-84ca66e-line-height);
+    letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
+    word-spacing: var(--e-global-typography-84ca66e-word-spacing);
+  }
 
-    .elementor-kit-20 button,
-    .elementor-kit-20 input[type="button"],
-    .elementor-kit-20 input[type="submit"],
-    .elementor-kit-20 .elementor-button {
-        font-size: var(--e-global-typography-5f1e0c6-font-size);
-        line-height: var(--e-global-typography-5f1e0c6-line-height);
-        letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
-        word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
-    }
+  .elementor-kit-20 button,
+  .elementor-kit-20 input[type="button"],
+  .elementor-kit-20 input[type="submit"],
+  .elementor-kit-20 .elementor-button {
+    font-size: var(--e-global-typography-5f1e0c6-font-size);
+    line-height: var(--e-global-typography-5f1e0c6-line-height);
+    letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
+    word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
+  }
 
-    .elementor-section.elementor-section-boxed>.elementor-container {
-        max-width: 1024px;
-    }
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1024px;
+  }
 
-    .e-con {
-        --container-max-width: 1024px;
-    }
+  .e-con {
+    --container-max-width: 1024px;
+  }
 }
 
-@media(max-width:767px) {
-    .elementor-kit-20 {
-        --e-global-typography-primary-font-size: 33px;
-        --e-global-typography-secondary-font-size: 26px;
-        --e-global-typography-text-font-size: 14px;
-        --e-global-typography-accent-font-size: 15px;
-        --e-global-typography-b2ce6af-font-size: 14px;
-        --e-global-typography-69c152f-font-size: 12px;
-        --e-global-typography-520c191-font-size: 14px;
-        --e-global-typography-583e54c-font-size: 33px;
-        --e-global-typography-5d167aa-font-size: 26px;
-        --e-global-typography-d3dae9a-font-size: 23px;
-        --e-global-typography-83682a1-font-size: 19px;
-        --e-global-typography-7044a64-font-size: 16px;
-        --e-global-typography-84ca66e-font-size: 15px;
-        --e-global-typography-112b6c4-font-size: 11px;
-        --e-global-typography-5f1e0c6-font-size: 14px;
-        --e-global-typography-25fd629-font-size: 44px;
-        --e-global-typography-1c4c200-font-size: 18px;
-        font-size: var(--e-global-typography-b2ce6af-font-size);
-        line-height: var(--e-global-typography-b2ce6af-line-height);
-        letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
-        word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
-    }
+@media (max-width: 767px) {
+  .elementor-kit-20 {
+    --e-global-typography-primary-font-size: 33px;
+    --e-global-typography-secondary-font-size: 26px;
+    --e-global-typography-text-font-size: 14px;
+    --e-global-typography-accent-font-size: 15px;
+    --e-global-typography-b2ce6af-font-size: 14px;
+    --e-global-typography-69c152f-font-size: 12px;
+    --e-global-typography-520c191-font-size: 14px;
+    --e-global-typography-583e54c-font-size: 33px;
+    --e-global-typography-5d167aa-font-size: 26px;
+    --e-global-typography-d3dae9a-font-size: 23px;
+    --e-global-typography-83682a1-font-size: 19px;
+    --e-global-typography-7044a64-font-size: 16px;
+    --e-global-typography-84ca66e-font-size: 15px;
+    --e-global-typography-112b6c4-font-size: 11px;
+    --e-global-typography-5f1e0c6-font-size: 14px;
+    --e-global-typography-25fd629-font-size: 44px;
+    --e-global-typography-1c4c200-font-size: 18px;
+    font-size: var(--e-global-typography-b2ce6af-font-size);
+    line-height: var(--e-global-typography-b2ce6af-line-height);
+    letter-spacing: var(--e-global-typography-b2ce6af-letter-spacing);
+    word-spacing: var(--e-global-typography-b2ce6af-word-spacing);
+  }
 
-    .elementor-kit-20 h1 {
-        font-size: var(--e-global-typography-583e54c-font-size);
-        line-height: var(--e-global-typography-583e54c-line-height);
-        letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
-        word-spacing: var(--e-global-typography-583e54c-word-spacing);
-    }
+  .elementor-kit-20 h1 {
+    font-size: var(--e-global-typography-583e54c-font-size);
+    line-height: var(--e-global-typography-583e54c-line-height);
+    letter-spacing: var(--e-global-typography-583e54c-letter-spacing);
+    word-spacing: var(--e-global-typography-583e54c-word-spacing);
+  }
 
-    .elementor-kit-20 h2 {
-        font-size: var(--e-global-typography-5d167aa-font-size);
-        line-height: var(--e-global-typography-5d167aa-line-height);
-        letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
-        word-spacing: var(--e-global-typography-5d167aa-word-spacing);
-    }
+  .elementor-kit-20 h2 {
+    font-size: var(--e-global-typography-5d167aa-font-size);
+    line-height: var(--e-global-typography-5d167aa-line-height);
+    letter-spacing: var(--e-global-typography-5d167aa-letter-spacing);
+    word-spacing: var(--e-global-typography-5d167aa-word-spacing);
+  }
 
-    .elementor-kit-20 h3 {
-        font-size: var(--e-global-typography-d3dae9a-font-size);
-        line-height: var(--e-global-typography-d3dae9a-line-height);
-        letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
-        word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
-    }
+  .elementor-kit-20 h3 {
+    font-size: var(--e-global-typography-d3dae9a-font-size);
+    line-height: var(--e-global-typography-d3dae9a-line-height);
+    letter-spacing: var(--e-global-typography-d3dae9a-letter-spacing);
+    word-spacing: var(--e-global-typography-d3dae9a-word-spacing);
+  }
 
-    .elementor-kit-20 h4 {
-        font-size: var(--e-global-typography-83682a1-font-size);
-        line-height: var(--e-global-typography-83682a1-line-height);
-        letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
-        word-spacing: var(--e-global-typography-83682a1-word-spacing);
-    }
+  .elementor-kit-20 h4 {
+    font-size: var(--e-global-typography-83682a1-font-size);
+    line-height: var(--e-global-typography-83682a1-line-height);
+    letter-spacing: var(--e-global-typography-83682a1-letter-spacing);
+    word-spacing: var(--e-global-typography-83682a1-word-spacing);
+  }
 
-    .elementor-kit-20 h5 {
-        font-size: var(--e-global-typography-7044a64-font-size);
-        line-height: var(--e-global-typography-7044a64-line-height);
-        letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
-        word-spacing: var(--e-global-typography-7044a64-word-spacing);
-    }
+  .elementor-kit-20 h5 {
+    font-size: var(--e-global-typography-7044a64-font-size);
+    line-height: var(--e-global-typography-7044a64-line-height);
+    letter-spacing: var(--e-global-typography-7044a64-letter-spacing);
+    word-spacing: var(--e-global-typography-7044a64-word-spacing);
+  }
 
-    .elementor-kit-20 h6 {
-        font-size: var(--e-global-typography-84ca66e-font-size);
-        line-height: var(--e-global-typography-84ca66e-line-height);
-        letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
-        word-spacing: var(--e-global-typography-84ca66e-word-spacing);
-    }
+  .elementor-kit-20 h6 {
+    font-size: var(--e-global-typography-84ca66e-font-size);
+    line-height: var(--e-global-typography-84ca66e-line-height);
+    letter-spacing: var(--e-global-typography-84ca66e-letter-spacing);
+    word-spacing: var(--e-global-typography-84ca66e-word-spacing);
+  }
 
-    .elementor-kit-20 button,
-    .elementor-kit-20 input[type="button"],
-    .elementor-kit-20 input[type="submit"],
-    .elementor-kit-20 .elementor-button {
-        font-size: var(--e-global-typography-5f1e0c6-font-size);
-        line-height: var(--e-global-typography-5f1e0c6-line-height);
-        letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
-        word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
-    }
+  .elementor-kit-20 button,
+  .elementor-kit-20 input[type="button"],
+  .elementor-kit-20 input[type="submit"],
+  .elementor-kit-20 .elementor-button {
+    font-size: var(--e-global-typography-5f1e0c6-font-size);
+    line-height: var(--e-global-typography-5f1e0c6-line-height);
+    letter-spacing: var(--e-global-typography-5f1e0c6-letter-spacing);
+    word-spacing: var(--e-global-typography-5f1e0c6-word-spacing);
+  }
 
-    .elementor-section.elementor-section-boxed>.elementor-container {
-        max-width: 767px;
-    }
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 767px;
+  }
 
-    .e-con {
-        --container-max-width: 767px;
-    }
+  .e-con {
+    --container-max-width: 767px;
+  }
 }

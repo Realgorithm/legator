@@ -81,7 +81,7 @@
   padding-left: 0;
 }
 
-.fa-ul>li {
+.fa-ul > li {
   position: relative;
 }
 
@@ -5274,11 +5274,16 @@
   font-style: normal;
   font-weight: normal;
   src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot);
-  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400d41d.eot) format("embedded-opentype"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2) format("woff2"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff) format("woff"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf) format("truetype"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg#fontawesome) format("svg");
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400d41d.eot)
+      format("embedded-opentype"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2)
+      format("woff2"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff)
+      format("woff"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf)
+      format("truetype"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg#fontawesome)
+      format("svg");
 }
 
 .fab {
@@ -5310,11 +5315,16 @@
   font-style: normal;
   font-weight: 900;
   src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot);
-  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900d41d.eot) format("embedded-opentype"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2) format("woff2"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff) format("woff"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf) format("truetype"),
-    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg#fontawesome) format("svg");
+  src: url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900d41d.eot)
+      format("embedded-opentype"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2)
+      format("woff2"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff)
+      format("woff"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf)
+      format("truetype"),
+    url(/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg#fontawesome)
+      format("svg");
 }
 
 .fa,

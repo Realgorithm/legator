@@ -1,62 +1,60 @@
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .error-container {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-video {
-    position: fixed;
-    width: fit-content;
-    height: fit-content;
-    object-fit: cover;
-    z-index: -1;
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .error-text {
-    position: absolute;
-    bottom: 50px;
-    /* Adjust as needed */
-    text-align: center;
-    color: #25106c;
-    font-family: Arial, sans-serif;
+  position: absolute;
+  bottom: 50px;
+  /* Adjust as needed */
+  text-align: center;
+  color: #25106c;
+  font-family: Arial, sans-serif;
 }
 
 .logo {
-
-    position: absolute;
-    top: 50px;
-    /* Adjust as needed */
-    text-align: center;
-    color: #25106c;
-    font-family: Arial, sans-serif;
+  position: absolute;
+  top: 50px;
+  /* Adjust as needed */
+  text-align: center;
+  color: #25106c;
+  font-family: Arial, sans-serif;
 }
 
-
 .error-text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 .error-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .error-text a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .error-text a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

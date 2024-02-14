@@ -168,11 +168,13 @@
   transform: translateY(30px);
 }
 
-.elementor-animated-content:hover .elementor-animated-item--move-contained-right {
+.elementor-animated-content:hover
+  .elementor-animated-item--move-contained-right {
   --translate: 8%, 0;
 }
 
-.elementor-animated-content:hover .elementor-animated-item--move-contained-left {
+.elementor-animated-content:hover
+  .elementor-animated-item--move-contained-left {
   --translate: -8%, 0;
 }
 
@@ -180,7 +182,8 @@
   --translate: 0, -8%;
 }
 
-.elementor-animated-content:hover .elementor-animated-item--move-contained-bottom {
+.elementor-animated-content:hover
+  .elementor-animated-item--move-contained-bottom {
   --translate: 0, 8%;
 }
 
@@ -271,25 +274,40 @@
   transform: scale(1.2) translate(var(--translate));
 }
 
-.elementor-editor-active .elementor.elementor-edit-mode .elementor-widget.elementor-global-widget:hover {
+.elementor-editor-active
+  .elementor.elementor-edit-mode
+  .elementor-widget.elementor-global-widget:hover {
   outline: 1px solid #fec449;
 }
 
-.elementor-editor-active .elementor.elementor-edit-mode .elementor-global-widget .elementor-editor-widget-settings {
+.elementor-editor-active
+  .elementor.elementor-edit-mode
+  .elementor-global-widget
+  .elementor-editor-widget-settings {
   background-image: -o-linear-gradient(bottom, #feb416, #fec449);
-  background-image: -webkit-gradient(linear,
-      left bottom,
-      left top,
-      from(#feb416),
-      to(#fec449));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#feb416),
+    to(#fec449)
+  );
   background-image: linear-gradient(0deg, #feb416, #fec449);
 }
 
-.elementor-editor-active .elementor.elementor-edit-mode .elementor-global-widget .elementor-editor-widget-settings .elementor-editor-element-setting:hover {
+.elementor-editor-active
+  .elementor.elementor-edit-mode
+  .elementor-global-widget
+  .elementor-editor-widget-settings
+  .elementor-editor-element-setting:hover {
   background-color: #feb416;
 }
 
-.elementor-editor-active .elementor.elementor-edit-mode .elementor-global-widget .elementor-editor-widget-settings .elementor-editor-element-setting.elementor-editor-element-save {
+.elementor-editor-active
+  .elementor.elementor-edit-mode
+  .elementor-global-widget
+  .elementor-editor-widget-settings
+  .elementor-editor-element-setting.elementor-editor-element-save {
   display: none;
 }
 
@@ -304,7 +322,8 @@
   clear: both;
 }
 
-.elementor-posts.elementor-posts--skin-archive_full_content article.elementor-post {
+.elementor-posts.elementor-posts--skin-archive_full_content
+  article.elementor-post {
   display: block;
 }
 
@@ -317,7 +336,9 @@
   padding-right: var(--padding-right);
 }
 
-[data-elementor-type="popup"] .elementor-section-wrap:not(:empty)+#elementor-add-new-section,
+[data-elementor-type="popup"]
+  .elementor-section-wrap:not(:empty)
+  + #elementor-add-new-section,
 [data-elementor-type="popup"]:not(.elementor-edit-area) {
   display: none;
 }
@@ -403,7 +424,8 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  -webkit-transform-origin: var(--e-transform-origin-y) var(--e-transform-origin-x);
+  -webkit-transform-origin: var(--e-transform-origin-y)
+    var(--e-transform-origin-x);
   -ms-transform-origin: var(--e-transform-origin-y) var(--e-transform-origin-x);
   transform-origin: var(--e-transform-origin-y) var(--e-transform-origin-x);
 }

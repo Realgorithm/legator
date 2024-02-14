@@ -73,7 +73,7 @@ p {
 }
 
 p.bg-white {
-  color: #400b96
+  color: #400b96;
 }
 
 hr {
@@ -188,7 +188,6 @@ template {
 }
 
 @media print {
-
   *,
   :after,
   :before {
@@ -455,26 +454,26 @@ table thead th {
   font-size: 1em;
 }
 
-table caption+thead tr:first-child td,
-table caption+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
+table caption + thead tr:first-child td,
+table caption + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
 table thead:first-child tr:first-child td,
 table thead:first-child tr:first-child th {
   border-top: 1px solid hsla(0, 0%, 50.2%, 0.5019607843137255);
 }
 
-table tbody>tr:nth-child(odd)>td,
-table tbody>tr:nth-child(odd)>th {
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
   background-color: hsla(0, 0%, 50.2%, 0.07058823529411765);
 }
 
-table tbody tr:hover>td,
-table tbody tr:hover>th {
+table tbody tr:hover > td,
+table tbody tr:hover > th {
   background-color: hsla(0, 0%, 50.2%, 0.10196078431372549);
 }
 
-table tbody+tbody {
+table tbody + tbody {
   border-top: 2px solid hsla(0, 0%, 50.2%, 0.5019607843137255);
 }
 

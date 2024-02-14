@@ -1,12 +1,28 @@
 <script>
-  showGetMessage('error', 'username_exists', 'Username already exists. 😕 Please log in', 'warning');
-  showGetMessage('error', 'email_exists', 'Email already exists. 😕 Please log in with your email', 'warning');
+  showGetMessage(
+    "error",
+    "username_exists",
+    "Username already exists. 😕 Please log in",
+    "warning"
+  );
+  showGetMessage(
+    "error",
+    "email_exists",
+    "Email already exists. 😕 Please log in with your email",
+    "warning"
+  );
 </script>
 
 <body id="top">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="page_loader"></div>
 
@@ -17,68 +33,110 @@
         <div class="col-lg-5 col-md-12 col-pad-0 bg-img none-992">
           <div class="informeson">
             <div class="btn-section">
-              <a href="home" class="active link-btn  bg-primary"
-                style="background-color: #1a7d7e !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Home</a>
-              <a href="login" class="active link-btn  bg-primary"
-                style="background-color: #c40d3b !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Login</a>
+              <a
+                href="home"
+                class="active link-btn bg-primary"
+                style="
+                  background-color: #1a7d7e !important;
+                  color: #fff;
+                  display: inline-block;
+                  font: normal 16px/18px 'FavoritPro Light', Arial, sans-serif;
+                  padding: 15px 30px;
+                  text-align: center;
+                "
+                >Home</a
+              >
+              <a
+                href="login"
+                class="active link-btn bg-primary"
+                style="
+                  background-color: #c40d3b !important;
+                  color: #fff;
+                  display: inline-block;
+                  font: normal 16px/18px 'FavoritPro Light', Arial, sans-serif;
+                  padding: 15px 30px;
+                  text-align: center;
+                "
+                >Login</a
+              >
             </div>
-            <h5> Your Gateway to Financial Excellence! 🚀 </h5>
-            <h2>Learn <br class="custom-line-break">Earn <br class="custom-line-break">Grow <br
-                class="custom-line-break">Analyse <br class="custom-line-break">Trade <br
-                class="custom-line-break">Overcome <br class="custom-line-break">Re-invest</h2>
-            <h4>Unleash the power of financial mastery and secure your seat in the future of trading and investment.
+            <h5>Your Gateway to Financial Excellence! 🚀</h5>
+            <h2>
+              Learn <br class="custom-line-break" />Earn
+              <br class="custom-line-break" />Grow
+              <br class="custom-line-break" />Analyse
+              <br class="custom-line-break" />Trade
+              <br class="custom-line-break" />Overcome
+              <br class="custom-line-break" />Re-invest
+            </h2>
+            <h4>
+              Unleash the power of financial mastery and secure your seat in the
+              future of trading and investment.
             </h4>
           </div>
-
         </div>
-        <div class="col-lg-7 col-md-12 col-pad-0 bg-color"
-          style="background-image:url(wp-content/uploads/sites/8/2022/11/My-password-amico.png) !important; background-size:cover;">
+        <div
+          class="col-lg-7 col-md-12 col-pad-0 bg-color"
+          style="
+            background-image: url(wp-content/uploads/sites/8/2022/11/My-password-amico.png) !important;
+            background-size: cover;
+          "
+        >
           <div class="login-inner-form">
             <div class="details">
               <a href="home">
-                <img src="wp-content/uploads/sites/8/2022/11/logo1.png" alt="logo">
+                <img
+                  src="wp-content/uploads/sites/8/2022/11/logo1.png"
+                  alt="logo"
+                />
               </a>
               <h3>Welcome to Legator Digital!</h3>
 
-
-
-              <script language=javascript>
+              <script language="javascript">
                 function checkform() {
-                  if (document.regform.fullname.value == '') {
+                  if (document.regform.fullname.value == "") {
                     alert("Please enter your full name!");
                     document.regform.fullname.focus();
                     return false;
                   }
 
-
-                  if (document.regform.username.value == '') {
+                  if (document.regform.username.value == "") {
                     alert("Please enter your username!");
                     document.regform.username.focus();
                     return false;
                   }
-                  if (!document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)) {
-                    alert("For username you should use English letters and digits only!");
+                  if (
+                    !document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)
+                  ) {
+                    alert(
+                      "For username you should use English letters and digits only!"
+                    );
                     document.regform.username.focus();
                     return false;
                   }
-                  if (document.regform.password.value == '') {
+                  if (document.regform.password.value == "") {
                     alert("Please enter your password!");
                     document.regform.password.focus();
                     return false;
                   }
-                  if (document.regform.password.value != document.regform.password2.value) {
+                  if (
+                    document.regform.password.value !=
+                    document.regform.password2.value
+                  ) {
                     alert("Please check your password!");
                     document.regform.password2.focus();
                     return false;
                   }
 
-
-                  if (document.regform.email.value == '') {
+                  if (document.regform.email.value == "") {
                     alert("Please enter your e-mail address!");
                     document.regform.email.focus();
                     return false;
                   }
-                  if (document.regform.email.value != document.regform.email1.value) {
+                  if (
+                    document.regform.email.value !=
+                    document.regform.email1.value
+                  ) {
                     alert("Please retype your e-mail!");
                     document.regform.email.focus();
                     return false;
@@ -87,22 +145,24 @@
                   for (i in document.regform.elements) {
                     f = document.regform.elements[i];
                     if (f.name && f.name.match(/^pay_account/)) {
-                      if (f.value == '') continue;
-                      var notice = f.getAttribute('data-validate-notice');
+                      if (f.value == "") continue;
+                      var notice = f.getAttribute("data-validate-notice");
                       var invalid = 0;
-                      if (f.getAttribute('data-validate') == 'regexp') {
-                        var re = new RegExp(f.getAttribute('data-validate-regexp'));
+                      if (f.getAttribute("data-validate") == "regexp") {
+                        var re = new RegExp(
+                          f.getAttribute("data-validate-regexp")
+                        );
                         if (!f.value.match(re)) {
                           invalid = 1;
                         }
-                      } else if (f.getAttribute('data-validate') == 'email') {
+                      } else if (f.getAttribute("data-validate") == "email") {
                         var re = /^[^\@]+\@[^\@]+\.\w{2,4}$/;
                         if (!f.value.match(re)) {
                           invalid = 1;
                         }
                       }
                       if (invalid) {
-                        alert('Invalid account format. Expected ' + notice);
+                        alert("Invalid account format. Expected " + notice);
                         f.focus();
                         return false;
                       }
@@ -121,7 +181,7 @@
                   var ValidChars = "0123456789";
                   var IsNumber = true;
                   var Char;
-                  if (sText == '') return false;
+                  if (sText == "") return false;
                   for (i = 0; i < sText.length && IsNumber == true; i++) {
                     Char = sText.charAt(i);
                     if (ValidChars.indexOf(Char) == -1) {
@@ -132,43 +192,85 @@
                 }
               </script>
 
-
-
-              <form method=post onsubmit="return checkform()" action="auth/register.php" name="regform"><input
-                  type="hidden" name="form_id" value="17035912079845"><input type="hidden" name="form_token"
-                  value="fdb5dbdd5b1311713f9dde8bfb57f30c">
-                <input type=hidden name=a value="signup">
-                <input type=hidden name=action value="signup">
+              <form
+                method="post"
+                onsubmit="return checkform()"
+                action="auth/register.php"
+                name="regform"
+              >
+                <input
+                  type="hidden"
+                  name="form_id"
+                  value="17035912079845"
+                /><input
+                  type="hidden"
+                  name="form_token"
+                  value="fdb5dbdd5b1311713f9dde8bfb57f30c"
+                />
+                <input type="hidden" name="a" value="signup" />
+                <input type="hidden" name="action" value="signup" />
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type=text name=fullname value='' class="form-control" placeholder="Full Name">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="fullname"
+                          value=""
+                          class="form-control"
+                          placeholder="Full Name"
+                        />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type=text name=username value='' class="form-control" placeholder="Username">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="username"
+                          value=""
+                          class="form-control"
+                          placeholder="Username"
+                        />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type=password name=password value='' class="form-control" placeholder="Password">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-lock"></i
+                        ></span>
+                        <input
+                          type="password"
+                          name="password"
+                          value=""
+                          class="form-control"
+                          placeholder="Password"
+                        />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type=password name=password2 value='' class="form-control" placeholder="Retype Password">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-lock"></i
+                        ></span>
+                        <input
+                          type="password"
+                          name="password2"
+                          value=""
+                          class="form-control"
+                          placeholder="Retype Password"
+                        />
                       </div>
                     </div>
                   </div>
@@ -176,57 +278,109 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input type=text name=email value='' required class="form-control" placeholder="E-mail">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-envelope"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="email"
+                          value=""
+                          required
+                          class="form-control"
+                          placeholder="E-mail"
+                        />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input type=text name=email1 value='' class="form-control" placeholder="Retype E-mail">
+                        <span class="input-group-addon"
+                          ><i class="fa fa-envelope"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="email1"
+                          value=""
+                          class="form-control"
+                          placeholder="Retype E-mail"
+                        />
                       </div>
                     </div>
                   </div>
-
-
 
                   <div class="col-md-12">
                     <div class="checkbox clearfix">
                       <div class="form-check checkbox-theme">
-                        <input class="form-check-input" type=checkbox name=agree value=1 id="termsOfService">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="agree"
+                          value="1"
+                          id="termsOfService"
+                        />
                         <label class="form-check-label" for="termsOfService">
-                          I agree with &nbsp; <a href="=rules"> Terms and conditions</a>
+                          I agree with &nbsp;
+                          <a href="=rules"> Terms and conditions</a>
                         </label>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-md-12">
-                    <button type="submit" class="btn-md btn-theme btn-block  bg-primary"
-                      style="background-color: #55C2C3 !important; color: #fff; display: inline-block; font: normal 16px/18px 'FavoritPro Light',Arial,sans-serif; padding: 15px 30px; text-align: center;">Sign
-                      Up </button>
-
+                    <button
+                      type="submit"
+                      class="btn-md btn-theme btn-block bg-primary"
+                      style="
+                        background-color: #55c2c3 !important;
+                        color: #fff;
+                        display: inline-block;
+                        font: normal 16px/18px 'FavoritPro Light', Arial,
+                          sans-serif;
+                        padding: 15px 30px;
+                        text-align: center;
+                      "
+                    >
+                      Sign Up
+                    </button>
                   </div>
-                  <br>
-                  <br><br>
+                  <br />
+                  <br /><br />
                   <div class="table-row d-flex align-items-center flex-column">
-                    <p class="mb-0" style="color:#ffffff;">Already have an account?
-                      <a style="color:#55C2C3; " href="login">Log in</a>
+                    <p class="mb-0" style="color: #ffffff">
+                      Already have an account?
+                      <a style="color: #55c2c3" href="login">Log in</a>
                     </p>
-                    <p class="text-center mb-0"
-                      style="font-weight:400;font-size:10px;line-height:140%;padding-top:1rem;">By clicking Sign Up,
-                      you agree to our
-                      <a target="blank" style="color:#164e8c" ; href="rules" style="font-size:10px;padding:0 5px;">Terms
-                        and Conditions</a> and that you have read our
-                      <a target="blank" style="color:#164e8c" ; href="privacy"
-                        style="font-size:10px;padding:0 5px;">Privacy Policy.</a>
+                    <p
+                      class="text-center mb-0"
+                      style="
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 140%;
+                        padding-top: 1rem;
+                      "
+                    >
+                      By clicking Sign Up, you agree to our
+                      <a
+                        target="blank"
+                        style="color: #164e8c"
+                        ;
+                        href="rules"
+                        style="font-size: 10px; padding: 0 5px"
+                        >Terms and Conditions</a
+                      >
+                      and that you have read our
+                      <a
+                        target="blank"
+                        style="color: #164e8c"
+                        ;
+                        href="privacy"
+                        style="font-size: 10px; padding: 0 5px"
+                        >Privacy Policy.</a
+                      >
                     </p>
                   </div>
-
                 </div>
-
               </form>
             </div>
           </div>

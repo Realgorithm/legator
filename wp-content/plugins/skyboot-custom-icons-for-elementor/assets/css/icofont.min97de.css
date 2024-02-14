@@ -8476,12 +8476,12 @@
   margin-left: 0;
 }
 
-.icofont-ul>li {
+.icofont-ul > li {
   position: relative;
   line-height: 2em;
 }
 
-.icofont-ul>li .icofont {
+.icofont-ul > li .icofont {
   display: inline-block;
   vertical-align: middle;
 }

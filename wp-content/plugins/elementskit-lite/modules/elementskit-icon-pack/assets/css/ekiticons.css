@@ -3498,8 +3498,10 @@
   content: "\eae5";
 }
 
-.ekit-wid-con .fasicon.icon-construction-tool-vehicle-with-crane-lifting-materials::before,
-.ekit-wid-con .icon.icon-construction-tool-vehicle-with-crane-lifting-materials::before,
+.ekit-wid-con
+  .fasicon.icon-construction-tool-vehicle-with-crane-lifting-materials::before,
+.ekit-wid-con
+  .icon.icon-construction-tool-vehicle-with-crane-lifting-materials::before,
 .icon.icon-construction-tool-vehicle-with-crane-lifting-materials::before {
   content: "\eae6";
 }

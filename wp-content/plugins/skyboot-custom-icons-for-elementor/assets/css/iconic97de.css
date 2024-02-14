@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'iconic';
-  src: url('../fonts/iconic03c2.eot?i072xj');
-  src: url('../fonts/iconic03c2.eot?i072xj#iefix') format('embedded-opentype'),
-    url('../fonts/iconic03c2.ttf?i072xj') format('truetype'),
-    url('../fonts/iconic03c2.woff?i072xj') format('woff'),
-    url('../fonts/iconic03c2.svg?i072xj#iconic') format('svg');
+  font-family: "iconic";
+  src: url("../fonts/iconic03c2.eot?i072xj");
+  src: url("../fonts/iconic03c2.eot?i072xj#iefix") format("embedded-opentype"),
+    url("../fonts/iconic03c2.ttf?i072xj") format("truetype"),
+    url("../fonts/iconic03c2.woff?i072xj") format("woff"),
+    url("../fonts/iconic03c2.svg?i072xj#iconic") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 .iconic {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'iconic' !important;
+  font-family: "iconic" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
