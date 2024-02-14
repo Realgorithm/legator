@@ -140,7 +140,7 @@ if (substr($originalString, -strlen($textToRemove)) === $textToRemove) {
 	<link type='text/css' rel='stylesheet' href='loginasset/assets/css/bootstrap.min.css'>
 	<link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/font-awesome/css/font-awesome.min.css'>
 	<link type='text/css' rel='stylesheet' href='loginasset/assets/fonts/flaticon/font/flaticon.css'>
-	<link rel='stylesheet' href='css/bootstrap.min.css'>
+	<!-- <link rel='stylesheet' href='css/bootstrap.min.css'> -->
 	<link rel='stylesheet' href='css/owl.carousel.min.css'>
 	<link rel='stylesheet' href='css/all.min.css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
